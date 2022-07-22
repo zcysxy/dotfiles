@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -16,11 +14,23 @@ fi
 
 # Path alias
 setopt cdable_vars
-export w=$HOME/Desktop/Workbench
-export t=$HOME/Desktop/Workbench/temp
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+#export LC_CTYPE=C
+#export LANG=C
+export w=$HOME/Workbench
+export t=$HOME/Workbench/temp
+export o=$HOME/OneDrive1/$(ls $HOME/OneDrive1/)
+export m=$HOME/0-MI
+export k=$HOME/3-KNWL
+export dl=$HOME/Downloads
+export s=$HOME/Workbench/School
+if [ -d ~/.texmf ] ; then
+    export TEXMFHOME=~/.texmf
+fi
 
 # Default editor
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # pre-oh-my-zsh
@@ -32,11 +42,15 @@ alias figletc="figlet -c -w \$(tput cols)"
 alias hello="say -v Fred hi\!"
 alias c=clear
 alias re="clear && neofetch"
-alias cat=bat
+alias cat="bat --theme ansi"
+alias sed=gsed
 alias e=$EDITOR
 alias lc='colorls -A --sd'
 alias p=pbcopy
 alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias nv=nvim
+alias lsf="ls | fzf"
+alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -57,10 +71,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # PATH
 export PATH="\
-/opt/homebrew/anaconda3/bin:\
+/opt/homebrew/bin:\
+/opt/homebrew/sbin:\
 /Users/ce/.local/bin:\
 /Applications/MATLAB_R2021b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
+/opt/homebrew/anaconda3/bin:\
 $PATH"  
 
 # icons-in-terminal
@@ -204,7 +220,20 @@ snow() {
 	ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
 }
 
+# rga-fzf
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
 eval $(thefuck --alias)
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
