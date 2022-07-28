@@ -3,7 +3,7 @@ syntax on
 highlight Visual cterm=reverse ctermbg=NONE
 set hlsearch
 set nocompatible
-filetype plugin
+"filetype plugin
 
 " Mappings
 inoremap jk <ESC>

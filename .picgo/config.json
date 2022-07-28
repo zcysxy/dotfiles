@@ -4,11 +4,12 @@
     "github": {
       "repo": "zcysxy/Figurebed",
       "branch": "master",
-      "token": "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",
+      "token": "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",
       "path": "img/",
       "customUrl": ""
     },
-    "uploader": "github"
+    "uploader": "github",
+    "transformer": "path"
   },
   "picgoPlugins": {}
 }
