@@ -18,13 +18,16 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #export LC_CTYPE=C
 #export LANG=C
-export w=$HOME/Workbench
-export t=$HOME/Workbench/temp
+#export w=$HOME/Workbench
+#export t=$HOME/Workbench/temp
 export o=$HOME/OneDrive1/$(ls $HOME/OneDrive1/)
 export m=$HOME/0-MI
 export k=$HOME/3-KNWL
 export dl=$HOME/Downloads
-export s=$HOME/Workbench/School
+#export s=$HOME/Workbench/School
+export 0=$HOME/0-TMP
+export salt=$HOME/3-KNWL/34-Notes/Salt-Box
+export snip=$HOME/3-KNWL/34-Notes/Salt-Box/.obsidian/snippets
 if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
@@ -51,6 +54,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias nv=nvim
 alias lsf="ls | fzf"
 alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
+#alias snip="/Applications/Snipaste.app/Contents/MacOS/Snipaste snip"
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
