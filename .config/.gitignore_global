@@ -1,0 +1,6 @@
+**/*.log
+**/*.aux
+**/*.gz
+.DS_Store
+.DS_Store?
+# **/*.pdf
