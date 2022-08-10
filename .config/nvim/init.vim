@@ -14,7 +14,7 @@ highlight Visual cterm=reverse ctermbg=NONE
 
 " MAPPINGS
 set hlsearch
-inoremap jk <ESC> " quick escape
+inoremap jk <ESC>" quick escape
 inoremap kj <ESC>
 nmap H ^
 nmap L $
