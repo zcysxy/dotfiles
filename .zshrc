@@ -14,12 +14,13 @@ fi
 
 # Path alias
 setopt cdable_vars
+setopt extendedglob
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #export LC_CTYPE=C
 #export LANG=C
 #export w=$HOME/Workbench
-#export t=$HOME/Workbench/temp
+export t=$HOME/0-TMP/temp
 export o=$HOME/OneDrive1/$(ls $HOME/OneDrive1/)
 export m=$HOME/0-MI
 export k=$HOME/3-KNWL
@@ -38,7 +39,7 @@ export VISUAL="$EDITOR"
 
 # pre-oh-my-zsh
 # aliases
-alias temp="cd ~/Desktop/Workbench/temp"
+alias temp="cd ~/0-TMP/temp"
 alias lse=ls_extended
 alias weather="curl http://wttr.in/"
 alias figletc="figlet -c -w \$(tput cols)"
@@ -55,6 +56,7 @@ alias nv=nvim
 alias lsf="ls | fzf"
 alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
 #alias snip="/Applications/Snipaste.app/Contents/MacOS/Snipaste snip"
+alias R="R --no-save"
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -240,4 +242,20 @@ rga-fzf() {
 }
 
 eval $(thefuck --alias)
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
