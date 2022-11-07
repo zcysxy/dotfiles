@@ -32,6 +32,8 @@ export snip=$HOME/3-KNWL/34-Notes/Salt-Box/.obsidian/snippets
 if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
+export GOPATH=~/.go
+export GOROOT="$(brew --prefix golang)/libexec"
 
 # Default editor
 export EDITOR=nvim
@@ -53,10 +55,13 @@ alias lc='colorls -A --sd'
 alias p=pbcopy
 alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias nv=nvim
+alias v=nvim
 alias lsf="ls | fzf"
 alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
 #alias snip="/Applications/Snipaste.app/Contents/MacOS/Snipaste snip"
 alias R="R --no-save"
+alias panmd="pandoc -f markdown+tex_math_single_backslash --pdf-engine=xelatex --citeproc -o output.pdf"
+alias xdg-open="open"
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -83,6 +88,7 @@ export PATH="\
 /Applications/MATLAB_R2021b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
 /opt/homebrew/anaconda3/bin:\
+${GOPATH}/bin:${GOROOT}/bin:\
 $PATH"  
 
 # icons-in-terminal
