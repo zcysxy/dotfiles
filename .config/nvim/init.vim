@@ -20,10 +20,13 @@ nmap j gj
 nmap k gk
 nmap H ^
 nmap L $
-nmap J <C-D>
-nmap K <C-U>
+"nmap J <C-D>
+"nmap K <C-U>
 nmap <ENTER> o<ESC>k " new line
-" nmap <BS> ddkk " delete line
+nmap <S-CR> i<CR><ESC>0 " break line
+" Execute code
+nmap <C-CR> :!./%<CR>
+nmap <BS> ddkk " delete line
 inoremap <TAB> <C-n>
 
 " Move lines up/down

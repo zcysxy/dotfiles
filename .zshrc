@@ -62,6 +62,7 @@ alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
 alias R="R --no-save"
 alias panmd="pandoc -f markdown+tex_math_single_backslash --pdf-engine=xelatex --citeproc -o output.pdf"
 alias xdg-open="open"
+alias q=exit
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }

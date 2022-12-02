@@ -1,4 +1,6 @@
 **/*.log
+**/*.out
+**/*.run.xml
 **/*.aux
 **/*.gz
 .DS_Store

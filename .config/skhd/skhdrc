@@ -24,27 +24,24 @@ alt + cmd - 0x18: \
 # alt + cmd - right : yabai -m window --focus east
 
 # moving windows
-# shift + alt - h : yabai -m window --warp west
-# shift + alt - j : yabai -m window --warp south
-# shift + alt - k : yabai -m window --warp north
-# shift + alt - l : yabai -m window --warp east
+#ctrl + alt - h : yabai -m window --warp west
+#ctrl + alt - j : yabai -m window --warp south
+#ctrl + alt - k : yabai -m window --warp north
+#ctrl + alt - l : yabai -m window --warp east
+ctrl + alt - l: yabai -m window --move rel:40:0
+ctrl + alt - h: yabai -m window --move rel:-40:0
+ctrl + alt - j: yabai -m window --move rel:0:-40
+ctrl + alt - k: yabai -m window --move rel:0:40
 
 # resize windows
 # cmd + fn - left : \
     # yabai -m window --resize left:-20:0 ; \
     # yabai -m window --resize right:-20:0
 # 
-# cmd + alt - j : \
-    # yabai -m window --resize bottom:0:20 ; \
-    # yabai -m window --resize top:0:20
-# 
-# cmd + alt - k : \
-    # yabai -m window --resize top:0:-20 ; \
-    # yabai -m window --resize bottom:0:-20
-# 
-# cmd + alt - l : \
-    # yabai -m window --resize right:20:0 ; \
-    # yabai -m window --resize left:20:0
+cmd + alt - k: yabai -m window --resize bottom:0:-40 ;
+cmd + alt - j : yabai -m window --resize bottom:0:40 ;
+cmd + alt - l : yabai -m window --resize right:40:0 ;
+cmd + alt - h : yabai -m window --resize right:-40:0 ;
 
 # equalize window size
 # cmd + alt - 0 : yabai -m space --balance
