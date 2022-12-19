@@ -17,11 +17,21 @@ alt + cmd - 0x18: \
 	$(($(yabai -m query --windows --window \
 	| jq -re .opacity)+0.1))	
 
-# navigation
+# Swap windows
+#ctrl + alt - left: yabai -m window --warp west
+#ctrl + alt - right: yabai -m window --warp east
+#ctrl + alt - up: yabai -m window --warp north
+#ctrl + alt - down: yabai -m window --warp south
+
+# navigation/focus
 # alt + cmd - left : yabai -m window --focus west
 # alt + cmd - down : yabai -m window --focus south
 # alt + cmd - up : yabai -m window --focus north
 # alt + cmd - right : yabai -m window --focus east
+#shift + alt - h: yabai -m window --focus west
+#shift + alt - l: yabai -m window --focus east
+#shift + alt - j: yabai -m window --focus south
+#shift + alt - k: yabai -m window --focus north
 
 # moving windows
 #ctrl + alt - h : yabai -m window --warp west
@@ -50,8 +60,8 @@ shift + alt - h : yabai -m window --resize right:-40:0 ;
 # alt - f : yabai -m window --toggle native-fullscreen
 
 # toggle current space layout
-# cmd + ctrl - u : yabai -m space --layout bsp
-# cmd + ctrl - f : yabai -m space --layout float
+cmd + ctrl - u : yabai -m space --layout bsp
+cmd + ctrl - f : yabai -m space --layout float
 
 # temporarily float and center window
 ctrl + alt - space : yabai -m window --toggle float;\
