@@ -1,6 +1,12 @@
 require('telescope').setup({
   extensions = {
     command_palette = {
+      {"_",
+        { "Focus on file tree", ':NERDTreeFocus<CR>' },
+        { "Toggle file tree", ':NERDTreeToggle<CR>' },
+        { "Jump to definition", ":call CocActionAsync('jumpDefinition')<CR>" },
+        { "Comment", '<LEADER>c<SPACE>'},
+      },
       {"File",
         { "entire selection (C-a)", ':call feedkeys("GVgg")' },
         { "save current file (C-s)", ':w' },

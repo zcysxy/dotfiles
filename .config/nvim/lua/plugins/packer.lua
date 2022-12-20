@@ -18,4 +18,7 @@ return require('packer').startup(function(use)
 	use "nvim-lua/plenary.nvim"
 	use { "nvim-telescope/telescope.nvim" }
 	use { "LinArcX/telescope-command-palette.nvim" }
+    use "savq/melange"
+    use { 'junegunn/fzf', run = ":call fzf#install()" }
+    use { 'junegunn/fzf.vim' }
 end)

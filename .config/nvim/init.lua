@@ -1,5 +1,9 @@
 require 'plugins'
 
+-- Theme
+--vim.opt.termguicolors = true
+vim.cmd("colorscheme melange")
+
 -- PREVIOUS INIT.VIM
 vim.cmd([[
 " Basic
@@ -14,7 +18,7 @@ set directory=~/.vimtmp//,.
 set expandtab
 set autoindent
 set smarttab
-highlight Visual cterm=reverse ctermbg=NONE
+highlight Visual term=reverse cterm=reverse guibg=Grey " ctermbg=NONE
 
 " MAPPINGS
 set hlsearch
@@ -68,6 +72,8 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 " Comment
 nmap <C-/> <LEADER>c<SPACE>
 vmap <C-/> <LEADER>c<SPACE>
+
+nnoremap <C-p> :Telescope command_palette<CR>
 
 " GitGutter
 set updatetime=200
