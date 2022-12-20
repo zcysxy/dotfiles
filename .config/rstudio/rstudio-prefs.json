@@ -1,0 +1,41 @@
+{
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "zsh",
+    "editor_theme": "Crimson Editor",
+    "jobs_tab_visibility": "shown",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "Console",
+            "TabSet1",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer",
+            "Presentations"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "save_workspace": "never",
+    "load_workspace": false,
+    "default_project_location": "~/Library/CloudStorage/OneDrive-四川民族学院/3-KNWL/31-Courses/EDAV",
+    "source_with_echo": true,
+    "show_terminal_tab": false,
+    "rmd_viewer_type": "pane"
+}

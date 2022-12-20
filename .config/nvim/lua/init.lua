@@ -1,4 +1,5 @@
-require'lspconfig'.pylsp.setop{}
+require 'plugins'
+require 'lspconfig'.pylsp.setop{}
 
 -- CMP
 -- Setup nvim-cmp.
