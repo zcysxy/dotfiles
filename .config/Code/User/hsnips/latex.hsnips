@@ -129,7 +129,7 @@ snippet hat "hat" iAm
 \hat{$1}$0
 endsnippet
 
-snippet hsq "\sqrt{}" iAm
+snippet sqr "\sqrt{}" iAm
 \sqrt{${1}}$0
 endsnippet
 
@@ -567,9 +567,9 @@ snippet iff "if and only if" iAm
 \iff
 endsnippet
 
-snippet EE "exist" iAm
-\exists 
-endsnippet
+/*snippet EE "exist" iAm*/
+/*\exists */
+/*endsnippet*/
 
 snippet AA "forall" iAm
 \forall 

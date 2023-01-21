@@ -21,4 +21,5 @@ return require('packer').startup(function(use)
     use "savq/melange"
     use { 'junegunn/fzf', run = ":call fzf#install()" }
     use { 'junegunn/fzf.vim' }
+    use 'eandrju/cellular-automaton.nvim'
 end)

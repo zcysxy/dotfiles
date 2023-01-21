@@ -35,7 +35,8 @@ nmap <S-CR> i<CR><ESC>0 " break line
 " Execute code
 nmap <C-CR> :!./%<CR>
 nmap <BS> ddkk " delete line
-inoremap <TAB> <C-n>
+" inoremap <TAB> <C-n>
+
 
 " Move lines up/down
 nnoremap <C-j> :m .+1<CR>==
@@ -74,6 +75,7 @@ nmap <C-/> <LEADER>c<SPACE>
 vmap <C-/> <LEADER>c<SPACE>
 
 nnoremap <C-p> :Telescope command_palette<CR>
+nnoremap <A-p> :Commands<CR>
 
 " GitGutter
 set updatetime=200

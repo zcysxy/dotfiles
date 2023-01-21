@@ -1,5 +1,6 @@
 **/*.log
 **/*.out
+**/*.blg
 **/*.run.xml
 **/*.aux
 **/*.gz
