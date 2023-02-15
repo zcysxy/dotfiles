@@ -1,4 +1,5 @@
 local vim = vim
+
 local execute = vim.api.nvim_command
 local fn = vim.fn
 -- ensure that packer is installed
@@ -18,8 +19,13 @@ return require('packer').startup(function(use)
 	use "nvim-lua/plenary.nvim"
 	use { "nvim-telescope/telescope.nvim" }
 	use { "LinArcX/telescope-command-palette.nvim" }
-    use "savq/melange"
+	use "savq/melange"
     use { 'junegunn/fzf', run = ":call fzf#install()" }
     use { 'junegunn/fzf.vim' }
     use 'eandrju/cellular-automaton.nvim'
+    use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'jupyter-vim/jupyter-vim' }
+    use { 'goerz/jupytext.vim' }
 end)
+

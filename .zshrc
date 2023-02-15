@@ -64,11 +64,11 @@ alias panmd="pandoc -f markdown+tex_math_single_backslash --pdf-engine=xelatex -
 alias xdg-open="open"
 alias q=exit
 
+
 # Functions
 mvf() { mv "$@" && goto "$_"; }
 cpf() { mv "$@" && goto "$_"; }
 goto() { [ -d "$1" ]  && cd "$1" || cd "$(dirname "$1")"; }
-rmd() { Rscript -e "rmarkdown::render('$1')"; }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

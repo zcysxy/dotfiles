@@ -1,12 +1,18 @@
 require 'plugins'
 
--- Theme
 --vim.opt.termguicolors = true
-vim.cmd("colorscheme melange")
+--vim.cmd [[colorscheme melange]]
+
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.cmd [[let maplocalleader="<space>"]]
 
 -- PREVIOUS INIT.VIM
 vim.cmd([[
 " Basic
+syntax on
+filetype plugin indent on
 set number
 set mouse=a
 set tabstop=4
@@ -19,9 +25,9 @@ set expandtab
 set autoindent
 set smarttab
 highlight Visual term=reverse cterm=reverse guibg=Grey " ctermbg=NONE
+set hlsearch
 
 " MAPPINGS
-set hlsearch
 inoremap jk <ESC>" quick escape
 inoremap kj <ESC>
 nmap j gj
@@ -36,7 +42,9 @@ nmap <S-CR> i<CR><ESC>0 " break line
 nmap <C-CR> :!./%<CR>
 nmap <BS> ddkk " delete line
 " inoremap <TAB> <C-n>
-
+map <leader>n :bnext<cr>
+map <leader>p :bprevious<cr>
+map <leader>d :bdelete<cr>
 
 " Move lines up/down
 nnoremap <C-j> :m .+1<CR>==
@@ -49,6 +57,11 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Fuzzy Find
 set path+=**
 set wildmenu
+set wildmode=longest:full,full
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
 
 call plug#begin()
 
@@ -61,6 +74,9 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'jupyter-vim/jupyter-vim'
 
 call plug#end()
 
@@ -120,3 +136,4 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 ]])
+
