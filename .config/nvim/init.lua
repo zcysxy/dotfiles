@@ -1,12 +1,36 @@
 require 'plugins'
+require('lualine').setup({
+    options = {
+        disabled_filetypes = { 'alpha' }
+    }
+})
 
---vim.opt.termguicolors = true
---vim.cmd [[colorscheme melange]]
+vim.cmd([[
+    augroup user_colors
+      autocmd!
+      autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight NormalNC ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight NormalSB ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight TelescopeNormal ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight Conceal ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight NvimTreeNormal ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight NvimTreeCursorLine ctermbg=NONE guibg=NONE
+    augroup END
+]])
+
+vim.opt.termguicolors = true
+vim.cmd.colorscheme 'onenord'
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.cmd [[let maplocalleader="<space>"]]
+--vim.cmd [[let maplocalleader="<space>"]]
+
+vim.o.conceallevel = 2
+vim.o.timeoutlen = 500
+
+vim.o.splitbelow = 1
+vim.o.splitright = 1
 
 -- PREVIOUS INIT.VIM
 vim.cmd([[
@@ -20,6 +44,8 @@ set softtabstop=4
 set shiftwidth=4
 set backupdir=~/.vimtmp//,.
 set directory=~/.vimtmp//,.
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 
 set expandtab
 set autoindent
@@ -54,6 +80,10 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" Terminal
+let $ZDOTDIR="/Users/ce/.zsh/simp"
+nnoremap <Leader>T :sp term://zsh<CR>i
+
 " Fuzzy Find
 set path+=**
 set wildmenu
@@ -65,12 +95,11 @@ endfunction
 
 call plug#begin()
 
-Plug 'https://github.com/vim-airline/vim-airline'
+" Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/preservim/nerdcommenter'
-Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -83,15 +112,17 @@ call plug#end()
 " NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <M-b> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 " Comment
 nmap <C-/> <LEADER>c<SPACE>
 vmap <C-/> <LEADER>c<SPACE>
 
-nnoremap <C-p> :Telescope command_palette<CR>
-nnoremap <A-p> :Commands<CR>
+" nnoremap <C-p> :Telescope command_palette<CR>
+nnoremap <C-p> :Telescope commands<CR>
+nnoremap <Leader>o :Telescope find_files<CR>
+" nnoremap <A-p> :Commands<CR>
 
 " GitGutter
 set updatetime=200

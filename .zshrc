@@ -56,6 +56,8 @@ alias p=pbcopy
 alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias nv=nvim
 alias v=nvim
+alias lazy='XDG_CONFIG_HOME="$HOME/.lazy" XDG_DATA_HOME="$HOME/.local/share/lazynvim" XDG_CACHE_HOME="$HOME/.cache/lazynvim" nvim'
+alias lv=lazy
 alias lsf="ls | fzf"
 alias pgu="echo \"![](\$(picgo upload | tail -n +6))\" | pbcopy"
 #alias snip="/Applications/Snipaste.app/Contents/MacOS/Snipaste snip"
