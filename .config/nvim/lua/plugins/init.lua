@@ -6,6 +6,6 @@ require 'plugins.alpha'
 require 'plugins.markdown'
 -- require 'plugins.tree'
 require 'plugins.coc'
-require 'plugins.tabout'
+--require 'plugins.tabout'
 require 'plugins.cmp'
 

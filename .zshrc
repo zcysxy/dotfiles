@@ -71,6 +71,9 @@ alias q=exit
 mvf() { mv "$@" && goto "$_"; }
 cpf() { mv "$@" && goto "$_"; }
 goto() { [ -d "$1" ]  && cd "$1" || cd "$(dirname "$1")"; }
+dif () {
+    diff -u $1 $2 | diff-so-fancy
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -94,6 +97,9 @@ export PATH="\
 /opt/homebrew/anaconda3/bin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 $PATH"  
+
+# autosuggestions
+bindkey '^P' autosuggest-accept
 
 # icons-in-terminal
 source ~/.local/share/icons-in-terminal/icons_bash.sh
@@ -182,13 +188,13 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 plugins=(
 	aliases
 	alias-finder
-	bbedit
+	#bbedit
 	brew
 	emoji
 	fzf
 	git
-	node
-	npm
+	#node
+	#npm
 	pip
 	python
 	# ssh-agent
@@ -197,6 +203,10 @@ plugins=(
 	z
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+    copyfile
+    dirhistory
+    history
+    macos
 )
 
 source $ZSH/oh-my-zsh.sh

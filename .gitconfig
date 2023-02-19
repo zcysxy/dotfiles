@@ -1,0 +1,8 @@
+[core]
+	excludesfile = /Users/ce/.config/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[user]
+	email = zcysxy.wyzdz@gmail.com
+	name = zcysxy
+[interactive]
+	diffFilter = diff-so-fancy --patch
