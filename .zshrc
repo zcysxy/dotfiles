@@ -1,22 +1,14 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  # source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
 
 # Path alias
 setopt cdable_vars
 setopt extendedglob
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+#export ARCHFLAGS="-arch x86_64"
 #export LC_CTYPE=C
 #export LANG=C
 #export w=$HOME/Workbench
@@ -28,7 +20,7 @@ export dl=$HOME/Downloads
 #export s=$HOME/Workbench/School
 export 0=$HOME/0-TMP
 export salt=$HOME/3-KNWL/34-Notes/Salt-Box
-export snip=$HOME/3-KNWL/34-Notes/Salt-Box/.obsidian/snippets
+#export snip=$HOME/3-KNWL/34-Notes/Salt-Box/.obsidian/snippets
 if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
 fi
@@ -66,13 +58,15 @@ alias panmd="pandoc -f markdown+tex_math_single_backslash --pdf-engine=xelatex -
 alias xdg-open="open"
 alias q=exit
 
-
 # Functions
 mvf() { mv "$@" && goto "$_"; }
 cpf() { mv "$@" && goto "$_"; }
 goto() { [ -d "$1" ]  && cd "$1" || cd "$(dirname "$1")"; }
-dif () {
-    diff -u $1 $2 | diff-so-fancy
+diff () {
+    /usr/bin/diff -u $1 $2 | diff-so-fancy
+}
+diffr () {
+    /usr/bin/diff -rq $1 $2 | diff-so-fancy
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -203,7 +197,7 @@ plugins=(
 	z
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-    copyfile
+    #copyfile
     dirhistory
     history
     macos
@@ -211,40 +205,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # functions
 
-snow() {
-	ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
-}
+#snow() {
+#	ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
+#}
 
 # rga-fzf
 rga-fzf() {

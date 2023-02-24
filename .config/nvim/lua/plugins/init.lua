@@ -7,5 +7,5 @@ require 'plugins.markdown'
 -- require 'plugins.tree'
 require 'plugins.coc'
 --require 'plugins.tabout'
-require 'plugins.cmp'
+-- require 'plugins.cmp'
 

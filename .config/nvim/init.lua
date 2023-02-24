@@ -19,7 +19,8 @@ vim.cmd([[
 ]])
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'onenord'
+require('bluloco').setup({ transparent = true, italics = true })
+vim.cmd.colorscheme 'bluloco'
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
 vim.g.mapleader = " "
@@ -44,8 +45,8 @@ set softtabstop=4
 set shiftwidth=4
 set backupdir=~/.vimtmp//,.
 set directory=~/.vimtmp//,.
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
 
 set expandtab
 set autoindent
@@ -116,8 +117,8 @@ nnoremap <M-b> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 " Comment
-nmap <C-/> <LEADER>c<SPACE>
-vmap <C-/> <LEADER>c<SPACE>
+nmap <C-_> <LEADER>c<SPACE>
+vmap <C-_> <LEADER>c<SPACE>
 
 " nnoremap <C-p> :Telescope command_palette<CR>
 nnoremap <C-p> :Telescope commands<CR>
