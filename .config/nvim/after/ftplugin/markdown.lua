@@ -7,3 +7,4 @@ vim.cmd([[
     hi checkbox guifg=red ctermfg=red
 ]])
 
+vim.g.vim_markdown_fenced_languages = {'shell=sh', 'bash=sh'}
