@@ -1,0 +1,212 @@
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{mytex}%[my custom LaTeX article style 2021-09-02]
+
+% Now paste your code from the preamble here
+
+% Use XeLaTeX if you want to use Unicode(UTF-8) and system fonts
+\usepackage{ifxetex}
+\ifxetex
+    % Chinese support
+    \usepackage{xeCJK}
+    %\setCJKmainfont{SimSun}[SizeFeatures={Size=14}]
+\fi
+
+% Use PDFLaTeX if you want faster compling speed and better typography
+\usepackage{ifpdf}
+\ifpdf
+    % Solve overfull and underfull
+    \usepackage{microtype}
+    \emergencystretch=1.5em
+\fi
+   
+% Figure
+\usepackage{graphicx}
+\graphicspath{{figures/}} % Figures are saved in subfolder "figures"
+\usepackage{float}
+\usepackage{caption}
+
+% MATH
+% Theorem-like environments
+\usepackage{amsthm} % proof environment
+\newenvironment{solution}
+{\begin{proof}[Solution]\renewcommand*{\qedsymbol}{\(\blacksquare\)}}
+{\end{proof}}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}[theorem]{Lemma} % Same counter as theorem
+\newtheorem{corollary}{Corollary}[theorem] % Reset counter for every theorem
+\newtheorem{axiom}[theorem]{Axiom} 
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+\newtheorem{practice}{Practice}
+\newtheorem{exercise}{Excercise}
+\newtheorem{problem}{Problem}
+% Math symbols
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb} % Special symbols
+\usepackage{bm} % Aame as \boldsymbol
+\usepackage{bbm} % Extend mathbb
+\usepackage{extarrows}
+\usepackage{mathrsfs} % \mathscr
+\usepackage{dsfont} % \mathds
+\usepackage{stmaryrd}
+
+% Other
+\usepackage{hyperref}
+\usepackage{soul}
+\usepackage{xcolor}
+
+%页面设置
+\usepackage{geometry} % 调整页边距
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\usepackage{fancyhdr}%页眉页脚
+\usepackage{changepage} %adjustwidth
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1}
+\usepackage{ulem}
+
+
+% 常用数学指令
+\def\ep{\varepsilon}
+\def\del{\delta}
+\def\al{\alpha}
+\def\ss{\subset}
+\def\scr{\mathscr}
+\def\es{\varnothing}
+\def\lam{\lambda}
+\def\lil{\lambda \in \Lambda}
+\def\mi{\setminus}
+\def\les{\leqslant}
+\def\ges{\geqslant}
+\def\ga{\gamma}
+\def\gig{\gamma \in \Gamma}
+\def\bu{\bigcup}
+\def\ba{\bigcap}
+\def\bb{\mathbb}
+\def\cal{\mathcal}
+\def\bf{\mathbf}
+\def\ail{\alpha \in \Lambda}
+\def\ring{\mathring}
+\def\qrq{\quad\Rightarrow\quad}
+\def\qlrq{\quad\Leftrightarrow\quad}
+\def\th{\theta}
+\def\ph{\varphi}
+\def\ds{\displaystyle}
+
+\def\bs{\boldsymbol}
+\newcommand{\rnone}{\uppercase\expandafter{\romannumeral 1 }}
+\newcommand{\rntwo}{\uppercase\expandafter{\romannumeral 2 }}
+\newcommand{\rnthree}{\uppercase\expandafter{\romannumeral 3 }}
+\newcommand{\rnfour}{\uppercase\expandafter{\romannumeral 4 }}
+\newcommand{\rnfive}{\uppercase\expandafter{\romannumeral 5 }}
+
+\newcommand{\curl}{\text{\bf curl }}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\To}{\longrightarrow}
+
+\newcommand{\Dcal}{\mathtt{D}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\Zcal}{\mathcal{Z}}
+
+% Calculus
+
+\renewcommand{\d}{\ensuremath{\mathrm{d}}}
+\newcommand{\dt}{ \ensuremath{\mathrm{d} t } }
+\newcommand{\dx}{ \ensuremath{\mathrm{d} x} }
+\newcommand{\dy}{ \ensuremath{\mathrm{d} y } }
+
+% indicator function
+\newcommand{\indf}{ \ensuremath{\mathbf{1} } }
+
+% probability
+
+\newcommand{\p}{ \mathbb{P}}
+\newcommand{\prob}{{\Pr}}
+\newcommand{\PP}{\mbox{PP}}% Poisson process
+
+% condition prob
+
+\newcommand{\cPr}[2]{{\Pr\left(#1\mid #2\right)}}
+
+\newcommand{\FF}{{\mathbb{F}}}
+
+\newcommand{\e}{ \operatorname{\mathbb E}}
+\newcommand{\Var}{\operatorname{\mathbb{V}ar}}
+\newcommand{\Std}{\operatorname{std}}
+\newcommand{\Cov}{\operatorname{cov}}
+
+% Matrix mathbf
+
+\newcommand{\Pb}{{\mathbf{P}}}
+\newcommand{\Qb}{{\mathbf{Q}}}
+\newcommand{\Mb}{{\mathbf{M}}}
+\newcommand{\cb}{\mathbf{c}}
+
+\newcommand{\Db}{{\mathbf{D}}}
+\newcommand{\Tb}{\mathbf{T}}
+
+\newcommand{\Wb}{\mathbf{W}}
+\newcommand{\wb}{\mathbf{w}}
+\newcommand{\Xb}{\mathbf{X}}
+
+\newcommand{\xb}{\mathbf{x}}
+
+\newcommand{\Wtn}{\mathbb{W}}
+\newcommand{\btn}{\mathbf{b}}
+
+
+% identity matrix
+\newcommand{\eye}{{\mathbf{I}}}
+
+\newcommand{\onem}{{\mathbb{1}}}
+\newcommand{\idor}{\mathsf{I}}
+\newcommand{\ii}{\mathbf{i}}
+
+
+% real number
+\newcommand{\R}{{\mathbb{R}}}
+% integer
+\newcommand{\ZZ}{\mathbb{Z}}
+% positive integer
+\newcommand{\NN}{\mathbb{N}}
+
+
+% 常用数学符号
+\newcommand{\inpd}[2]{\left\langle #1, #2 \right\rangle} % inner product
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\wt}[1]{{\widetilde{#1}}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ppar}[2]{  \frac{\partial #1 }{\partial #2}}
+\newcommand{\supp}{\text{supp}}
+
+
+\newcommand{\ie}{{\it{i.e.}}}
+
+\newcommand{\transpose}{\textsf{T}} % or, \intercal
+\newcommand{\diag}{\textsf{diag}}
+\newcommand{\tr}{{\textsf{T}}}
+\newcommand{\rt}{{\textbf{r}}}
+
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+
+
+% Date & Title
+\renewcommand{\today}{\number\year /\number\month /\number\day}
+% \title{TITLE}
+% \author{张宸宇 18300180101}
+\date{}
+
+% Finally, we'll use \endinput to indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
+\endinput

@@ -1,0 +1,56 @@
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{mycode}%[my custom LaTeX article style 2021-09-02]
+
+% Now paste your code from the preamble here
+
+% Algorithm
+\usepackage{algorithm}
+% \usepackage{algorithm2e}
+% \usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+% Codeblock
+% \usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{listings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+% \lstset{
+%     language=python,
+%     showstringspaces=true,
+%     columns=flexible,
+%     basicstyle={\small\ttfamily},
+%     numberstyle=\tiny\color{gray},
+%     keywordstyle=\color{blue},
+%     commentstyle=\color{dkgreen},
+%     stringstyle=\color{mauve},
+%     breaklines=true,
+%     breakatwhitespace=true
+%     tabsize=4
+% }
+
+
+\def\MATLAB\lstset{
+    language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    extendedchars=false,
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    % numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    % emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+    frame=single,    
+}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}

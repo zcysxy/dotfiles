@@ -1,0 +1,30 @@
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{mygraph}%[my custom LaTeX article style 2021-09-02]
+
+% Now paste your code from the preamble here
+
+% Drawing
+\usepackage{tikz} %praphics
+\usepackage{tikz-qtree}
+\usetikzlibrary{shapes,positioning,trees,arrows.meta, patterns}
+\usepackage{pgfplots}
+\usepackage{eso-pic}
+
+% Tables
+\usepackage{paralist} %压缩列表和行间列表
+\usepackage{color}%Excel2LaTeX辅助包
+\usepackage{booktabs}
+\usepackage{multirow}
+% \resizebox{120mm}{100mm}{} 调整表格大小
+\usepackage{array}
+\usepackage{diagbox}
+\usepackage{makecell}
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
