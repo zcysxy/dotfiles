@@ -57,6 +57,8 @@ alias R="R --no-save"
 alias panmd="pandoc -f markdown+tex_math_single_backslash --pdf-engine=xelatex --citeproc -o output.pdf"
 alias xdg-open="open"
 alias q=exit
+alias :q="cowsay 'Fuck you, Im not Vim!'"
+alias :wq="cowsay 'Fuck you, Im not Vim!'"
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }

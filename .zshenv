@@ -1,1 +1,1 @@
-rmd() { Rscript -e "rmarkdown::render('$1')"; }
+rmd() { Rscript -e "knitr::opts_chunk$set(echo = TRUE, fig.align="center"); rmarkdown::render('$1')"; }

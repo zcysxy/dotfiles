@@ -1,0 +1,10 @@
+{
+    "markdownlint.config": {
+        "line-length": false,
+        "single-h1": false,
+        "ul-indent": {
+            "indent": 4
+        },
+        "first-line-h1": false
+    }
+}

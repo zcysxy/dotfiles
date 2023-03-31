@@ -8,6 +8,8 @@ require 'plugins.markdown'
 require 'plugins.coc'
 -- require 'plugins.tabout'
 -- require 'plugins.cmp'
+require 'plugins.treesitter'
+require 'plugins.luasnip'
 
 -- CSV
 vim.g.csv_arrange_align = 'l*'

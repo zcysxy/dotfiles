@@ -1,4 +1,5 @@
 require 'plugins'
+require 'keymap'
 require('lualine').setup({
     options = {
         disabled_filetypes = { 'alpha' }
@@ -17,6 +18,13 @@ vim.cmd([[
       autocmd ColorScheme * highlight NvimTreeCursorLine ctermbg=NONE guibg=NONE
     augroup END
 ]])
+
+-- Enable folds
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = { "*" },
+    command = "normal zx",
+})
+vim.o.foldlevel = 99
 
 vim.opt.termguicolors = true
 require('bluloco').setup({ transparent = true, italics = true })
@@ -47,6 +55,7 @@ set backupdir=~/.vimtmp//,.
 set directory=~/.vimtmp//,.
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
+" set nofoldenable
 
 set expandtab
 set autoindent
@@ -56,7 +65,7 @@ set hlsearch
 
 " MAPPINGS
 inoremap jk <ESC>" quick escape
-inoremap kj <ESC>
+" inoremap kj <ESC>
 nmap j gj
 nmap k gk
 nmap H ^
@@ -66,8 +75,9 @@ nmap L $
 nmap <ENTER> o<ESC>k " new line
 nmap <S-CR> i<CR><ESC>0 " break line
 " Execute code
-nmap <C-CR> :!./%<CR>
-nmap <BS> ddkk " delete line
+nnoremap <C-CR> :!./%<CR>
+nnoremap <Leader><CR> :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <BS> ddkk " delete line
 " inoremap <TAB> <C-n>
 map <leader>n :bnext<cr>
 map <leader>p :bprevious<cr>
@@ -104,8 +114,7 @@ Plug 'https://github.com/preservim/nerdcommenter'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
 Plug 'jupyter-vim/jupyter-vim'
 
 call plug#end()

@@ -1,6 +1,8 @@
 vim.g.maplocalleader = " "
 vim.cmd [[
-    let g:jupytext_fmt = 'py'
+    let g:jupytext_enable = 1
+    let g:jupytext_command = 'jupytext'
+    let g:jupytext_fmt = 'py:percent'
     let g:python3_host_prog = '/opt/homebrew/anaconda3/envs/py3/bin/python'
     let g:jupyter_highlight_cells = 1
     let g:jupyter_cell_separators = ['# %%']

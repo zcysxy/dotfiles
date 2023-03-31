@@ -60,10 +60,33 @@ return packer.startup(function(use)
     }
     use 'airblade/vim-gitgutter'
 
+    use 'chrisbra/csv.vim'
     -- Markdown
     --use 'godlygeek/tabular'
     use 'preservim/vim-markdown'
     --use { 'nvim-tree/nvim-tree.lua' }
+    --use 'daeyun/vim-matlab'
+    use 'WENLIXIAO-CS/vim-matlab'
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        -- tag = "v<CurrentMajor>.*",
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    })
+    use "lervag/vimtex"
+    use {
+      "iurimateus/luasnip-latex-snippets.nvim",
+      branch = 'fix/lazy-loading',
+      -- replace "lervag/vimtex" with "nvim-treesitter/nvim-treesitter" if you're
+      -- using treesitter.
+      --requires = { "L3MON4D3/LuaSnip", "nvim-treesitter/nvim-treesitter" },
+      requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+      config = function()
+        require'luasnip-latex-snippets'.setup({use_treesitter = false})
+      end,
+      -- treesitter is required for markdown
+    }
 
     use { 'neoclide/coc.nvim', branch = 'release' }
     use({ "hrsh7th/nvim-cmp",
@@ -86,7 +109,8 @@ return packer.startup(function(use)
               {open = '`', close = '`'},
               {open = '(', close = ')'},
               {open = '[', close = ']'},
-              {open = '{', close = '}'}
+              {open = '{', close = '}'},
+              {open = '$', close = '$'}
             },
             ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
             exclude = {} -- tabout will ignore these filetypes
