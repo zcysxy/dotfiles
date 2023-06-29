@@ -9,4 +9,5 @@
 [filter "gitignore"]
     clean = "sed '/# gitignore$/d'"
 	clean = "sed '/\\/\\/ gitignore$/d'"
+	clean = "sed '/-- gitignore$/d'"
 	smudge = cat

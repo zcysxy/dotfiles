@@ -28,6 +28,17 @@ return packer.startup(function(use)
     use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
     use { 'uloco/bluloco.nvim',
         requires = { 'rktjmp/lush.nvim' } }
+    use {
+      "svermeulen/text-to-colorscheme.nvim",
+      config = function ()
+          require('text-to-colorscheme').setup {
+              ai = {
+                  gpt_model = "gpt-3.5-turbo",
+              }
+          }
+      end
+
+    }
 
     -- Plugins
 	use "nvim-lua/plenary.nvim"
@@ -89,9 +100,26 @@ return packer.startup(function(use)
     }
 
     use { 'neoclide/coc.nvim', branch = 'release' }
+    use { 'fannheyward/telescope-coc.nvim',
+        config = function ()
+            require("telescope").setup({
+              extensions = {
+                coc = {
+                    --theme = 'ivy',
+                    --prefer_locations = false, -- always use Telescope locations to preview definitions/declarations/implementations etc
+                }
+              },
+            })
+            require('telescope').load_extension('coc')
+        end}
     use({ "hrsh7th/nvim-cmp",
             requires = { "mstanciu552/cmp-matlab" },
 		})
+    use { 'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
     use { 'abecodes/tabout.nvim',
         config = function ()
         require('tabout').setup {
@@ -118,5 +146,10 @@ return packer.startup(function(use)
 	end,
         wants = {'nvim-treesitter'},
         after = {'nvim-cmp'}, }
+    use { 'ggandor/leap.nvim',
+          config = function ()
+              require('leap').add_default_mappings()
+          end
+        }
 end)
 

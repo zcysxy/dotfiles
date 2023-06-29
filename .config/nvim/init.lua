@@ -3,6 +3,9 @@ require 'keymap'
 require('lualine').setup({
     options = {
         disabled_filetypes = { 'alpha' }
+    },
+    sections = {
+        lualine_c = {{'filename', path = 1 }}
     }
 })
 
@@ -18,6 +21,49 @@ vim.cmd([[
       autocmd ColorScheme * highlight NvimTreeCursorLine ctermbg=NONE guibg=NONE
     augroup END
 ]])
+vim.cmd.colorscheme 'bluloco'
+-- vim.o.background = "dark"
+require('text-to-colorscheme').setup {
+  ai = {
+      gpt_model = "gpt-3.5-turbo",
+  },
+  hex_palettes = {
+     {
+        name = "Obsidian",
+        background_mode = "dark",
+        background = "#1c1e26",
+        foreground = "#c0caf5",
+        accents = {
+           "#f7768e",
+           "#86af5a",
+           "#e0af68",
+           "#78dce8",
+           "#ab9df2",
+           "#7dcfff",
+           "#ff5370",
+        }
+     },
+     {
+        name = "ocean sunset",
+        background_mode = "dark",
+        background = "#1c2331",
+        foreground = "#d8dde8",
+        accents = {
+           "#f7768e",
+           "#f7c46c",
+           "#6cbaac",
+           "#b2b2b2",
+           "#f5a5fc",
+           "#8be9fd",
+           "#ff6e6e",
+        }
+     }
+  },
+  default_palette = "Obsidian",
+}
+-- vim.cmd([[colorscheme text-to-colorscheme]])
+vim.api.nvim_set_hl(0, "TelescopeNormal", {ctermbg="darkblue", bg="NONE"})
+vim.api.nvim_set_hl(0, "TelescopeBorder", {ctermbg="darkblue", bg="NONE"})
 
 -- Enable folds
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -28,7 +74,6 @@ vim.o.foldlevel = 99
 
 vim.opt.termguicolors = true
 require('bluloco').setup({ transparent = true, italics = true })
-vim.cmd.colorscheme 'bluloco'
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
 vim.g.mapleader = " "
@@ -62,6 +107,7 @@ set autoindent
 set smarttab
 highlight Visual term=reverse cterm=reverse guibg=Grey " ctermbg=NONE
 set hlsearch
+set statusline+=%F
 
 " MAPPINGS
 inoremap jk <ESC>" quick escape
@@ -110,7 +156,7 @@ call plug#begin()
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/neovim/nvim-lspconfig'
-Plug 'https://github.com/preservim/nerdcommenter'
+" Plug 'https://github.com/preservim/nerdcommenter'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -126,12 +172,13 @@ nnoremap <M-b> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 " Comment
-nmap <C-_> <LEADER>c<SPACE>
-vmap <C-_> <LEADER>c<SPACE>
+nmap <C-_> gcc
+vmap <C-_> gc
 
 " nnoremap <C-p> :Telescope command_palette<CR>
 nnoremap <C-p> :Telescope commands<CR>
 nnoremap <Leader>o :Telescope find_files<CR>
+nnoremap <Leader>r :Rg<CR>
 " nnoremap <A-p> :Commands<CR>
 
 " GitGutter

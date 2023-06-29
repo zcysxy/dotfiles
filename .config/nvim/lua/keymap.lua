@@ -9,6 +9,10 @@ end
 map("n", "zz", "za", { silent = true, noremap = true })
 map("t", "<ESC>", "<C-\\><C-n>", { silent = true, noremap = true })
 
+-- Telescope-coc
+map("n", "<M-c>", ":Telescope coc<CR>", { silent = true, noremap = true })
+vim.g.AutoPairsShortcutToggle = ''
+
 -- Visual multi
 vim.g.VM_maps = {}
 vim.g.VM_maps = {

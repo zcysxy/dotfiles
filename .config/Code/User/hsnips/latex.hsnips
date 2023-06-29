@@ -95,6 +95,10 @@ snippet `(\\?[a-zA-Z]\w*({?\w*})?)(htd|TD)` "tilde" iAm
 \tilde{``rv = m[1]``}
 endsnippet
 
+snippet `(\\?[a-zA-Z]\w*({?\w*})?)~` "tilde" iAm
+\tilde{``rv = m[1]``}
+endsnippet
+
 snippet `(\\?[a-zA-Z]\w*({?\w*})?)bar` "bar" iAm
 \bar{``rv = m[1]``}
 endsnippet
