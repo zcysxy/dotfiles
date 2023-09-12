@@ -83,6 +83,11 @@ return packer.startup(function(use)
         -- follow latest release.
         -- tag = "v<CurrentMajor>.*",
         -- install jsregexp (optional!:).
+        version = "2.*",
+        config = function ()
+            local ls = require 'luasnip';
+            ls.setup({ enable_autosnippets = true })
+        end,
         run = "make install_jsregexp"
     })
     use "lervag/vimtex"

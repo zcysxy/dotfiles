@@ -39,7 +39,7 @@ alias weather="curl http://wttr.in/"
 alias figletc="figlet -c -w \$(tput cols)"
 alias hello="say -v Fred hi\!"
 alias c=clear
-alias re="clear && neofetch"
+alias re="(git rev-parse --is-inside-work-tree && onefetch)||(clear && neofetch)"
 alias cat="bat --theme ansi"
 alias sed=gsed
 alias e=$EDITOR
@@ -77,6 +77,7 @@ LFCD="/etc/lf/lfcd.sh"
 if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
+alias f=lfcd
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -92,6 +93,7 @@ export PATH="\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
 /opt/homebrew/anaconda3/bin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
+/Users/ce/.scripts:\
 $PATH"  
 
 # autosuggestions
@@ -204,8 +206,17 @@ plugins=(
     history
     macos
 )
+# zgen pkm
+source ${HOME}/.zgen/zgen.zsh
+# if the init script doesn't exist
+if ! zgen saved; then
 
-source $ZSH/oh-my-zsh.sh
+  # specify plugins here
+  zgen load urbainvaes/fzf-marks
+
+  # generate the init script from plugins above
+  zgen save
+fi
 
 # Compilation flags
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
