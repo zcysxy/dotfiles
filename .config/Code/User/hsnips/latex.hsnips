@@ -99,6 +99,11 @@ snippet `(\\?[a-zA-Z]\w*({?\w*})?)~` "tilde" iAm
 \tilde{``rv = m[1]``}
 endsnippet
 
+priority 10000
+snippet `(\\tilde{(\w*)}~)` "widetilde" iAm
+\widetilde{``rv = m[2]``}
+endsnippet
+
 snippet `(\\?[a-zA-Z]\w*({?\w*})?)bar` "bar" iAm
 \bar{``rv = m[1]``}
 endsnippet
@@ -554,6 +559,11 @@ snippet `(?<=\b|\d+)(?<!\\)(bot|top|dagger)` "logic symbols" iAm
 \\``rv = m[1]``
 endsnippet
 
+priority 200
+snippet `\+\|` "dagger" iAm
+\\dagger
+endsnippet
+
 snippet -> "to" iAm
 \to 
 endsnippet
@@ -668,9 +678,9 @@ $${1}$$0
 endsnippet
 
 snippet dm "display Math" wA
-$$
-${1}
-$$$0
+\\[
+  ${1}
+.\\]$0
 endsnippet
 
 snippet eqt "equation" wA

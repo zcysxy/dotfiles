@@ -22,7 +22,7 @@ nmap H ^
 nmap L $
 "nmap J <C-D>
 "nmap K <C-U>
-nmap <ENTER> o<ESC>k " new line
+" nmap <ENTER> o<ESC>k " new line
 nmap <S-CR> i<CR><ESC>0 " break line
 " Execute code
 nmap <C-CR> :!./%<CR>
@@ -70,7 +70,7 @@ set updatetime=200
 let g:gitgutter_async=0
 let g:gitgutter_override_sign_column_highlight = 0
 highlight clear SignColumn
-highlight SignColumn ctermbg=NONE
+highlight SignColumn ctermbg=NONE gui=NONE
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1

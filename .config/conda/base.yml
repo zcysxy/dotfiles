@@ -508,6 +508,7 @@ dependencies:
   - pip:
       - albumentations==1.3.0
       - bibtexparser==1.4.0
+      - canvassync==0.2.4
       - chardet==5.1.0
       - contourpy==1.0.7
       - einops==0.6.1
@@ -524,6 +525,8 @@ dependencies:
       - opencv-python-headless==4.7.0.72
       - pdf-tocgen==1.3.3
       - prompt-toolkit==3.0.38
+      - py-bcrypt==0.4
+      - pycryptodome==3.18.0
       - pymupdf==1.22.3
       - pynput==1.7.6
       - pyobjc-core==9.1.1

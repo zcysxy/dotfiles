@@ -13,7 +13,6 @@ export LANG=en_US.UTF-8
 #export LANG=C
 #export w=$HOME/Workbench
 export t=$HOME/0-TMP/temp
-export o=$HOME/OneDrive1/$(ls $HOME/OneDrive1/)
 export m=$HOME/0-MI
 export k=$HOME/3-KNWL
 export dl=$HOME/Downloads
@@ -64,10 +63,10 @@ alias :wq="cowsay 'Fuck you, Im not Vim!'"
 mvf() { mv "$@" && goto "$_"; }
 cpf() { mv "$@" && goto "$_"; }
 goto() { [ -d "$1" ]  && cd "$1" || cd "$(dirname "$1")"; }
-diff () {
+dif () {
     /usr/bin/diff -u $1 $2 | diff-so-fancy
 }
-diffr () {
+difr () {
     /usr/bin/diff -rq $1 $2 | diff-so-fancy
 }
 
@@ -206,21 +205,25 @@ plugins=(
     history
     macos
 )
+source $ZSH/oh-my-zsh.sh
+
+# Compilation flags
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # zgen pkm
 source ${HOME}/.zgen/zgen.zsh
 # if the init script doesn't exist
 if ! zgen saved; then
 
   # specify plugins here
+  zgen oh-my-zsh
   zgen load urbainvaes/fzf-marks
 
   # generate the init script from plugins above
   zgen save
 fi
 
-# Compilation flags
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # functions
 rmd() { Rscript -e "rmarkdown::render('$1')"; }

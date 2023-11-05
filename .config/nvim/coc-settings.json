@@ -6,5 +6,7 @@
             "indent": 4
         },
         "first-line-h1": false
-    }
+    },
+  "list.normalMappings": {
+  },
 }

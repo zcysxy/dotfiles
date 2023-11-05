@@ -8,7 +8,7 @@ vim.opt.updatetime = 300
 
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appeared/became resolved
-vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes"
 
 local keyset = vim.keymap.set
 -- Autocomplete
@@ -16,6 +16,11 @@ function _G.check_back_space()
     local col = vim.fn.col('.') - 1
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
+
+vim.cmd([[
+    nnoremap <SPACE> <Nop>
+    let mapleader = " "
+]])
 
 -- Use Tab for trigger completion with characters ahead and navigate
 -- NOTE: There's always a completion item selected by default, you may want to enable
@@ -45,9 +50,9 @@ keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
 keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
+keyset("n", "<Leader><CR>", ":call CocActionAsync('jumpDefinition')<CR>", {silent = true})
 
-
--- Use K to show documentation in preview window
+-- Use K to show documentation in preview windowinit
 function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
     if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
@@ -68,7 +73,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
     command = "silent call CocActionAsync('highlight')",
     desc = "Highlight symbol under cursor on CursorHold"
 })
-
 
 -- Symbol renaming
 keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
@@ -184,3 +188,5 @@ local opts = {silent = true, nowait = true}
 -- keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- -- Resume latest coc list
 -- keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+
+keyset("n", "gL", "<cmd>call coc#rpc#request('fillDiagnostics', [bufnr('%')])<CR><cmd>Trouble loclist<CR>`", {silent=true})

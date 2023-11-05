@@ -1,12 +1,13 @@
+local vim = vim
 require 'plugins'
 require 'keymap'
 require('lualine').setup({
-    options = {
-        disabled_filetypes = { 'alpha' }
-    },
-    sections = {
-        lualine_c = {{'filename', path = 1 }}
-    }
+  options = {
+    disabled_filetypes = { 'alpha' }
+  },
+  sections = {
+    lualine_c = { { 'filename', path = 1 } }
+  }
 })
 
 vim.cmd([[
@@ -16,64 +17,92 @@ vim.cmd([[
       autocmd ColorScheme * highlight NormalNC ctermbg=NONE guibg=NONE
       autocmd ColorScheme * highlight NormalSB ctermbg=NONE guibg=NONE
       autocmd ColorScheme * highlight TelescopeNormal ctermbg=NONE guibg=NONE
+      autocmd ColorScheme * highlight TelescopeBorder ctermbg=NONE guibg=NONE
       autocmd ColorScheme * highlight Conceal ctermbg=NONE guibg=NONE
       autocmd ColorScheme * highlight NvimTreeNormal ctermbg=NONE guibg=NONE
       autocmd ColorScheme * highlight NvimTreeCursorLine ctermbg=NONE guibg=NONE
     augroup END
 ]])
-vim.cmd.colorscheme 'bluloco'
--- vim.o.background = "dark"
+
+vim.opt.termguicolors = true
+require('bluloco').setup({ transparent = true, italics = true })
+-- Set different colorscheme for different backgrounds
+-- require('dark_notify').run()
+vim.schedule(function ()
+  if vim.o.background == 'dark' then
+    vim.cmd([[colorscheme gruvbox-material]])
+  else
+    vim.cmd([[colorscheme bluloco]])
+  end
+end
+)
+
 require('text-to-colorscheme').setup {
   ai = {
-      gpt_model = "gpt-3.5-turbo",
+    gpt_model = "gpt-4",
   },
   hex_palettes = {
-     {
-        name = "Obsidian",
-        background_mode = "dark",
-        background = "#1c1e26",
-        foreground = "#c0caf5",
-        accents = {
-           "#f7768e",
-           "#86af5a",
-           "#e0af68",
-           "#78dce8",
-           "#ab9df2",
-           "#7dcfff",
-           "#ff5370",
-        }
-     },
-     {
-        name = "ocean sunset",
-        background_mode = "dark",
-        background = "#1c2331",
-        foreground = "#d8dde8",
-        accents = {
-           "#f7768e",
-           "#f7c46c",
-           "#6cbaac",
-           "#b2b2b2",
-           "#f5a5fc",
-           "#8be9fd",
-           "#ff6e6e",
-        }
-     }
+    {
+      name = "mean field game",
+      background_mode = "dark",
+      background = "#1a1a1a",
+      foreground = "#f2f2f2",
+      accents = {
+        "#ff6b6b",
+        "#ffd166",
+        "#05b688",
+        "#118ab2",
+        "#0c6380",
+        "#ef476f",
+        "#ffd166",
+      }
+    },
+    {
+      name = "Obsidian",
+      background_mode = "dark",
+      background = "#1c1e26",
+      foreground = "#c0caf5",
+      accents = {
+        "#f7768e",
+        "#86af5a",
+        "#e0af68",
+        "#78dce8",
+        "#ab9df2",
+        "#7dcfff",
+        "#ff5370",
+      }
+    },
+    {
+      name = "ocean sunset",
+      background_mode = "dark",
+      background = "#1c2331",
+      foreground = "#d8dde8",
+      accents = {
+        "#f7768e",
+        "#f7c46c",
+        "#6cbaac",
+        "#b2b2b2",
+        "#f5a5fc",
+        "#8be9fd",
+        "#ff6e6e",
+      }
+    }
   },
   default_palette = "Obsidian",
 }
 -- vim.cmd([[colorscheme text-to-colorscheme]])
-vim.api.nvim_set_hl(0, "TelescopeNormal", {ctermbg="darkblue", bg="NONE"})
-vim.api.nvim_set_hl(0, "TelescopeBorder", {ctermbg="darkblue", bg="NONE"})
+vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "darkblue", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { ctermbg = "darkblue", bg = "NONE" })
 
 -- Enable folds
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    pattern = { "*" },
-    command = "normal zx",
+  pattern = { "*" },
+  command = "normal zx",
 })
 vim.o.foldlevel = 99
-
-vim.opt.termguicolors = true
-require('bluloco').setup({ transparent = true, italics = true })
+-- Use treesitter for folding
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
 vim.g.mapleader = " "
@@ -118,16 +147,17 @@ nmap H ^
 nmap L $
 "nmap J <C-D>
 "nmap K <C-U>
-nmap <ENTER> o<ESC>k " new line
+" nmap <ENTER> o<ESC>k " new line
 nmap <S-CR> i<CR><ESC>0 " break line
 " Execute code
 nnoremap <C-CR> :!./%<CR>
-nnoremap <Leader><CR> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <BS> ddkk " delete line
 " inoremap <TAB> <C-n>
 map <leader>n :bnext<cr>
 map <leader>p :bprevious<cr>
-map <leader>d :bdelete<cr>
+" map <leader>d :bdelete<cr>
+map <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
+>
 
 " Move lines up/down
 nnoremap <C-j> :m .+1<CR>==
@@ -177,8 +207,10 @@ vmap <C-_> gc
 
 " nnoremap <C-p> :Telescope command_palette<CR>
 nnoremap <C-p> :Telescope commands<CR>
+nnoremap <leader>t :Telescope<CR>
 nnoremap <Leader>o :Telescope find_files<CR>
-nnoremap <Leader>r :Rg<CR>
+" nnoremap <Leader>r :Rg<CR>
+nnoremap <Leader>r :Telescope live_grep<CR>
 " nnoremap <A-p> :Commands<CR>
 
 " GitGutter
@@ -187,10 +219,10 @@ let g:gitgutter_async=0
 let g:gitgutter_override_sign_column_highlight = 0
 highlight clear SignColumn
 highlight SignColumn ctermbg=NONE
-highlight GitGutterAdd ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-highlight GitGutterChangeDelete ctermfg=4
+highlight GitGutterAdd ctermfg=2 ctermbg=NONE guibg=NONE
+highlight GitGutterChange ctermfg=3 ctermbg=NONE guibg=NONE
+highlight GitGutterDelete ctermfg=1 ctermbg=NONE guibg=NONE
+highlight GitGutterChangeDelete ctermfg=4 ctermbg=NONE guibg=NONE
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -225,3 +257,4 @@ if has('syntax') && has('eval')
 endif
 ]])
 
+vim.cmd([[set exrc secure]])

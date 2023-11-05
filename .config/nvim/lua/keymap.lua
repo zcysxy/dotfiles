@@ -29,3 +29,12 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+
+-- GitGutter
+map("n", "<C-g>r", ":GitGutterUndoHunk<CR>", { silent = true, noremap = true })
+map("n", "<C-g>s", ":GitGutterStageHunk<CR>", { silent = true, noremap = true })
+
+-- SnipRun
+map('v', 'f', '<Plug>SnipRun', {silent = true})
+map('n', '<leader>f', '<Plug>SnipRunOperator', {silent = true})
+map('n', '<leader>ff', '<Plug>SnipRun', {silent = true})
