@@ -1,4 +1,5 @@
 local vim = vim
+require '_lazy'
 require 'plugins'
 require 'keymap'
 require('lualine').setup({
@@ -157,7 +158,6 @@ map <leader>n :bnext<cr>
 map <leader>p :bprevious<cr>
 " map <leader>d :bdelete<cr>
 map <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
->
 
 " Move lines up/down
 nnoremap <C-j> :m .+1<CR>==
@@ -176,24 +176,6 @@ set path+=**
 set wildmenu
 set wildmode=longest:full,full
 
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
-call plug#begin()
-
-" Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'https://github.com/preservim/tagbar'
-Plug 'https://github.com/neovim/nvim-lspconfig'
-" Plug 'https://github.com/preservim/nerdcommenter'
-Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/jiangmiao/auto-pairs'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-" Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
-Plug 'jupyter-vim/jupyter-vim'
-
-call plug#end()
 
 " NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -201,17 +183,9 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <M-b> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
-" Comment
+" " Comment
 nmap <C-_> gcc
 vmap <C-_> gc
-
-" nnoremap <C-p> :Telescope command_palette<CR>
-nnoremap <C-p> :Telescope commands<CR>
-nnoremap <leader>t :Telescope<CR>
-nnoremap <Leader>o :Telescope find_files<CR>
-" nnoremap <Leader>r :Rg<CR>
-nnoremap <Leader>r :Telescope live_grep<CR>
-" nnoremap <A-p> :Commands<CR>
 
 " GitGutter
 set updatetime=200
@@ -247,7 +221,7 @@ augroup vimrcEx
 augroup END
 
 " Add optional packages.
-"
+
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
 " The ! means the package won't be loaded right away but when plugins are

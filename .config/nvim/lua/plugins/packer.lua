@@ -44,18 +44,8 @@ return packer.startup(function(use)
 
   -- Plugins
   -- Search and Telescope
-  use { 'fannheyward/telescope-coc.nvim',
-    config = function()
-      require("telescope").setup({
-        extensions = {
-          coc = {
-            --theme = 'ivy',
-            --prefer_locations = false, -- always use Telescope locations to preview definitions/declarations/implementations etc
-          }
-        },
-      })
-      require('telescope').load_extension('coc')
-    end }
+  use 'fannheyward/telescope-coc.nvim'
+  use 'catgoose/telescope-helpgrep.nvim'
   use({
     "hrsh7th/nvim-cmp",
     requires = { "mstanciu552/cmp-matlab" },
