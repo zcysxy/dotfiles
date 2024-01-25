@@ -1,16 +1,32 @@
 local vim = vim
-require '_lazy'
+
+-- Pre
+vim.g['pandoc#filetypes#pandoc_markdown'] = 0
+
+-- Lazy
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",     -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
+--vim.cmd [[let maplocalleader="<space>"]]
+vim.g.maplocalleader = " "
+vim.g.mapleader = " "
+require('lazy').setup('lazies')
+
 require 'plugins'
 require 'keymap'
-require('lualine').setup({
-  options = {
-    disabled_filetypes = { 'alpha' }
-  },
-  sections = {
-    lualine_c = { { 'filename', path = 1 } }
-  }
-})
+require 'utils'
 
+-- Appearance
 vim.cmd([[
     augroup user_colors
       autocmd!
@@ -29,7 +45,7 @@ vim.opt.termguicolors = true
 require('bluloco').setup({ transparent = true, italics = true })
 -- Set different colorscheme for different backgrounds
 -- require('dark_notify').run()
-vim.schedule(function ()
+vim.schedule(function()
   if vim.o.background == 'dark' then
     vim.cmd([[colorscheme gruvbox-material]])
   else
@@ -38,62 +54,10 @@ vim.schedule(function ()
 end
 )
 
-require('text-to-colorscheme').setup {
-  ai = {
-    gpt_model = "gpt-4",
-  },
-  hex_palettes = {
-    {
-      name = "mean field game",
-      background_mode = "dark",
-      background = "#1a1a1a",
-      foreground = "#f2f2f2",
-      accents = {
-        "#ff6b6b",
-        "#ffd166",
-        "#05b688",
-        "#118ab2",
-        "#0c6380",
-        "#ef476f",
-        "#ffd166",
-      }
-    },
-    {
-      name = "Obsidian",
-      background_mode = "dark",
-      background = "#1c1e26",
-      foreground = "#c0caf5",
-      accents = {
-        "#f7768e",
-        "#86af5a",
-        "#e0af68",
-        "#78dce8",
-        "#ab9df2",
-        "#7dcfff",
-        "#ff5370",
-      }
-    },
-    {
-      name = "ocean sunset",
-      background_mode = "dark",
-      background = "#1c2331",
-      foreground = "#d8dde8",
-      accents = {
-        "#f7768e",
-        "#f7c46c",
-        "#6cbaac",
-        "#b2b2b2",
-        "#f5a5fc",
-        "#8be9fd",
-        "#ff6e6e",
-      }
-    }
-  },
-  default_palette = "Obsidian",
-}
--- vim.cmd([[colorscheme text-to-colorscheme]])
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "darkblue", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { ctermbg = "darkblue", bg = "NONE" })
+vim.cmd('highlight Visual term=reverse cterm=reverse guibg=Grey')
+-- vim.api.nvim_set_hl(0, "Visual", { term = "reverse", cterm = "reverse", guibg = "Grey" })
 
 -- Enable folds
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -102,43 +66,45 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 })
 vim.o.foldlevel = 99
 -- Use treesitter for folding
-vim.wo.foldmethod = "expr"
-vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.wo.foldmethod = "expr"
+-- vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
-vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
---vim.cmd [[let maplocalleader="<space>"]]
-
-vim.o.conceallevel = 2
+-- General
+-- vim.o.conceallevel = 2
 vim.o.timeoutlen = 500
 
 vim.o.splitbelow = 1
 vim.o.splitright = 1
 
+vim.cmd('syntax on')
+vim.cmd('filetype plugin indent on')
+vim.o.number = true
+vim.o.mouse = 'a'
+vim.bo.tabstop = 4
+vim.bo.softtabstop = 4
+vim.bo.shiftwidth = 4
+vim.o.backupdir = '~/.vimtmp//,.'
+vim.o.directory = '~/.vimtmp//,.'
+vim.o.expandtab = true
+vim.o.autoindent = true
+vim.o.smarttab = true
+vim.o.hlsearch = true
+vim.o.statusline = vim.o.statusline .. '%F'
+vim.o.grepprg = "rg --vimgrep --no-heading --smart-case -g '!*~'"
+
+vim.g.python3_host_prog = '/Users/ce/opt/anaconda3/bin/python'
+
+-- Terminal
+vim.env.ZDOTDIR = "/Users/ce/.zsh/simp"
+vim.api.nvim_set_keymap('n', '<Leader>T', ':sp term://zsh<CR>i', {noremap = true})
+
+-- Fuzzy Find
+vim.o.path = vim.o.path .. "**"
+vim.o.wildmenu = true
+vim.o.wildmode = "longest:full,full"
+
 -- PREVIOUS INIT.VIM
 vim.cmd([[
-" Basic
-syntax on
-filetype plugin indent on
-set number
-set mouse=a
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set backupdir=~/.vimtmp//,.
-set directory=~/.vimtmp//,.
-" set foldmethod=expr
-" set foldexpr=nvim_treesitter#foldexpr()
-" set nofoldenable
-
-set expandtab
-set autoindent
-set smarttab
-highlight Visual term=reverse cterm=reverse guibg=Grey " ctermbg=NONE
-set hlsearch
-set statusline+=%F
-
 " MAPPINGS
 inoremap jk <ESC>" quick escape
 " inoremap kj <ESC>
@@ -151,7 +117,7 @@ nmap L $
 " nmap <ENTER> o<ESC>k " new line
 nmap <S-CR> i<CR><ESC>0 " break line
 " Execute code
-nnoremap <C-CR> :!./%<CR>
+nnoremap <C-CR> :r!./%<CR>
 nnoremap <BS> ddkk " delete line
 " inoremap <TAB> <C-n>
 map <leader>n :bnext<cr>
@@ -166,16 +132,6 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-
-" Terminal
-let $ZDOTDIR="/Users/ce/.zsh/simp"
-nnoremap <Leader>T :sp term://zsh<CR>i
-
-" Fuzzy Find
-set path+=**
-set wildmenu
-set wildmode=longest:full,full
-
 
 " NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -206,6 +162,8 @@ else
     set undofile	" keep an undo file (undo changes after closing)
   endif
 endif
+set nowritebackup
+set nobackup
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -232,3 +190,5 @@ endif
 ]])
 
 vim.cmd([[set exrc secure]])
+
+-- 

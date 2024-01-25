@@ -11,3 +11,7 @@
 	clean = "sed '/\\/\\/ gitignore$/d'"
 	clean = "sed '/-- gitignore$/d'"
 	smudge = cat
+[https]
+	proxy = 127.0.0.1:7890
+[http]
+	proxy = 127.0.0.1:7890

@@ -3,7 +3,11 @@ alt + cmd - t: open -a /Applications/iTerm.app/Contents/MacOS/iTerm2
 # cmd - e: open ~
 
 # pin window to always on top
-alt + cmd - z: yabai -m window --toggle topmost
+# topmost < alt + cmd - z: yabai -m window --layer above; yabai -m window --layer normal;
+alt + cmd - z: yabai -m window --layer above
+shift + alt - z: yabai -m window --layer normal
+# topmost < alt + cmd - z: skhd -k "escape";\
+#                          yabai -m window --layer above
 
 # Opacity
 # alt + cmd - o: yabai -m window --opacity 1.0 || yabai -m window --opacity 1.0

@@ -19,6 +19,8 @@ vim.g.VM_maps = {
     ['Find Under'] = '<C-d>',
     ['Find Subword Under']= '<C-d>'
 }
+vim.g.VM_maps['Find Under'] = '<C-d>'
+vim.g.VM_maps['Find Subword Under'] = '<C-d>'
 
 vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
 vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})

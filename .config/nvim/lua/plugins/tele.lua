@@ -17,7 +17,9 @@ map('n', '<leader>t', function()
 end)
 map('n', '<C-p>', ':Telescope commands<CR>')
 map('n', '<leader>o', ':Telescope find_files<CR>')
+map('n', '<leader>b', ':Telescope buffers<CR>')
 -- nnoremap <Leader>r :Rg<CR>
 map('n', '<leader>r', ':Telescope live_grep<CR>')
+map('n', '<leader>s', ':Telescope live_grep<CR>')
 -- nnoremap <A-p> :Commands<CR>
 

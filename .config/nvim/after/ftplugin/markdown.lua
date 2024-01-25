@@ -78,3 +78,8 @@ vim.cmd([[
 
 vim.g.vim_markdown_fenced_languages = {'shell=sh', 'bash=sh'}
 -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+
+vim.keymap.set({ 'n' },'<leader>ll', function() require("knap").toggle_autopreviewing() end)
+
+vim.wo.conceallevel = 1
+vim.o.conceallevel = 1

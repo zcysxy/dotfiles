@@ -207,20 +207,24 @@ snippet := "def" iA
 endsnippet
 
 priority 1000
+context "math()"
 snippet ~== "equals" iA
 \cong
 endsnippet
 
 priority 1000
+context "math()"
 snippet === "equals" iA
 \equiv
 endsnippet
 
 priority 100
+context "math()"
 snippet == "equals" iA
 &= $1 \\\\
 endsnippet
 
+context "math()"
 snippet != "equals" iA
 \neq 
 endsnippet
@@ -360,6 +364,7 @@ snippet sr "square root" iA
 \sqrt{$1}$0
 endsnippet
 
+context "math()"
 snippet td "subscript" iA
 _{$1}$0
 endsnippet
@@ -562,7 +567,7 @@ snippet << "<<" iA
 \ll
 endsnippet
 
-
+context "math()"
 snippet ~~ "~" iA
 \sim 
 endsnippet

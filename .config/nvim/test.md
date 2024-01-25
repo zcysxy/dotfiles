@@ -5,18 +5,18 @@ output:
       - -otest.pdf
 ---
 
-# hello
+#  world random this 
 
-## hello world
+##  world
 
 ```
 a = 1;
 
-function hello (x)
+function  (x)
     print(x)
 end
 
-b = a * hello(1);
+b = a * (1);
 ```
 
 ## sdlkfj
