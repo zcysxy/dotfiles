@@ -1,0 +1,56 @@
+
+require('text-to-colorscheme').setup {
+  ai = {
+    openai_api_key = "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", -- gitignore
+    gpt_model = "gpt-4",
+  },
+  hex_palettes = {
+    {
+      name = "mean field game",
+      background_mode = "dark",
+      background = "#1a1a1a",
+      foreground = "#f2f2f2",
+      accents = {
+        "#ff6b6b",
+        "#ffd166",
+        "#05b688",
+        "#118ab2",
+        "#0c6380",
+        "#ef476f",
+        "#ffd166",
+      }
+    },
+    {
+      name = "Obsidian",
+      background_mode = "dark",
+      background = "#1c1e26",
+      foreground = "#c0caf5",
+      accents = {
+        "#f7768e",
+        "#86af5a",
+        "#e0af68",
+        "#78dce8",
+        "#ab9df2",
+        "#7dcfff",
+        "#ff5370",
+      }
+    },
+    {
+      name = "ocean sunset",
+      background_mode = "dark",
+      background = "#1c2331",
+      foreground = "#d8dde8",
+      accents = {
+        "#f7768e",
+        "#f7c46c",
+        "#6cbaac",
+        "#b2b2b2",
+        "#f5a5fc",
+        "#8be9fd",
+        "#ff6e6e",
+      }
+    }
+  },
+  default_palette = "Obsidian",
+}
+-- vim.cmd([[colorscheme text-to-colorscheme]])

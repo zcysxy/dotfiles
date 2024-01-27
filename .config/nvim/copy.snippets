@@ -1,0 +1,64 @@
+snippet table "Table environment" b
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+	\begin{tabular}{${5:c}}
+	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+	\end{tabular}
+\end{table}
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${1:htpb}]
+	\centering
+	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	\caption{${4:$3}}
+	\label{fig:${5:${3/\W+/-/g}}}
+\end{figure}
+endsnippet
+
+snippet pac "Package" b
+\usepackage[${1:options}]{${2:package}}$0
+endsnippet
+
+
+# Text decorations
+context "not math()"
+snippet ** "emph" iA
+\emph{${1:${VISUAL}}}$0
+endsnippet
+
+
+snippet @@ "\cite" iA
+\cite{$1}$0
+endsnippet
+
+context "not math()"
+snippet @@ "\cite" iA
+\cite{$1}$0
+endsnippet
+
+context "not math()"
+snippet @t "\citet" iA
+\citet{$1}$0
+endsnippet
+
+context "not math()"
+snippet @p "\citep" iA
+\cite
+p{$1}$0
+endsnippet
+ 
+# Text snippets
+
+context "not math()"
+snippet " te " "there exists" riA
+ there exists $0 
+endsnippet
+
+context "not math()"
+snippet " st " "such that" riA
+ such that $0 
+endsnippet
+

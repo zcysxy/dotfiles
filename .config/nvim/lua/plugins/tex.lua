@@ -5,7 +5,7 @@ vim.cmd([[
     let g:vimtex_view_skim_activate = 1
     let g:vimtex_fold_enable = 1
 
-    let g:UltiSnipsExpandTrigger = "<TAB>"
-    let g:UltiSnipsJumpForwardTrigger = "<TAB>"
-    let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+    " let g:UltiSnipsExpandTrigger = "<TAB>"
+    " let g:UltiSnipsJumpForwardTrigger = "<TAB>"
+    " let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
 ]])
