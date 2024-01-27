@@ -24,6 +24,7 @@ require('lazy').setup('lazies')
 
 require 'plugins'
 require 'keymap'
+require 'autocommands'
 require 'utils'
 
 -- Appearance
@@ -135,9 +136,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <M-b> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <M-l> :NERDTreeToggle<CR>
+" nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 " " Comment
 nmap <C-_> gcc

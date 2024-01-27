@@ -121,10 +121,25 @@ ${1:${VISUAL}}
 .\] $0
 endsnippet
 
+context "not math()"
 snippet ali "Align" bA
-\begin{align*}
+\begin{align}
 	${1:${VISUAL}}
-.\end{align*}
+.\end{align}
+endsnippet
+
+context "not math()"
+snippet eqn "equation" bA
+\begin{equation}
+	${1:${VISUAL}}
+.\end{equation}
+endsnippet
+
+context "math()"
+snippet ali "Align" bA
+\begin{aligned}
+	${1:${VISUAL}}
+.\end{aligned}
 endsnippet
 
 
@@ -849,7 +864,7 @@ snippet dag "dagger" iA
 endsnippet
 
 context "math()"
-snippet '(max|sup)' "operator" irA
+snippet '(?<!\\)(max|sup)' "operator" irA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 

@@ -21,3 +21,6 @@ vim.o.foldtext = "vimtex#fold#text()"
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "vimtex#fold#level(v:lnum)"
 vim.wo.foldtext = "vimtex#fold#text()"
+
+vim.o.conceallevel = 2
+vim.o.shiftwidth = 2
