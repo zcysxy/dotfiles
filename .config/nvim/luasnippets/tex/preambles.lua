@@ -11,39 +11,32 @@ local begins_line = function()
     return #cur_line == #string.match(cur_line, "%s*[^%s]+")
 end
 
+local ls = require("luasnip")
+local ps = ls.extend_decorator.apply(ls.parser.parse_snippet)
+
 return {
+    ps({ trig = "pac", name = "package", snippetType = "snippet" }, "\\usepackage{${1}}$0"),
     -- LaTeX: Assignment preamble
     s(
-        "setup",
+        { trig = "article", name = "article template", snippetType = "snippet"},
         fmt(
             [[
             \documentclass{{article}}
-            \input{{../../Preamble}}
+            \usepackage{{mytex}}
 
-            \fancyhf{{}}
-            \setlength{{\headheight}}{{24pt}}
-            \lhead{{{} \\{}}}
-            \rhead{{Kyle Chui \\Page \thepage}}
-            \pagestyle{{fancy}}
-            \pagenumbering{{gobble}}
-
-            \date{{{}}}
             \title{{{}}}
+            \author{{{}}}
+            \date{{}}
 
             \begin{{document}}
               \maketitle
-              \newpage
-              \pagenumbering{{arabic}}
+
               {}
             \end{{document}}
         ]],
             {
-                i(1, "Class Name"),
-                i(2, "Assignment Name"),
-                f(function()
-                    return os.date("%Y-%m-%d")
-                end),
-                rep(2),
+                i(1, "Title"),
+                i(2, "Author"),
                 i(0),
             }
         ),
