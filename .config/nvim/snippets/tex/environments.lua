@@ -9,7 +9,7 @@ local in_mathzone = function()
 end
 
 local in_text = function()
-  return not in_mathzone() * not in_comment()
+  return not in_mathzone() and not in_comment()
 end
 
 local in_list = function()

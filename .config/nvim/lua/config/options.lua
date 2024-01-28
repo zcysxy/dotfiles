@@ -15,13 +15,13 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- indent
-vim.bo.tabstop = 2
-vim.bo.softtabstop = 2
-vim.bo.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.o.smarttab = true
-vim.o.autoindent = true
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+-- vim.opt.expandtab = true
+-- vim.opt.smartindent = true
+-- vim.o.smarttab = true
+-- vim.o.autoindent = true
 vim.cmd('filetype plugin indent on')
 
 -- vim.o.conceallevel = 2
@@ -91,7 +91,7 @@ vim.o.ls = 0
 vim.o.ch = 0
 
 -- misc
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 vim.opt.isfname:append("@-@")
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
@@ -102,3 +102,6 @@ vim.opt.linebreak = true
 
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 0
+
+-- local rc
+vim.o.exrc = true
