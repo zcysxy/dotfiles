@@ -10,7 +10,12 @@ return {
   { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
   {
     'uloco/bluloco.nvim',
-    dependencies = { 'rktjmp/lush.nvim' }
+    lazy = false,
+    priority = 1000,
+    dependencies = { 'rktjmp/lush.nvim' },
+    config = function()
+      require('bluloco').setup({ transparent = true, italics = true })
+    end
   },
   'xiyaowong/nvim-transparent',
 

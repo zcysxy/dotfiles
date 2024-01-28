@@ -6,9 +6,8 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    border = "single",
+    border = "rounded",
     escape_quit = true,
-    highlights = { NormalFloat = { guibg = "NONE" } },
     winblend = 0,
   },
   keys = {

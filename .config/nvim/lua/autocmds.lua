@@ -1,5 +1,38 @@
+local vim = vim
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
+
+-- Appearance
+local transparent = augroup("transparent", {})
+autocmd("ColorScheme", {
+  pattern = { "*" },
+  callback = function()
+    local groups = {
+      "Normal",
+      "NormalNC",
+      "NormalSB",
+      "NormalFloat",
+      "FloatBorder",
+      "FloatTitle",
+      "TelescopeNormal",
+      "TelescopeBorder",
+      "Conceal",
+      "NvimTreeNormal",
+      "NvimTreeCursorLine",
+    }
+    for _, group in ipairs(groups) do
+      vim.api.nvim_set_hl(0, group, { ctermbg = "NONE", bg = "NONE" })
+    end
+    -- vim.api.nvim_set_hl(0, "Visual", { reverse = true, cterm = { reverse = true }, fg = "Grey" })
+  end,
+  group = transparent,
+})
+
+-- Enable folds
+autocmd({ "BufEnter" }, {
+  pattern = { "*" },
+  command = "normal zx",
+})
 
 -- Highlight yanked text
 local highlightYank = augroup("highlightYank", {})
@@ -32,13 +65,24 @@ vim.api.nvim_create_user_command("Messages", function()
 end, {})
 
 -- Save folds
-vim.api.nvim_create_autocmd({"BufWinLeave"}, {
+autocmd({"BufWinLeave"}, {
   pattern = {"*.*"},
   desc = "save view (folds), when closing file",
   command = "mkview",
 })
-vim.api.nvim_create_autocmd({"BufWinEnter"}, {
+autocmd({"BufWinEnter"}, {
   pattern = {"*.*"},
   desc = "load view (folds), when opening file",
   command = "silent! loadview"
 })
+
+-- For all text files set 'textwidth' to 78 characters.
+local vimrcEx = augroup("vimrcEx", {})
+autocmd("FileType", {
+  pattern = { "text" },
+  callback = function()
+    vim.bo.textwidth = 78
+  end,
+  group = vimrcEx,
+})
+
