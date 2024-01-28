@@ -13,94 +13,129 @@ local in_text = function()
 end
 
 local ls = require("luasnip")
+local snippet_events = require('luasnip.util.events')
+local utils = require("luasnippets.util.utils")
+
+local remove_auto_close_char_callback = {
+  [-1] = {
+    [snippet_events.enter] = utils.remove_auto_close_char,
+  },
+}
 
 local decorator = {
+  condition = in_text,
   wordTrig = false,
-  condition = (not in_mathzone) and (not in_comment),
 }
-local rsdecorator = {
-  wordTrig = false,
-  condition = in_mathzone,
-  trigEngine = "ecma",
+local snippet_decorator = {
   snippetType = "snippet",
 }
+vim.tbl_extend("keep", snippet_decorator, decorator)
 
 local ps = ls.extend_decorator.apply(ls.parser.parse_snippet, decorator) -- parse snippet
 local s = ls.extend_decorator.apply(ls.snippet, decorator)
-local rsps = ls.extend_decorator.apply(ls.parser.parse_snippet, rsdecorator)
+local ss = ls.extend_decorator.apply(ls.snippet, snippet_decorator)
+local sps = ls.extend_decorator.apply(ls.parser.parse_snippet, snippet_decorator)
 
 
 --[[
   Snippets
 --]]
 
--- Greek letters
+-- Text snippets
+local text_snippets = {
+  s({ trig = " te ", name = "there exists" }, t(" there exists ")),
+  s({ trig = " st ", name = "such that" }, t(" such that ")),
+  s({ trig = " iff ", name = "if and only if" }, t(" if and only if ")),
+}
 
-
-return nil, {
-  -- LaTeX: Section
-  s({ trig = "sec" }, {
+-- Commands
+local commands = {
+  ss({ trig = "sec", name = "section" }, {
     c(1, {
       t("\\section{"),
       t("\\section*{"),
     }),
     i(0),
     t("}"),
-  }, { condition = in_text }),
-  -- LaTeX: Subsection
-  s("ssec", {
+  }),
+  ss({ trig = "ssec", name = "subsection" }, {
     c(1, {
       t("\\subsection{"),
       t("\\subsection*{"),
     }),
     i(0),
     t("}"),
-  }, { condition = in_text }),
-  -- LaTeX: Subsubsection
-  s("sssec", {
+  }),
+  ss({ trig = "sssec", name = "subsubsection" }, {
     c(1, {
       t("\\subsubsection{"),
       t("\\subsubsection*{"),
     }),
     i(0),
     t("}"),
-  }, { condition = in_text }),
-  -- LaTeX: Inline math mode
-  s({ trig = "\\bmk", trigEngine = "ecma", }, fmt("${}$", i(1)), { condition = in_text }),
+  }),
+  sps({ trig = "para", name = "paragraph" }, "\\paragraph{${1}}$0"),
+  sps({ trig = "pac", name = "package" }, "\\usepackage{${1}}$0"),
+}
+
+-- Math modes
+local math_modes = {
+  ps({ trig = "\\bmk", trigEngine = "ecma", }, "$$1$$0"),
   -- LaTeX: Display math mode
-  s({ trig = "(?<=^\\s*)dm", trigEngine = "ecma", }, {
-    t({ "\\[", "  " }),
-    i(0),
-    t({ "", ".\\]" }),
-  }, { condition = in_text }),
-  -- LaTeX: Single-letter variables
+  ps({ trig = "(?<=^\\s*)dm", trigEngine = "ecma", }, "\\[\n  $1\n.\\]$0"),
+}
+
+-- Text decorations
+local text_decorations = {
+  ps( { trig = "emph", name = "emphasis" }, "\\emph{${1}}$0"),
+  ps( { trig = "**", name = "emphasis" }, "\\emph{${1}}$0"),
+  sps( { trig = "fbf", name = "boldface" }, "\\textbf{${1}}$0"),
+  ps( { trig = "__", name = "boldface" }, "\\textbf{${1}}$0"),
+  sps({ trig = "fit", name = "italic" }, "\\textit{${1}}$0"),
+  sps( { trig = "ftt", name = "teletype" }, "\\texttt{${1}}$0"),
+}
+
+-- Citations
+local citations = {
+  ps({ trig = "@@", name = "cite" }, "\\cite{${1}}$0"),
+  ps({ trig = "@p", name = "paren cite" }, "\\citep{${1}}$0"),
+  ps({ trig = "@t", name = "text cite" }, "\\citet{${1}}$0"),
+
+}
+
+-- Other
+local other = {
   s(
     { trig = " ([b-hj-zB-HJ-Z])([%p%s])", regTrig = true, wordTrig = false },
     f(function(_, snip)
       return " $" .. snip.captures[1] .. "$" .. snip.captures[2]
-    end),
-    { condition = in_text }
+    end)
   ),
-  -- LaTeX: Quotations
-  s('"', fmt([[``{}'']], i(1)), { condition = in_text }),
-  -- LaTeX: Emphasis
-  s("emph", fmt([[\emph{{{}}}]], i(1)), { condition = in_text }),
-  -- LaTeX: Boldface
-  s("bf", fmt([[\textbf{{{}}}]], i(1)), { condition = in_text }),
-  -- LaTeX: Teletype
-  s("tt", fmt([[\texttt{{{}}}]], i(1)), { condition = in_text }),
-  -- LaTeX: Ordinal nth
-  s({ trig = "([%d$])th", regTrig = true, wordTrig = false }, {
+  s(
+    { trig = '"', name = "quotation" },
+    { t("``"), i(1), t("''") },
+    { callbacks = remove_auto_close_char_callback }
+  ),
+  s({ trig = "([%d$])th", name = "ordinal nth", regTrig = true, wordTrig = false }, {
     f(function(_, snip)
       return snip.captures[1] .. "\\tsup{th}"
     end),
-  }, { condition = in_text }),
-  -- LaTeX: Image
-  s("img", {
+  }),
+  ss({ trig = "img", name = "image" }, {
     t({ "\\begin{center}", "\t\\resizebox{" }),
     i(1, "5"),
     t("in}{!}{\\includegraphics{./"),
     i(2),
     t({ "}}", "\\end{center}" }),
-  }, { condition = in_text }),
+  }),
 }
+
+local M = {}
+vim.list_extend(M, text_snippets)
+vim.list_extend(M, commands)
+vim.list_extend(M, math_modes)
+vim.list_extend(M, text_decorations)
+vim.list_extend(M, citations)
+vim.list_extend(M, other)
+
+return nil, M
