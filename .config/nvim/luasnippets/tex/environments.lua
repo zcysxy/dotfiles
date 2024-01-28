@@ -9,15 +9,20 @@ local in_mathzone = function()
 end
 
 local in_text = function()
-  return not in_mathzone() and not in_comment()
+  return not in_mathzone() * not in_comment()
 end
 
-local begins_line = function()
-  local cur_line = vim.api.nvim_get_current_line()
-  -- Checks if the current line consists of whitespace and then the snippet
-  -- TODO: Fix limitation that the snippet cannot contain whitespace itself
-  return #cur_line == #string.match(cur_line, "%s*[^%s]+")
+local in_list = function()
+  return vim.fn["vimtex#env#is_inside"]("itemize")[1] + vim.fn["vimtex#env#is_inside"]("enumerate")[1] ~= 0
 end
+
+-- local line_begin = function()
+--   local cur_line = vim.api.nvim_get_current_line()
+--   return #cur_line == #string.match(cur_line, "%s*[^%s]+%s?")
+-- end
+
+local ls = require("luasnip")
+local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
 local get_env = function(name, close)
   close = close or ""
@@ -34,7 +39,6 @@ local get_env = function(name, close)
     { delimiters = '<>' })
 end
 
-local ls = require("luasnip")
 
 local rsdecorator = {
   wordTrig = false,
@@ -49,8 +53,7 @@ local rsps = ls.extend_decorator.apply(ls.parser.parse_snippet, rsdecorator)
 return nil,
     {
       -- General environment
-      s(
-        "beg",
+      s({ trig = "beg", name = "begin/end" },
         fmt(
           [[
             \begin{{{}}}
@@ -65,22 +68,23 @@ return nil,
         ),
         {
           condition = function()
-            return begins_line() or in_mathzone()
+            return line_begin() or in_mathzone()
           end,
         }
       ),
 
       -- Equations
       s("ali", get_env("align", "."), { condition = in_text }),
-      s("ali", get_env("aligned", "."), { condition = in_mathzone and begins_line }),
+      s("ali", get_env("aligned", "."), { condition = in_mathzone * line_begin }),
       s("eqn", get_env("equation", "."), { condition = in_text }),
       s("case", get_env("cases", "."), { condition = in_mathzone }),
+
+      -- Lists
       ps(
         { trig = "item", snippetType = "snippet" },
         "\\begin{itemize}\n  \\item $0\n\\end{itemize}",
-        { condition = in_text and begins_line }
+        { condition = in_text * line_begin }
       ),
-      -- Enumerate environment
       s("enum", {
         t("\\begin{enumerate}"),
         c(1, {
@@ -92,10 +96,11 @@ return nil,
         t({ "", "  \\item " }),
         i(0),
         t({ "", "\\end{enumerate}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
+      s({ trig = "- ", name = "point" }, t("\\item "), { condition = line_begin * in_list }),
 
       -- Proof environment
-      s("pf", get_env("proof"), { condition = in_text and begins_line }),
+      s("pf", get_env("proof"), { condition = in_text * line_begin }),
       -- Note environment
       s("nt", {
         t("\\begin{note}{"),
@@ -103,7 +108,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{note}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Definition environment
       s("defn", {
         t("\\begin{definition}{"),
@@ -111,7 +116,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{definition}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Example environment
       s("ex", {
         t("\\begin{example}{"),
@@ -119,7 +124,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{example}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Theorem environment
       s("thm", {
         t("\\begin{theorem}{"),
@@ -127,7 +132,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{theorem}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
 
       -- Problem environment
       s("pb", {
@@ -136,7 +141,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{problem}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Lemma environment
       s("lem", {
         t("\\begin{lemma}{"),
@@ -144,7 +149,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{lemma}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Algorithm environment
       s("algo", {
         t({
@@ -156,7 +161,7 @@ return nil,
         t({ "}", "\t" }),
         i(0),
         t({ "", "\\end{algorithm}" }),
-      }, { condition = in_text and begins_line }),
+      }, { condition = in_text * line_begin }),
       -- Matrices
       s({ trig = "([pbv])mat_(%d)(%d)", regTrig = true }, {
         d(1, function(_, snip)
