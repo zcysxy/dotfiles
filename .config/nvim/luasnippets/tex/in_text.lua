@@ -41,15 +41,8 @@ local sps = ls.extend_decorator.apply(ls.parser.parse_snippet, snippet_decorator
   Snippets
 --]]
 
--- Text snippets
-local text_snippets = {
-  s({ trig = " te ", name = "there exists" }, t(" there exists ")),
-  s({ trig = " st ", name = "such that" }, t(" such that ")),
-  s({ trig = " iff ", name = "if and only if" }, t(" if and only if ")),
-}
-
--- Commands
-local commands = {
+-- Sections
+local sections = {
   ss({ trig = "sec", name = "section" }, {
     c(1, {
       t("\\section{"),
@@ -75,7 +68,6 @@ local commands = {
     t("}"),
   }),
   sps({ trig = "para", name = "paragraph" }, "\\paragraph{${1}}$0"),
-  sps({ trig = "pac", name = "package" }, "\\usepackage{${1}}$0"),
 }
 
 -- Math modes
@@ -131,8 +123,7 @@ local other = {
 }
 
 local M = {}
-vim.list_extend(M, text_snippets)
-vim.list_extend(M, commands)
+vim.list_extend(M, sections)
 vim.list_extend(M, math_modes)
 vim.list_extend(M, text_decorations)
 vim.list_extend(M, citations)
