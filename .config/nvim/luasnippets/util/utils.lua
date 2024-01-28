@@ -29,7 +29,7 @@ M.no_backslash = function(line_to_cursor, matched_trigger)
   return not line_to_cursor:find("\\%a+$", -#line_to_cursor)
 end
 
-local ts_utils = require("luasnip-latex-snippets.util.ts_utils")
+local ts_utils = require("luasnippets.util.ts_utils")
 M.is_math = function(treesitter)
   if treesitter then
     return ts_utils.in_mathzone()
@@ -63,6 +63,22 @@ end
 M.with_opts = function(fn, opts)
   return function()
     return fn(opts)
+  end
+end
+
+M.remove_auto_close_char = function(snippet)
+  local char_list = '[%)%]}>"\']'
+  local line_index = snippet.mark:pos_end()[1]
+  local character_index = snippet.mark:pos_end()[2] + 1
+  local line_content = vim.api.nvim_buf_get_lines(
+    0, line_index, line_index + 1, false
+  )[1]
+  local character = line_content:sub(character_index, character_index)
+
+  if character:find(char_list) and true or false then
+    vim.api.nvim_buf_set_text(
+      0, line_index, character_index - 1, line_index, character_index, { '' }
+    )
   end
 end
 
