@@ -1,28 +1,12 @@
-local vim = vim
+require("config.lazy")
 
--- Lazy
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",     -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
---vim.cmd [[let maplocalleader="<space>"]]
-vim.g.maplocalleader = " "
-vim.g.mapleader = " "
-require('lazy').setup('lazies')
+-- require("nvim-treesitter.install").prefer_git = true -- Use this in emergency
 
+-- Remove the following lines if using LazyVim/LazyVim
+require 'config.options'
+require 'config.autocmds'
+require 'config.keymap'
 require 'plugins'
-require 'keymap'
-require 'autocmds'
-require 'options'
 require 'utils'
 
 vim.cmd([[
@@ -52,6 +36,4 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 ]])
-
-vim.cmd([[set exrc secure]])
 

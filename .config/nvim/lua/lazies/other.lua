@@ -1,4 +1,6 @@
 return {
+  'LazyVim/LazyVim',
+
   -- Themes
   'cormacrelf/dark-notify',
   'rebelot/kanagawa.nvim',
@@ -91,7 +93,7 @@ return {
       require("trouble").setup {
         icon = false,
       }
-    end
+    end,
   },
   {
     'nvim-lualine/lualine.nvim',
