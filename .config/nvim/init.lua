@@ -24,7 +24,7 @@ require('lazy').setup('lazies')
 
 require 'plugins'
 require 'keymap'
-require 'autocommands'
+require 'autocmds'
 require 'utils'
 
 -- Appearance
@@ -191,4 +191,3 @@ endif
 
 vim.cmd([[set exrc secure]])
 
--- 

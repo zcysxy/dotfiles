@@ -14,7 +14,7 @@ end
 
 local ls = require("luasnip")
 local snippet_events = require('luasnip.util.events')
-local utils = require("luasnippets.util.utils")
+local utils = require("snippets.util.utils")
 
 local remove_auto_close_char_callback = {
   [-1] = {

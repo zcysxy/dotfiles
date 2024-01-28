@@ -7,7 +7,7 @@ return {
     local types = require("luasnip.util.types")
     -- Loads in snippets
     require("luasnip.loaders.from_lua").load({
-      paths = vim.fn["stdpath"]("config") .. "/luasnippets/",
+      paths = vim.fn["stdpath"]("config") .. "/snippets/",
     })
     require("luasnip").config.set_config({
       update_events = "TextChanged,TextChangedI",
