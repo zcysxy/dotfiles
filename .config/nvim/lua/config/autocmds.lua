@@ -19,6 +19,7 @@ autocmd("ColorScheme", {
       "Conceal",
       "NvimTreeNormal",
       "NvimTreeCursorLine",
+      "NotifyBackground",
     }
     for _, group in ipairs(groups) do
       vim.api.nvim_set_hl(0, group, { ctermbg = "NONE", bg = "NONE" })
@@ -65,16 +66,16 @@ vim.api.nvim_create_user_command("Messages", function()
 end, {})
 
 -- Save folds
-autocmd({"BufWinLeave"}, {
-  pattern = {"*.*"},
-  desc = "save view (folds), when closing file",
-  command = "mkview",
-})
-autocmd({"BufWinEnter"}, {
-  pattern = {"*.*"},
-  desc = "load view (folds), when opening file",
-  command = "silent! loadview"
-})
+-- autocmd({"BufWinLeave"}, {
+--   pattern = {"*.*"},
+--   desc = "save view (folds), when closing file",
+--   command = "mkview",
+-- })
+-- autocmd({"BufWinEnter"}, {
+--   pattern = {"*.*"},
+--   desc = "load view (folds), when opening file",
+--   command = "silent! loadview"
+-- })
 
 -- For all text files set 'textwidth' to 78 characters.
 local vimrcEx = augroup("vimrcEx", {})

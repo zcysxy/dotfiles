@@ -19,7 +19,7 @@ return {
       require('bluloco').setup({ transparent = true, italics = true })
     end
   },
-  'xiyaowong/nvim-transparent',
+  { 'xiyaowong/transparent.nvim', lazy = false },
 
   -- Plugins
   -- Search and Telescope

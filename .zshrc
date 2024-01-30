@@ -49,6 +49,7 @@ alias lc='colorls -A --sd'
 alias p=pbcopy
 alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias nv=nvim
+alias n=nvim
 alias v=nvim
 alias lazy='XDG_CONFIG_HOME="$HOME/.lazy" XDG_DATA_HOME="$HOME/.local/share/lazynvim" XDG_CACHE_HOME="$HOME/.cache/lazynvim" nvim'
 alias lv=lazy
