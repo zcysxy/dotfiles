@@ -516,6 +516,7 @@ dependencies:
       - einops==0.6.1
       - entmax==1.1
       - feedparser==6.0.10
+      - gscholar==2.1.0
       - importlib-resources==5.12.0
       - junix==0.1.5
       - jupyter-client==8.0.3

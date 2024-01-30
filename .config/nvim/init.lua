@@ -1,6 +1,6 @@
 require("config.lazy")
 
--- require("nvim-treesitter.install").prefer_git = true -- Use this in emergency
+require("nvim-treesitter.install").prefer_git = true -- Use this in emergency
 
 -- Remove the following lines if using LazyVim/LazyVim
 require 'config.options'

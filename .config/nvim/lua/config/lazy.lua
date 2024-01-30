@@ -1,3 +1,5 @@
+--- @diagnostic disable: undefined-global
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
@@ -11,10 +13,10 @@ vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true 
 vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
-require('lazy').setup({
-  spec = {
+require("lazy").setup({
+	spec = {
 		-- { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "../lazies" }
-  },
-  ui = { border = "rounded" },
+		{ import = "../lazies" },
+	},
+	ui = { border = "rounded" },
 })
