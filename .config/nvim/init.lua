@@ -6,7 +6,6 @@ require("nvim-treesitter.install").prefer_git = true -- Use this in emergency
 require 'config.options'
 require 'config.autocmds'
 require 'config.keymap'
-require 'plugins'
 require 'utils'
 
 vim.cmd([[
