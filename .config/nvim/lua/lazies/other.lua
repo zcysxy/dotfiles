@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
   'LazyVim/LazyVim',
 
@@ -22,6 +23,8 @@ return {
   { 'xiyaowong/transparent.nvim', lazy = false },
 
   -- Plugins
+	-- Meta
+  'mrquantumcodes/retrospect.nvim',
   -- Search and Telescope
   'fannheyward/telescope-coc.nvim',
   'catgoose/telescope-helpgrep.nvim',
@@ -51,7 +54,6 @@ return {
       }
     end
   },
-  'LinArcX/telescope-command-palette.nvim',
 
   -- Shell and Terminal
   'eandrju/cellular-automaton.nvim',
@@ -73,7 +75,7 @@ return {
   },
   {
     "luukvbaal/statuscol.nvim",
-    config = function()
+		config = function()
       local builtin = require "statuscol.builtin"
       require("statuscol").setup {
         -- relculright = true,
@@ -91,7 +93,7 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     conifg = function()
       require("trouble").setup {
-        icon = false,
+        icon = true,
       }
     end,
   },
@@ -166,16 +168,6 @@ return {
     end
   },
 
-  -- AI
-  'github/copilot.vim',
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("copilot").setup({})
-  --   end,
-  -- },
-  'madox2/vim-ai',
 
   -- Languages
   --lsp
@@ -313,14 +305,15 @@ return {
   -- 'WENLIXIAO-CS/vim-matlab', --TODO: to update
   'lervag/vimtex',
   -- { 'sirver/ultisnips', ft = {"markdown", "tex"} },
-  {
-    'vim-pandoc/vim-pandoc',
-    config = function()
-      vim.g['pandoc#biblio#bibs'] = { '/Users/ce/3-KNWL/33-Ref/myLibrary.bib' };
-      vim.g['pandoc#modules#disabled'] = { 'keyboard' }
-      vim.g['pandoc#filetypes#pandoc_markdown'] = 0
-    end
-  },
+  -- {
+  --   'vim-pandoc/vim-pandoc',
+  --   config = function()
+  --     vim.g['pandoc#biblio#bibs'] = { '/Users/ce/3-KNWL/33-Ref/myLibrary.bib' };
+  --     vim.g['pandoc#modules#disabled'] = { 'keyboard' }
+		-- 	vim.g['pandoc#filetypes#handled'] = { 'pandoc', 'markdown' }
+  --     vim.g['pandoc#filetypes#pandoc_markdown'] = 0
+  --   end
+  -- },
   -- 'vim-pandoc/vim-pandoc-syntax',
   {
     'aspeddro/cmp-pandoc.nvim',

@@ -9,6 +9,7 @@ vim.o.winblend = 0
 vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- gutter
 vim.o.number = true
@@ -67,8 +68,8 @@ else
     vim.o.undofile = true       -- keep an undo file (undo changes after closing)
   end
 end
-vim.o.backupdir = '~/.vimtmp//,.'
-vim.o.directory = '~/.vimtmp//,.'
+vim.o.backupdir = '~/.vimtmp//'
+vim.o.directory = '~/.vimtmp//'
 vim.o.nowritebackup = true
 vim.o.nobackup = true
 vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undo"

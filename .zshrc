@@ -62,6 +62,7 @@ alias xdg-open="open"
 alias q=exit
 alias :q="cowsay 'Fuck you, Im not Vim!'"
 alias :wq="cowsay 'Fuck you, Im not Vim!'"
+alias gs=gscholar
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }

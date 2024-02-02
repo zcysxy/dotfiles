@@ -1,10 +1,11 @@
-local vim = vim
-local map = function (mode, lhs, rhs, opts)
-    local options = { silent = true, noremap = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+---@diagnostic disable: undefined-global
+
+local map = function(mode, lhs, rhs, opts)
+	local options = { silent = true, noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Basic
@@ -52,8 +53,8 @@ vim.g.AutoPairsShortcutToggle = ''
 -- Visual multi
 vim.g.VM_maps = {}
 vim.g.VM_maps = {
-    ['Find Under'] = '<C-d>',
-    ['Find Subword Under']= '<C-d>'
+	['Find Under'] = '<C-d>',
+	['Find Subword Under'] = '<C-d>'
 }
 vim.g.VM_maps['Find Under'] = '<C-d>'
 vim.g.VM_maps['Find Subword Under'] = '<C-d>'
@@ -63,6 +64,11 @@ map("n", "<C-g>r", ":GitGutterUndoHunk<CR>", { silent = true, noremap = true })
 map("n", "<C-g>s", ":GitGutterStageHunk<CR>", { silent = true, noremap = true })
 
 -- SnipRun
-map('v', 'f', '<Plug>SnipRun', {silent = true})
-map('n', '<leader>f', '<Plug>SnipRunOperator', {silent = true})
-map('n', '<leader>ff', '<Plug>SnipRun', {silent = true})
+map('v', 'f', '<Plug>SnipRun', { silent = true })
+map('n', '<leader>f', '<Plug>SnipRunOperator', { silent = true })
+map('n', '<leader>ff', '<Plug>SnipRun', { silent = true })
+
+-- Clear notifications
+vim.keymap.set('n', '<c-x>', function() require("notify").dismiss({ silent = true }) end, { silent = true, noremap = true }
+)
+

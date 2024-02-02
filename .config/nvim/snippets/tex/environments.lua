@@ -68,7 +68,7 @@ return nil,
         ),
         {
           condition = function()
-            return line_begin() or in_mathzone()
+            return line_begin + in_mathzone
           end,
         }
       ),
