@@ -9,11 +9,6 @@ require 'config.keymap'
 require 'utils'
 
 vim.cmd([[
-" NERDTree
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <M-l> :NERDTreeToggle<CR>
-" nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-
 " GitGutter
 set updatetime=200
 let g:gitgutter_async=0

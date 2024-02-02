@@ -250,7 +250,6 @@ return {
 	},
 
 
-	--'nvim-tree/nvim-tree.lua',
 	--'daeyun/vim-matlab',
 	-- 'WENLIXIAO-CS/vim-matlab', --TODO: to update
 	-- {
@@ -287,7 +286,6 @@ return {
 	'AndrewRadev/tagalong.vim',
 
 	-- " Plug 'https://github.com/vim-airline/vim-airline'
-	'https://github.com/preservim/nerdtree',
 	'https://github.com/preservim/tagbar',
 	-- " Plug 'https://github.com/preservim/nerdcommenter'
 	'https://github.com/tpope/vim-surround',

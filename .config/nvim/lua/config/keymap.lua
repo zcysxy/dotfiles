@@ -73,4 +73,7 @@ vim.keymap.set('n', '<c-x>', function() require("notify").dismiss({ silent = tru
 	{ silent = true, noremap = true }
 )
 
--- TAB
+-- Tree
+map("n", "<C-f>", ":Neotree<CR>")
+map("n", "<M-l>", ":Neotree toggle=true<CR>")
+

@@ -28,7 +28,7 @@ return {
 			--dashboard.button( "q", "  Quit" , ":qa<CR>"),
 			dashboard.button("e", "New", ":ene <BAR> startinsert <CR>"),
 			--dashboard.button( "t", "Tree" , ":ene | NvimTreeFocus | only<CR>"),
-			dashboard.button("t", "Tree", ":ene | NERDTree | only<CR>"),
+			dashboard.button("t", "Tree", ":Neotree toggle=true<CR>"),
 			dashboard.button("f", "Oil", ":Oil<CR>"),
 			dashboard.button("o", "Files", ":Telescope find_files<CR>"),
 			dashboard.button("r", "Recent", ":Telescope oldfiles<CR>"),

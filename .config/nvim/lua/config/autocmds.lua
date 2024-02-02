@@ -20,6 +20,9 @@ autocmd("ColorScheme", {
 			"NvimTreeNormal",
 			"NvimTreeCursorLine",
 			"NotifyBackground",
+			"NeoTreeNormal",
+			"NeoTree",
+			"NeoTreeEndOfBuffer",
 		}
 		for _, group in ipairs(groups) do
 			vim.api.nvim_set_hl(0, group, { ctermbg = "NONE", bg = "NONE" })

@@ -39,7 +39,7 @@ return {
 
 			-- Make <CR> to accept selected completion item or notify coc.nvim to format
 			-- <C-g>u breaks current undo, please make your own choice
-			-- keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+			keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 			-- Use <c-j> to trigger snippets
 			keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
@@ -201,6 +201,7 @@ return {
 	},
 
 	-- WARNING: Comment out the following plugin if there were issues
+	--[[
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = { "mstanciu552/cmp-matlab" },
@@ -326,7 +327,7 @@ return {
 			--end
 		end
 	},
-
+--]]
 	{
 		'abecodes/tabout.nvim',
 		event = 'VeryLazy',

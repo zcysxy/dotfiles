@@ -8,13 +8,13 @@ return {
 		opts = {
 			panel = {
 				keymap = {
-					accept = "<c-cr>"
+					accept = "<s-cr>"
 				}
 			},
 			suggestion = {
 				auto_trigger = true,
 				keymap = {
-					accept = "<c-cr>"
+					accept = "<s-cr>"
 				}
 			}
 		}
