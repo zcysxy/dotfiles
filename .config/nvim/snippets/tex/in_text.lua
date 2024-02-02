@@ -14,11 +14,27 @@ end
 
 local ls = require("luasnip")
 local snippet_events = require('luasnip.util.events')
-local utils = require("snippets.util.utils")
+-- local utils = require("util.utils")
+local remove_auto_close_char = function(snippet)
+  local char_list = '[%)%]}>"\']'
+  local line_index = snippet.mark:pos_end()[1]
+  local character_index = snippet.mark:pos_end()[2] + 1
+  local line_content = vim.api.nvim_buf_get_lines(
+    0, line_index, line_index + 1, false
+  )[1]
+  local character = line_content:sub(character_index, character_index)
+
+  if character:find(char_list) and true or false then
+    vim.api.nvim_buf_set_text(
+      0, line_index, character_index - 1, line_index, character_index, { '' }
+    )
+  end
+end
 
 local remove_auto_close_char_callback = {
   [-1] = {
-    [snippet_events.enter] = utils.remove_auto_close_char,
+    -- [snippet_events.enter] = utils.remove_auto_close_char,
+    [snippet_events.enter] = remove_auto_close_char,
   },
 }
 

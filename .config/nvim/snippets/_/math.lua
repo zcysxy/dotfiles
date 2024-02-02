@@ -25,18 +25,34 @@ local in_mathzone = function()
 end
 
 local in_align = function()
-  return vim.fn["vimtex#env#is_inside"]("align")[1] ~= 0
+  return vim.fn["vimtex#env#is_inside"]("align")[1] + vim.fn["vimtex#env#is_inside"]("aligned")[1] ~= 0
 end
 
 local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
 local ls = require("luasnip")
 local snippet_events = require('luasnip.util.events')
-local utils = require("snippets.util.utils")
+-- local utils = require("snippets.util.utils")
+
+local remove_auto_close_char = function(snippet)
+  local char_list = '[%)%]}>"\']'
+  local line_index = snippet.mark:pos_end()[1]
+  local character_index = snippet.mark:pos_end()[2] + 1
+  local line_content = vim.api.nvim_buf_get_lines(
+    0, line_index, line_index + 1, false
+  )[1]
+  local character = line_content:sub(character_index, character_index)
+
+  if character:find(char_list) and true or false then
+    vim.api.nvim_buf_set_text(
+      0, line_index, character_index - 1, line_index, character_index, { '' }
+    )
+  end
+end
 
 local remove_auto_close_char_callback = {
   [-1] = {
-    [snippet_events.enter] = utils.remove_auto_close_char,
+    [snippet_events.enter] = remove_auto_close_char,
   },
 }
 
@@ -59,6 +75,7 @@ local decorator = {
   wordTrig = false,
   condition = in_mathzone,
 }
+local ams_decorator = vim.tbl_extend("force", decorator, { condition = in_mathzone and in_align })
 local rsdecorator = {
   wordTrig = false,
   condition = in_mathzone,
@@ -67,7 +84,8 @@ local rsdecorator = {
 }
 
 local ps = ls.extend_decorator.apply(ls.parser.parse_snippet, decorator) -- parse snippet
-local s = ls.extend_decorator.apply(ls.snippet, decorator)
+local ms = ls.extend_decorator.apply(ls.snippet, decorator)
+local ams = ls.extend_decorator.apply(ls.snippet, ams_decorator)
 local rsps = ls.extend_decorator.apply(ls.parser.parse_snippet, rsdecorator)
 
 
@@ -108,7 +126,7 @@ local GREEK_LETTERS = {
 local GREEK_COMMANDs =
 "(alpha|beta|[cC]hi|[dD]elta|epsilon|eta|[gG]amma|iota|kappa|[lL]ambda|mu|nu|[oO]mega|[pP]hi|[Pp]i|[rR]ho|[sS]igma|[tT]heta|tau|Xi)"
 local greek = {
-  s({ trig = "[;@](%a)", regTrig = true, }, {
+  ms({ trig = "[;@](%a)", regTrig = true, }, {
     f(function(_, snip)
       if GREEK_LETTERS[snip.captures[1]] then
         return "\\" .. GREEK_LETTERS[snip.captures[1]]
@@ -121,12 +139,12 @@ local greek = {
 -- Commands
 local COMMANDS = "(sin|cos|tan|log|ln|exp|ell|nabla|max|sup)"
 local commands = {
-  s({ trig = "(?<!\\\\)" .. COMMANDS, trigEngine = "ecma" }, {
+  ms({ trig = "(?<!\\\\)" .. COMMANDS, trigEngine = "ecma" }, {
     f(function(_, snip)
       return "\\" .. snip.captures[1]
     end),
   }),
-  s({ trig = "(?<!\\\\)" .. GREEK_COMMANDs, trigEngine = "ecma" }, {
+  ms({ trig = "(?<!\\\\)" .. GREEK_COMMANDs, trigEngine = "ecma" }, {
     f(function(_, snip)
       return "\\" .. snip.captures[1]
     end),
@@ -137,21 +155,21 @@ local commands = {
 
 -- Subscripts
 local subscripts = {
-  ps({ trig = "td", name = "subscript" }, "_{$1}$0 "),
-  ps({ trig = "__", name = "subscript" }, "_{$1}$0 "),
-  s(
+  ps({ trig = "td", name = "subscript" }, "_{$1}$0"),
+  ps({ trig = "__", name = "subscript" }, "_{$1}$0"),
+  ms(
     { trig = "(%a)(%d)", regTrig = true },
     f(function(_, snip)
       return snip.captures[1] .. "_" .. snip.captures[2]
     end)
   ),
-  s(
+  ms(
     { trig = "(%a_)(%d+)", regTrig = true },
     f(function(_, snip)
       return snip.captures[1] .. "{" .. snip.captures[2] .. "}"
     end)
   ),
-  s(
+  ms(
     { trig = "([ijkdtn])\\1", name = "letter subscript", trigEngine = "ecma" },
     f(function(_, snip)
       return "_" .. snip.captures[1]
@@ -165,7 +183,7 @@ local superscripts = {
   ps({ trig = "^^", name = "superscript" }, "^{$1}$0 "),
   ps({ trig = "^-", name = "negative sup" }, "^{-$1}$0 "),
   ps({ trig = "rd", name = "superscript" }, "^{($1)}$0 "),
-  s(
+  ms(
     { trig = "(%a^)(%d+)", regTrig = true },
     f(function(_, snip)
       return snip.captures[1] .. "{" .. snip.captures[2] .. "}"
@@ -179,18 +197,18 @@ local superscripts = {
 
 -- Relations
 local relations = {
-  s({ trig = "<=" }, t("\\le")),
-  s({ trig = ">=" }, t("\\geq")),
-  s({ trig = "=== " }, t("\\equiv ")),
-  s({ trig = ":=" }, t("\\coloneqq")),
-  s({ trig = "~=" }, t("\\cong")),
-  s({ trig = "(!=|<>)", trigEngine = "ecma" }, t("\\neq")),
-  s({ trig = "(sim|~~)", trigEngine = "ecma" }, t("\\sim")),
-  s({ trig = "=>" }, t("\\implies")),
-  s({ trig = "->" }, t("\\to")),
-  s({ trig = "|>", wordTrig = false, priority = 2000 }, t("\\mapsto")),
-  s({ trig = "==>", wordTrig = false, priority = 2000 }, t("\\Rightarrow")),
-  s({ trig = "===>", wordTrig = false, priority = 3000 }, t("\\Longrightarrow")),
+  ms({ trig = "<=" }, t("\\le")),
+  ms({ trig = ">=" }, t("\\geq")),
+  ms({ trig = "=== " }, t("\\equiv ")),
+  ms({ trig = ":=" }, t("\\coloneqq")),
+  ms({ trig = "~=" }, t("\\cong")),
+  ms({ trig = "(!=|<>)", trigEngine = "ecma" }, t("\\neq")),
+  ms({ trig = "(sim|~~)", trigEngine = "ecma" }, t("\\sim")),
+  ms({ trig = "=>" }, t("\\implies")),
+  ms({ trig = "->" }, t("\\to")),
+  ms({ trig = "|>", wordTrig = false, priority = 2000 }, t("\\mapsto")),
+  ms({ trig = "==>", wordTrig = false, priority = 2000 }, t("\\Rightarrow")),
+  ms({ trig = "===>", wordTrig = false, priority = 3000 }, t("\\Longrightarrow")),
   -- iff
   ps({ trig = "iff" }, "\\iff"),
   ps({ trig = "subs", name = "subset" }, "\\subset "),
@@ -214,8 +232,8 @@ local symbols = {
 local operations = {
   ps({ trig = "binom" }, "\\binom{$1}{$2}$0"),
   ps({ trig = "sr" }, "\\sqrt{$1}$0"),
-  s(".b", t("\\dotsb")),
-  s(".c", t("\\dotsc")),
+  ms(".b", t("\\dotsb")),
+  ms(".c", t("\\dotsc")),
 }
 
 
@@ -226,25 +244,25 @@ local math_fonts = {
   ps({ trig = "mrm", name = "roman" }, "\\mathrm{$1}$0"),
   ps({ trig = "mcal", name = "calligraphy" }, "\\mathcal{$1}$0"),
   ps({ trig = "mscr", name = "script" }, "\\mathscr{$1}$0"),
-  s({ trig = "(?<!\\\\)" .. MATHBB_LETTERS .. "\\1", trigEngine = "ecma" }, {
+  ms({ trig = "(?<!\\\\)" .. MATHBB_LETTERS .. "\\1", trigEngine = "ecma" }, {
     f(function(_, snip)
       return "\\mathbb{" .. snip.captures[1] .. "}"
     end),
   }),
   ps({ trig = "11", name = "indicator" }, "\\mathbbm{1}"),
-  s(
+  ms(
     { trig = "\\b([A-Z])cal", name = "calligraphy", trigEngine = "ecma" }, {
       f(function(_, snip)
         return "\\mathcal{" .. snip.captures[1] .. "}"
       end)
     }),
-  s(
+  ms(
     { trig = "\\b(\\w*)rm", name = "roman", trigEngine = "ecma" }, {
       f(function(_, snip)
         return "\\mathrm{" .. snip.captures[1] .. "}"
       end)
     }),
-  s(
+  ms(
     { trig = "\\b(\\w*)opn", name = "operatorname", trigEngine = "ecma" }, {
       f(function(_, snip)
         return "\\operatorname{" .. snip.captures[1] .. "}"
@@ -267,7 +285,7 @@ local surroundings = {
   ps({ trig = "ceil" }, "\\left\\lceil $1 \\right\\rceil$0"),
   ps({ trig = "paren" }, "\\paren{ $1 }$0"),
   ps({ trig = "vec" }, "\\vec{ $1 }$0"),
-  s(
+  ms(
     { trig = "(lr|@|;)(\\(|\\[|<|\\||\\\\\\||\\{)", trigEngine = "ecma", name = "Big parens" },
     d(1, function(_, snip)
       local left = snip.captures[2]
@@ -288,7 +306,7 @@ local surroundings = {
     end),
     { callbacks = remove_auto_close_char_callback }
   ),
-  s({ trig = "(\\(|\\||\\\\\\||\\[|\\{|<)", trigEngine = "ecma", name = "visual parens" }, {
+  ms({ trig = "(\\(|\\||\\\\\\||\\[|\\{|<)", trigEngine = "ecma", name = "visual parens" }, {
     d(1, function(_, snip)
       local left = snip.captures[1]
       local right = ""
@@ -315,26 +333,20 @@ local surroundings = {
 
 -- Decorations
 local decorations = {
-  s({ trig = "(\\?[%a%d^_]+)hat", regTrig = true }, {
-    f(function(_, snip)
-      return "\\hat{" .. snip.captures[1] .. "}"
-    end),
-  }),
-  s({ trig = "hat" }, { t("\\hat{"), i(1), t("}"), }),
-  s({ trig = "(\\?%a+)bar", regTrig = true }, {
+  ms(
+	{ trig = "(\\?%a+)bar", regTrig = true }, {
     f(function(_, snip)
       return "\\bar{" .. snip.captures[1] .. "}"
     end),
   }),
-  s({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
-  s({ trig = "(\\?%a+)Bar", regTrig = true }, {
+  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
+  ms({ trig = "(\\?%a+)Bar", regTrig = true }, {
     f(function(_, snip)
       return "\\overline{" .. snip.captures[1] .. "}"
     end),
   }),
-  s({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
-  -- tilde
-  s({ trig = "(\\?%a+)([tT])il", regTrig = true }, {
+  ms({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
+  ms({ trig = "(\\?%a+)([tT])il", regTrig = true }, {
     f(function(_, snip)
       local tilde = "\\tilde{"
       if snip.captures[2] == "T" then
@@ -343,7 +355,7 @@ local decorations = {
       return tilde .. snip.captures[1] .. "}"
     end),
   }),
-  s({ trig = "([tT])il", regTrig = true }, {
+  ms({ trig = "([tT])il", regTrig = true }, {
     f(function(_, snip)
       local tilde = "\\tilde{"
       if snip.captures[1] == "T" then
@@ -354,11 +366,36 @@ local decorations = {
     i(1),
     t("}"),
   }),
+  ms({ trig = "(\\?%a+)([hH])at", regTrig = true }, {
+    f(function(_, snip)
+      local hat = "\\hat{"
+      if snip.captures[2] == "T" then
+        hat = "\\widehat{"
+      end
+      return hat .. snip.captures[1] .. "}"
+    end),
+  }),
+  ms({ trig = "([hH])at", regTrig = true }, {
+    f(function(_, snip)
+      local hat = "\\hat{"
+      if snip.captures[1] == "T" then
+        hat = "\\widehat{"
+      end
+      return hat
+    end),
+    i(1),
+    t("}"),
+  }),
+  ms({ trig = "(\\?[%a%d^_]+)bm", regTrig = true }, {
+    f(function(_, snip)
+      return "\\bm{" .. snip.captures[1] .. "}"
+    end),
+  }),
 }
 
 -- Math environments
 local math_environments = {
-  s({ trig = "beg", name = "begin/end" },
+  ms({ trig = "beg", name = "begin/end" },
     fmt(
       [[
             \begin{{{}}}
@@ -371,11 +408,11 @@ local math_environments = {
         rep(1),
       }
     ),
-    { condition = line_begin * in_mathzone }
+    { condition = line_begin + in_mathzone }
   ),
-  s("ali", get_env("aligned", "."), { condition = in_mathzone * line_begin }),
-  s("case", get_env("cases", "."), { condition = in_mathzone }),
-  s({ trig = "([pbv])mat_(%d)(%d)", name = "matrices", regTrig = true, priority = 2000 }, {
+  ms("ali", get_env("aligned", "."), { condition = in_mathzone * line_begin }),
+  ms("case", get_env("cases", "."), { condition = in_mathzone }),
+  ms({ trig = "([pbv])mat_(%d)(%d)", name = "matrices", regTrig = true, priority = 2000 }, {
     d(1, function(_, snip)
       local type = snip.captures[1] .. "matrix"
       local rows, cols = snip.captures[2], snip.captures[3]
@@ -401,11 +438,11 @@ local math_environments = {
 
 -- In align
 local align = {
-  s(
+  ams(
     { trig = "([^&])=", regTrig = true },
     f(function(_, snip)
-      return snip.captures[1] .. "&="
-    end), { condition = in_align }
+      return snip.captures[1] .. "=&"
+    end)
   ),
 }
 
@@ -418,7 +455,7 @@ local expressions = {
   rsps({ trig = "\\\\?lim" }, "\\lim_{${1:n} \\to ${2:\\infity}}$0"),
   rsps({ trig = "\\\\?limsup" }, "\\limsup_{${1:n} \\to ${2:\\infity}}$0"),
   rsps({ trig = "\\\\?int" }, "\\int_{${1:0}}^{${2:\\infity}} $0 \\, \\mathrm{d}${3:x}"),
-  s({ trig = "(%w):", name = "functions", regTrig = true }, {
+  ms({ trig = "(%w):", name = "functions", regTrig = true }, {
     d(1, function(_, snip)
       return sn(1, {
         t(snip.captures[1] .. "\\colon "),
@@ -432,21 +469,21 @@ local expressions = {
 
 -- Derivatives and fractions
 local fractions = {
-  s({ trig = "part" }, {
+  ms({ trig = "part" }, {
     t("\\frac{\\partial "),
     i(1, " "),
     t("}{\\partial "),
     i(2, "x"),
     t("}"),
   }),
-  s({ trig = "diff", wordTrig = false, priority = 2000 }, {
+  ms({ trig = "diff", wordTrig = false, priority = 2000 }, {
     t("\\frac{\\mathrm{d} "),
     i(1, " "),
     t("}{\\mathrm{d} "),
     i(2, "x"),
     t("}"),
   }),
-  s("//", {
+  ms("//", {
     d(1, function(_, snip)
       return sn(1, {
         t("\\frac{"),
@@ -458,7 +495,7 @@ local fractions = {
     end, {}),
   }),
   -- Parenthesis-delimited fractions
-  s({ trig = "(%b())/", regTrig = true }, {
+  ms({ trig = "(%b())/", regTrig = true }, {
     d(1, function(_, snip)
       return sn(
         1,
@@ -476,7 +513,7 @@ local fractions = {
   }),
   -- TODO: Make more generalized
   -- Brace-delimited fractions pt. 1
-  s({ trig = "(\\frac%b{}%b{})/", regTrig = true }, {
+  ms({ trig = "(\\frac%b{}%b{})/", regTrig = true }, {
     d(1, function(_, snip)
       return sn(
         1,
@@ -493,7 +530,7 @@ local fractions = {
     end, {}),
   }),
   -- Brace-delimited fractions pt. 2
-  s({ trig = "(\\%a+%b{})/", regTrig = true }, {
+  ms({ trig = "(\\%a+%b{})/", regTrig = true }, {
     d(1, function(_, snip)
       return sn(
         1,
@@ -510,7 +547,7 @@ local fractions = {
     end, {}),
   }),
   -- Regexp fractions
-  s({ trig = "([%a%d^_\\!'.]+)/", regTrig = true }, {
+  ms({ trig = "([%a%d^_\\!'.]+)/", regTrig = true }, {
     d(1, function(_, snip)
       return sn(1, {
         t("\\frac{"),
@@ -522,7 +559,7 @@ local fractions = {
     end, {}),
   }),
   -- Visual fractions
-  s("/", {
+  ms("/", {
     d(1, function(_, snip)
       if snip.env.TM_SELECTED_TEXT[1] then
         return sn(1, {
@@ -538,7 +575,7 @@ local fractions = {
 
 -- Visuals
 local visuals = {
-  s({ trig = "UU", name = "underbrace", snippetType = "snippet" }, {
+  ms({ trig = "UU", name = "underbrace", snippetType = "snippet" }, {
     d(1, function(_, snip)
       if snip.env.TM_SELECTED_TEXT[1] then
         return sn(1, {
@@ -550,7 +587,7 @@ local visuals = {
       return sn(nil, t("U"))
     end),
   }),
-  s({ trig = "U", name = "underset", snippetType = "snippet" }, {
+  ms({ trig = "U", name = "underset", snippetType = "snippet" }, {
     d(1, function(_, snip)
       if snip.env.TM_SELECTED_TEXT[1] then
         return sn(1, {
@@ -562,7 +599,7 @@ local visuals = {
       return sn(nil, t("U"))
     end),
   }),
-  s({ trig = "OO", name = "overbrace", snippetType = "snippet" }, {
+  ms({ trig = "OO", name = "overbrace", snippetType = "snippet" }, {
     d(1, function(_, snip)
       if snip.env.TM_SELECTED_TEXT[1] then
         return sn(1, {
@@ -574,7 +611,7 @@ local visuals = {
       return sn(nil, t("O"))
     end),
   }),
-  s({ trig = "O", name = "overset", snippetType = "snippet" }, {
+  ms({ trig = "O", name = "overset", snippetType = "snippet" }, {
     d(1, function(_, snip)
       if snip.env.TM_SELECTED_TEXT[1] then
         return sn(1, {

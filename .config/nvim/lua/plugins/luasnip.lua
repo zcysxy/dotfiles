@@ -1,17 +1,40 @@
 local ls = require("luasnip")
 local keyset = vim.keymap.set
+local types = require("luasnip.util.types")
+
+require("luasnip").filetype_extend("markdown", { "_" })
+require("luasnip").filetype_extend("pandoc", { "markdown" })
+require("luasnip").filetype_extend("tex", { "_" })
+-- Loads in snippets
+require("luasnip.loaders.from_lua").lazy_load({
+	paths = vim.fn["stdpath"]("config") .. "/snippets/",
+})
+require("luasnip").config.set_config({
+	update_events = "TextChanged,TextChangedI",
+	enable_autosnippets = true,
+	store_selection_keys = "<Tab>",
+	ext_opts = {
+		[types.choiceNode] = {
+			active = {
+				virt_text = { { "<- Choice" } },
+			},
+		},
+	},
+})
 
 keyset({ "i" }, "<C-K>", function() ls.expand() end, { silent = true })
 keyset({ "i", "s" }, "<C-L>", function() ls.jump(1) end, { silent = true })
 keyset({ "i", "s" }, "<C-J>", function() ls.jump(-1) end, { silent = true })
 
 vim.keymap.set({ "i", "s" }, "<C-E>", function()
-  if ls.choice_active() then
-    ls.change_choice(1)
-  end
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
 end, { silent = true })
-local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keyset("i", "<TAB>", "luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : v:lua.check_back_space() ? '<Tab>' : coc#refresh()", opts)
+local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+keyset("i", "<TAB>",
+	"luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : v:lua.check_back_space() ? '<Tab>' : coc#refresh()",
+	opts)
 -- keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 -- keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
@@ -51,4 +74,3 @@ snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 --   }
 
 require("luasnip.loaders.from_snipmate").load({ include = { "markdown" } })
-

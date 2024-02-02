@@ -31,7 +31,22 @@ return {
 				inc_rename = false,       -- enables an input dialog for inc-rename.nvim
 				lsp_doc_border = false,   -- add a border to hover docs and signature help
 			},
+			routes = {
+				{
+					view = "cmdline",
+					filter = {
+						any = {
+							{ event = "msg_show", kind = "confirm_sub" },
+						},
+					
+					},
+				}
+			}
 		})
-	require("notify").setup({ background_colour = "#000000" })
+		require("notify").setup({
+			background_colour = "#000000",
+			render = "wrapped-compact",
+			top_down = false
+		})
 	end,
 }

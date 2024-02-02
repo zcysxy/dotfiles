@@ -1,4 +1,4 @@
-local vim = vim
+---@diagnostic disable: undefined-global
 
 local execute = vim.api.nvim_command
 local fn = vim.fn
