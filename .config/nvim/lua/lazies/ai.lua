@@ -1,16 +1,26 @@
 ---@diagnostic disable: undefined-global
 
 return {
-  'madox2/vim-ai',
-	-- {
-	--   "zbirenbaum/copilot.lua",
-	--   event = "VeryLazy",
-	--   config = function()
-	--     require("copilot").setup({})
-	--   end,
-	-- },
+	-- 'github/copilot.vim',
 	{
-		'github/copilot.vim',
+		"zbirenbaum/copilot.lua",
+		event = "VeryLazy",
+		opts = {
+			panel = {
+				keymap = {
+					accept = "<c-cr>"
+				}
+			},
+			suggestion = {
+				auto_trigger = true,
+				keymap = {
+					accept = "<c-cr>"
+				}
+			}
+		}
+	},
+	{
+		'madox2/vim-ai',
 		config = function()
 			vim.cmd([[
 let s:initial_chat_prompt =<< trim END
@@ -105,7 +115,7 @@ let g:copilot_filetypes = {
 			local function generateVimCommand(args)
 				local purpose = args['args']
 				local prompt = "I am in a NeoVim buffer. What is the Vim command for this purpose: \"" ..
-				purpose .. "\"? Please directly return the command without any explanation."
+						purpose .. "\"? Please directly return the command without any explanation."
 				print(prompt)
 
 				local range = 0

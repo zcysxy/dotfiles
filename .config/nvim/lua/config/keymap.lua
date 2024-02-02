@@ -69,6 +69,8 @@ map('n', '<leader>f', '<Plug>SnipRunOperator', { silent = true })
 map('n', '<leader>ff', '<Plug>SnipRun', { silent = true })
 
 -- Clear notifications
-vim.keymap.set('n', '<c-x>', function() require("notify").dismiss({ silent = true }) end, { silent = true, noremap = true }
+vim.keymap.set('n', '<c-x>', function() require("notify").dismiss({ silent = true }) end,
+	{ silent = true, noremap = true }
 )
 
+-- TAB

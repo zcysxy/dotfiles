@@ -25,10 +25,6 @@ return {
 	-- Plugins
 	-- Meta
 	'mrquantumcodes/retrospect.nvim',
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = { "mstanciu552/cmp-matlab" },
-	},
 
 	-- Shell and Terminal
 	'eandrju/cellular-automaton.nvim',
@@ -252,7 +248,6 @@ return {
 			},
 		},
 	},
-	{ 'neoclide/coc.nvim',          branch = 'release' },
 
 
 	--'nvim-tree/nvim-tree.lua',
@@ -299,17 +294,4 @@ return {
 	'https://github.com/jiangmiao/auto-pairs',
 	{ 'mg979/vim-visual-multi', branch = 'master' },
 	'jupyter-vim/jupyter-vim',
-	{
-		'abecodes/tabout.nvim',
-		event = 'VeryLazy',
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"hrsh7th/nvim-cmp",
-			"L3MON4D3/LuaSnip",
-			-- "sirver/ultisnips",
-			"github/copilot.vim",
-			-- "zbirenbaum/copilot.lua",
-			"neoclide/coc.nvim"
-		},
-	},
 }
