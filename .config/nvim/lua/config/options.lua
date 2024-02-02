@@ -1,4 +1,4 @@
-local vim = vim
+---@diagnostic disable: undefined-global
 
 -- colors
 vim.o.termguicolors = true
@@ -68,8 +68,8 @@ else
     vim.o.undofile = true       -- keep an undo file (undo changes after closing)
   end
 end
-vim.o.backupdir = '~/.vimtmp//'
-vim.o.directory = '~/.vimtmp//'
+vim.o.backupdir = os.getenv("HOME") .. "/.vimtmp//"
+vim.o.directory = os.getenv("HOME") .. "/.vimtmp//"
 vim.o.nowritebackup = true
 vim.o.nobackup = true
 vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undo"

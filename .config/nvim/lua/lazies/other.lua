@@ -25,35 +25,10 @@ return {
   -- Plugins
 	-- Meta
   'mrquantumcodes/retrospect.nvim',
-  -- Search and Telescope
-  'fannheyward/telescope-coc.nvim',
-  'catgoose/telescope-helpgrep.nvim',
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "mstanciu552/cmp-matlab" },
-  },
-  {
-    "Shougo/deoplete.nvim",
-    config = function()
-      vim.g['deoplete#enable_at_startup'] = 1
-      vim.g['deoplete#omni_patterns'] = {}
-      vim.g['deoplete#omni_patterns.pandoc'] = '@\\w*'
-    end
-  },
-  { 'junegunn/fzf',      build = ":call fzf#install()" },
-  'junegunn/fzf.vim',
-  {
-    "nvim-telescope/telescope.nvim",
-    config = function()
-      require('telescope').setup {
-        pickers = {
-          colorscheme = {
-            enable_preview = true,
-          },
-        }
-      }
-    end
-  },
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = { "mstanciu552/cmp-matlab" },
+	},
 
   -- Shell and Terminal
   'eandrju/cellular-automaton.nvim',
@@ -121,12 +96,6 @@ return {
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
       }
-    end
-  },
-  {
-    'goolord/alpha-nvim',
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
     end
   },
   'airblade/vim-gitgutter',
