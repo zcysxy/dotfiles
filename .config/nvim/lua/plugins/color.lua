@@ -1,4 +1,19 @@
 return {
+	-- Autoswitch
+	{
+		"f-person/auto-dark-mode.nvim",
+		config = {
+			update_interval = 1000,
+			set_dark_mode = function()
+				vim.api.nvim_set_option("background", "dark")
+				vim.cmd("colorscheme gruvbox-material")
+			end,
+			set_light_mode = function()
+				vim.api.nvim_set_option("background", "light")
+				vim.cmd("colorscheme bluloco")
+			end,
+		},
+	},
 	-- Colorschemes
 	'sainnhe/gruvbox-material',
 	'catppuccin/nvim',
@@ -7,6 +22,7 @@ return {
 	'rmehri01/onenord.nvim',
 	'Th3Whit3Wolf/one-nvim',
 	'projekt0n/github-nvim-theme',
+	'Signynt/primary.nvim',
 	{
 		'uloco/bluloco.nvim',
 		lazy = false,

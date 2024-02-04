@@ -43,6 +43,7 @@
   "one-nvim": { "branch": "main", "commit": "faf6fb3f98fccbe009c3466f657a8fff84a5f956" },
   "onenord.nvim": { "branch": "main", "commit": "ad19a49d38e34a5dde8224882ac711c1310565a0" },
   "plenary.nvim": { "branch": "master", "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d" },
+  "primary.nvim": { "branch": "main", "commit": "f88a937fdb40d3f93bc60e2ff304f484fff3996a" },
   "promise-async": { "branch": "main", "commit": "94f6f03c6c1e2aab551aacdf0c1e597a7269abb6" },
   "retrospect.nvim": { "branch": "main", "commit": "1efdc6639c5ec556542c4d436e8e3c3ec13243f7" },
   "smart-open.nvim": { "branch": "0.2.x", "commit": "026091fe7f9b283aa1f5f4bb8c56aa5bcad43dbd" },
