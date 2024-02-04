@@ -39,4 +39,26 @@ return {
 			-- kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
 		end
 	},
+	-- {
+	--   'vim-pandoc/vim-pandoc',
+	--   config = function()
+	--     vim.g['pandoc#biblio#bibs'] = { '/Users/ce/3-KNWL/33-Ref/myLibrary.bib' };
+	--     vim.g['pandoc#modules#disabled'] = { 'keyboard' }
+	-- 	vim.g['pandoc#filetypes#handled'] = { 'pandoc', 'markdown' }
+	--     vim.g['pandoc#filetypes#pandoc_markdown'] = 0
+	--   end
+	-- },
+	-- 'vim-pandoc/vim-pandoc-syntax',
+	-- {
+	-- 	'aspeddro/cmp-pandoc.nvim',
+	-- 	dependencies = { 'nvim-lua/plenary.nvim' },
+	-- 	config = function()
+	-- 		require('cmp').setup {
+	-- 			sources = {
+	-- 				{ name = 'pandoc' },
+	-- 			},
+	-- 		}
+	-- 		require('cmp_pandoc').setup()
+	-- 	end
+	-- }
 }

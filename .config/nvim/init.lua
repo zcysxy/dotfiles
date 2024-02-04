@@ -1,12 +1,14 @@
+---@diagnostic disable: undefined-global
+
 require("config.lazy")
 
 require("nvim-treesitter.install").prefer_git = true -- Use this in emergency
 
 -- Remove the following lines if using LazyVim/LazyVim
-require 'config.options'
-require 'config.autocmds'
-require 'config.keymap'
-require 'utils'
+require("config.options")
+require("config.autocmds")
+require("config.keymap")
+require("utils")
 
 vim.cmd([[
 " GitGutter
@@ -30,4 +32,3 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 ]])
-

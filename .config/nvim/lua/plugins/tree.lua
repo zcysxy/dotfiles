@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 
 return {
+	'preservim/tagbar',
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",

@@ -7,7 +7,7 @@
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [filter "gitignore"]
-    clean = "sed '/# gitignore$/d'"
+  clean = "sed '/# gitignore$/d'"
 	clean = "sed '/\\/\\/ gitignore$/d'"
 	clean = "sed '/-- gitignore$/d'"
 	smudge = cat
