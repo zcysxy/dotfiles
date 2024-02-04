@@ -16,6 +16,11 @@ return {
 				keymap = {
 					accept = "<s-cr>"
 				}
+			},
+			filetypes = {
+				markdown = true,
+				tex = true,
+				yaml = true,
 			}
 		}
 	},

@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 
+local options = { silent = true, noremap = true }
 local map = function(mode, lhs, rhs, opts)
-	local options = { silent = true, noremap = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
@@ -12,6 +12,8 @@ end
 map("i", "jk", "<ESC>")
 map("n", "j", "gj")
 map("n", "gj", "j")
+map("x", "j", "gj")
+map("x", "gj", "j")
 map("n", "k", "gk")
 map("n", "gk", "k")
 map("n", "H", "^")
@@ -19,6 +21,9 @@ map("n", "L", "$")
 -- nmap J <C-D>
 -- nmap K <C-U>
 map("n", "<S-CR>", "i<CR><ESC>0") -- break line
+vim.cmd [[command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>]]
+vim.cmd [[command! -bang Q quit<bang>]]
+
 
 -- Move lines up/down
 map("n", "<C-j>", ":m .+1<CR>==")
@@ -76,4 +81,5 @@ vim.keymap.set('n', '<c-x>', function() require("notify").dismiss({ silent = tru
 -- Tree
 map("n", "<C-f>", ":Neotree<CR>")
 map("n", "<M-l>", ":Neotree toggle=true<CR>")
+vim.keymap.set("n", "<M-r>", vim.cmd.TagbarToggle, options)
 

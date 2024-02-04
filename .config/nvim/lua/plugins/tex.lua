@@ -10,5 +10,5 @@ return {
 		vim.g.vimtex_view_skim_activate = 1
 		vim.g.vimtex_fold_enable = 1
 	end,
-	ft = { 'tex', 'latex' },
+	ft = { 'tex', 'latex', 'markdown' },
 }
