@@ -28,7 +28,6 @@ return {
 			require('text-to-colorscheme').setup {
 				ai = {
 					gpt_model = "gpt-4",
-					openai_api_key = "", -- gitignore
 				},
 				hex_palettes = {
 					{
