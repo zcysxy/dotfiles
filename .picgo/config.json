@@ -6,7 +6,6 @@
       "branch": "master",
       "path": "img/",
       "customUrl": "",
-			"token": "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" // gitignore
     },
     "uploader": "github",
     "transformer": "path"
