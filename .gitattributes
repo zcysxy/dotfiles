@@ -1,0 +1,5 @@
+*.lua filter=gitignore
+*.json filter=gitignore
+**/*.* filter=gitignore
+*.* filter=gitignore
+.* filter=gitignore

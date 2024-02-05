@@ -26,7 +26,6 @@ dependencies:
   - arrow-cpp=11.0.0=py39h7f74497_0
   - astroid=2.14.2=py39hecd8cb5_0
   - astropy=5.1=py39h67323c0_0
-  - asttokens=2.0.5=pyhd3eb1b0_0
   - async-lru=2.0.4=py39hecd8cb5_0
   - atomicwrites=1.4.0=py_0
   - attrs=23.1.0=py39hecd8cb5_0
@@ -88,7 +87,6 @@ dependencies:
   - conda-package-handling=2.2.0=py39hecd8cb5_0
   - conda-package-streaming=0.9.0=py39hecd8cb5_0
   - conda-repo-cli=1.0.75=py39hecd8cb5_0
-  - conda-token=0.4.0=pyhd3eb1b0_0
   - conda-verify=3.4.2=py_1
   - constantly=23.10.4=py39hecd8cb5_0
   - cookiecutter=2.5.0=py39hecd8cb5_0
@@ -576,7 +574,6 @@ dependencies:
       - sgmllib3k==1.0.0
       - shiboken6==6.5.0
       - timm==0.5.4
-      - tokenizers==0.13.0
       - torch==2.0.0
       - torchvision==0.15.1
       - traitlets==5.9.0
