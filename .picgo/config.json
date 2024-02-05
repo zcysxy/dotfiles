@@ -5,7 +5,8 @@
       "repo": "zcysxy/Figurebed",
       "branch": "master",
       "path": "img/",
-      "customUrl": ""
+      "customUrl": "",
+			"token": "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" // gitignore
     },
     "uploader": "github",
     "transformer": "path"

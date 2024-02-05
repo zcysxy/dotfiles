@@ -1,0 +1,6 @@
+0 */3 * * * /usr/bin/crontab -l > /Users/ce/.config/.crontab
+0 */3 * * * /bin/zsh /Users/ce/.scripts/conda.sh
+0 */3 * * * /bin/bash /Users/ce/.scripts/font-list.sh
+0 */3 * * * /bin/bash /Users/ce/.scripts/crontab.sh
+0 */3 * * * /opt/homebrew/bin/brew bundle dump --force --file=/Users/ce/.brew
+
