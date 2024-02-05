@@ -1,0 +1,40 @@
+name: obsidian
+channels:
+  - defaults
+dependencies:
+  - bzip2=1.0.8=h1de35cc_0
+  - ca-certificates=2023.12.12=hecd8cb5_0
+  - libffi=3.4.4=hecd8cb5_0
+  - ncurses=6.4=hcec6c5f_0
+  - openssl=3.0.13=hca72f7f_0
+  - pip=23.3.1=py310hecd8cb5_0
+  - python=3.10.13=h5ee71fb_0
+  - readline=8.2=hca72f7f_0
+  - setuptools=68.2.2=py310hecd8cb5_0
+  - sqlite=3.41.2=h6c40b1e_0
+  - tk=8.6.12=h5d9f67b_0
+  - tzdata=2023d=h04d1e81_0
+  - wheel=0.41.2=py310hecd8cb5_0
+  - xz=5.4.5=h6c40b1e_0
+  - zlib=1.2.13=h4dc903c_0
+  - pip:
+      - charset-normalizer==3.3.2
+      - click==8.1.7
+      - emoji==2.10.1
+      - loguru==0.7.2
+      - markdown-it-py==3.0.0
+      - mdurl==0.1.2
+      - obsidian-metadata==0.12.1
+      - prompt-toolkit==3.0.43
+      - pygments==2.17.2
+      - questionary==1.10.0
+      - regex==2023.12.25
+      - rich==13.7.0
+      - ruamel-yaml==0.17.40
+      - ruamel-yaml-clib==0.2.8
+      - shellingham==1.5.4
+      - tomlkit==0.12.3
+      - typer==0.9.0
+      - typing-extensions==4.9.0
+      - wcwidth==0.2.13
+prefix: /Users/ce/opt/anaconda3/envs/obsidian

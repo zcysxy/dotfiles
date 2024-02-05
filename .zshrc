@@ -32,6 +32,7 @@ export GOROOT="$(brew --prefix golang)/libexec"
 # Default editor
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # pre-oh-my-zsh
 # aliases

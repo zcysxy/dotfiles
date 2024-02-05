@@ -11,6 +11,7 @@ export PATH="\
 /opt/homebrew/anaconda3/bin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 $PATH"  
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # Path alias
 setopt cdable_vars

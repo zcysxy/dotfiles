@@ -1,0 +1,16 @@
+# Add another vault by replicating this section and changing the name
+["Vault 1"] # Name of the vault.
+
+    # Path to your obsidian vault
+    # Note for Windows users: Windows paths must use `\` as the path separator due to a limitation with how TOML parses strings.
+    #   Example: "C:\Users\username\Documents\Obsidian"
+    path = "/Users/ce/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box"
+
+    # Folders within the vault to ignore when indexing metadata
+    exclude_paths = [".git", ".obsidian"]
+
+    # Location to add new metadata. One of:
+    #    TOP:            Directly after frontmatter.
+    #    AFTER_TITLE:    After the first header following frontmatter.
+    #    BOTTOM:         The bottom of the note
+    insert_location = "BOTTOM"

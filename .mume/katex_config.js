@@ -1,0 +1,31 @@
+module.exports = {
+  macros: {
+    "\\inv":"{{#1}^{-1}}",
+    "\\bmatrix":"{\\begin{bmatrix}#1\\end{bmatrix}}",
+    "\\pmatrix":"{\\begin{pmatrix}#1\\end{pmatrix}}",
+    "\\cases":"{\\begin{cases}#1\\end{cases}}",
+    "\\angle":"{\\langle #1 \\rangle}",
+    "\\C": "\\mathbb{C}",
+    "\\tr": "\\operatorname{tr}",
+    "\\epsilon": "\\varepsilon",
+    "\\grad": "\\operatorname{grad}",
+    "\\hfill": "\\qquad",
+    "\\ge": "\\geqslant",
+    "\\le": "\\leqslant",
+    "\\ds": "\\displaystyle",
+    "\\al": "\\alpha",
+    "\\lam": "\\lambda",
+    "\\del": "\\delta",
+    "\\diag": "\\operatorname{diag}",
+    "\\d": "\\mathrm{d}",
+    "\\ppar": "\\frac{\\partial #1}{\\partial #2}",
+    "\\span": "\\operatorname{span}",
+    "\\spa": "\\operatorname{span}",
+    "\\dist": "\\operatorname{dist}",
+    "\\pat": "\\partial",
+    // TEMP
+    "\\M": "\\mathcal{M}",
+    "\\tm": "T_{#1}{\\mathcal{M}}",
+    "\\hyph": "\\text{-}",
+  }
+}
