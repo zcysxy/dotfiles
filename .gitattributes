@@ -3,3 +3,4 @@
 **/*.* filter=gitignore
 *.* filter=gitignore
 .* filter=gitignore
+/Users/ce/.zshrc filter=gitignore
