@@ -7,9 +7,7 @@
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [filter "gitignore"]
-  clean = "sed '/# gitignore$/d'"
-	clean = "sed '/\\/\\/ gitignore$/d'"
-	clean = "sed '/-- gitignore$/d'"
+	clean = "sed '/-- gitignore$/d; /# gitignore$/d; /\\/\\/ gitignore$/d'"
 	smudge = cat
 [https]
 	proxy = 127.0.0.1:54482
