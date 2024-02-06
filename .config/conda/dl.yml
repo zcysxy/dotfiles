@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - appnope=0.1.3=pyhd8ed1ab_0
+  - asttokens=2.4.1=pyhd8ed1ab_0
   - backports=1.0=pyhd8ed1ab_3
   - backports.functools_lru_cache=1.6.5=pyhd8ed1ab_0
   - ca-certificates=2023.7.22=h8857fd0_0
