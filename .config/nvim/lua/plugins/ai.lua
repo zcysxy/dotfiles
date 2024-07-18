@@ -4,8 +4,9 @@ return {
 	-- 'github/copilot.vim',
 	{
 		"zbirenbaum/copilot.lua",
-		event = "VeryLazy",
-		opts = {
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
 			panel = {
 				keymap = {
 					accept = "<s-cr>"
@@ -14,7 +15,7 @@ return {
 			suggestion = {
 				auto_trigger = true,
 				keymap = {
-					accept = "<s-cr>"
+					accept = "<s-cr>",
 				}
 			},
 			filetypes = {
@@ -22,7 +23,8 @@ return {
 				tex = true,
 				yaml = true,
 			}
-		}
+			})
+		end,
 	},
 	{
 		'madox2/vim-ai',
@@ -31,8 +33,7 @@ return {
 let s:initial_chat_prompt =<< trim END
 >>> system
 
-I am writing a computer science paper using LaTeX. You are a proficient researcher and academic writer. I want you to help me polish my manuscript. Specifically, please help me polish the writing to meet the academic style, improve the spelling, grammar, clarity, concision and overall readability. When necessary, rewrite the whole sentence.
-I will provide the manuscript in LaTeX; please directly return the edited LaTeX text. You don't need to explain your modification.
+I am writing a computer science paper using LaTeX. You are a proficient researcher and academic writer. I want you to help me polish my manuscript. Specifically, please help me polish the writing to meet the academic style, improve the spelling, grammar, clarity, concision and overall readability. I will provide the manuscript in LaTeX; please directly return the edited LaTeX text. You don't need to explain your modification. Most important, please stick to my writing style and refrain from using fancy words or phrases. Only make drastic changes if it is necessary.
 
 END
 let g:vim_ai_chat = {

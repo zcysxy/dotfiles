@@ -29,8 +29,8 @@ vim.cmd('filetype plugin indent on')
 vim.o.timeoutlen = 500
 
 -- Split
-vim.o.splitbelow = 1
-vim.o.splitright = 1
+vim.o.splitbelow = true
+vim.o.splitright = true
 -- Default splitting will cause your main splits to jump when opening an edgebar.
 -- To prevent this, set `splitkeep` to either `screen` or `topline`.
 vim.opt.splitkeep = "screen"
@@ -61,7 +61,8 @@ vim.g['pandoc#filetypes#pandoc_markdown'] = 0
 
 -- Backup
 if vim.fn.has("vms") then
-  vim.o.nobackup = true         -- do not keep a backup file, use versions instead
+  -- vim.o.nobackup = true         -- do not keep a backup file, use versions instead
+  vim.o.backup = false         -- do not keep a backup file, use versions instead
 else
   vim.o.backup = true           -- keep a backup file (restore to previous version)
   if vim.fn.has('persistent_undo') then
@@ -70,12 +71,15 @@ else
 end
 vim.o.backupdir = os.getenv("HOME") .. "/.vimtmp//"
 vim.o.directory = os.getenv("HOME") .. "/.vimtmp//"
-vim.o.nowritebackup = true
-vim.o.nobackup = true
+-- vim.o.nowritebackup = true
+vim.o.writebackup = false
+-- vim.o.nobackup = true
+vim.o.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undo"
 
 
-if tonumber(vim.o.t_Co) > 2 or vim.fn.has("gui_running") then
+-- if tonumber(vim.g.t_Co) > 2 or vim.fn.has("gui_running") then
+if vim.fn.has("gui_running") then
   -- Switch on highlighting the last used search pattern.
   vim.o.hlsearch = true
 end

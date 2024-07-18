@@ -1,7 +1,7 @@
-#!MANAGED-CONFIG https://3vcv.gardenparty.me/link/VD1oF9XDGHhxhYeM?sub=3&client=clash
+#!MANAGED-CONFIG https://cac3.gardenparty.me/link/VD1oF9XDGHhxhYeM?sub=2&client=clash
 
 #---------------------------------------------------#
-## 上次更新于：2024-02-05 01:14:39
+## 上次更新于：2024-07-17 05:21:05
 #---------------------------------------------------#
 
 port: 7890
@@ -14,290 +14,318 @@ external-controller: '0.0.0.0:9090'
 secret: ''
 proxies:
   -
-    name: '🇼🇸 台湾 A01V'
-    type: vmess
+    name: '🇼🇸 台湾 A01R'
+    type: ssr
     server: node-1201.yh82l3dsytxzf8.com
-    port: 6000
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 6004
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇼🇸 台湾 A02V'
-    type: vmess
+    name: '🇼🇸 台湾 A02R'
+    type: ssr
     server: node-1202.yh82l3dsytxzf8.com
-    port: 6001
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 6005
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇼🇸 台湾 A03V'
-    type: vmess
+    name: '🇼🇸 台湾 A03R'
+    type: ssr
     server: node-1203.yh82l3dsytxzf8.com
-    port: 6002
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 6006
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇼🇸 台湾 A04V'
-    type: vmess
+    name: '🇼🇸 台湾 A04R'
+    type: ssr
     server: node-1204.yh82l3dsytxzf8.com
-    port: 6003
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 6007
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇯🇵 日本 A01V'
-    type: vmess
+    name: '🇯🇵 日本 A01R'
+    type: ssr
     server: node-1301.yh82l3dsytxzf8.com
-    port: 30037
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30021
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇯🇵 日本 A02V'
-    type: vmess
+    name: '🇯🇵 日本 A02R'
+    type: ssr
     server: node-1302.yh82l3dsytxzf8.com
-    port: 30038
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30022
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇯🇵 日本 A03V'
-    type: vmess
+    name: '🇯🇵 日本 A03R'
+    type: ssr
     server: node-1303.yh82l3dsytxzf8.com
-    port: 30019
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30023
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇯🇵 日本 A04V'
-    type: vmess
+    name: '🇯🇵 日本 A04R'
+    type: ssr
     server: node-1304.yh82l3dsytxzf8.com
-    port: 30020
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30024
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇸🇬 狮城 A01V'
-    type: vmess
+    name: '🇸🇬 狮城 A01R'
+    type: ssr
     server: node-1401.yh82l3dsytxzf8.com
-    port: 30039
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30033
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇸🇬 狮城 A02V'
-    type: vmess
+    name: '🇸🇬 狮城 A02R'
+    type: ssr
     server: node-1402.yh82l3dsytxzf8.com
-    port: 30040
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30034
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇸🇬 狮城 A03V'
-    type: vmess
+    name: '🇸🇬 狮城 A03R'
+    type: ssr
     server: node-1403.yh82l3dsytxzf8.com
-    port: 30031
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30035
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇸🇬 狮城 A04V'
-    type: vmess
+    name: '🇸🇬 狮城 A04R'
+    type: ssr
     server: node-1404.yh82l3dsytxzf8.com
-    port: 30032
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30036
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇺🇲 美国 A01V'
-    type: vmess
+    name: '🇺🇲 美国 A01R'
+    type: ssr
     server: node-1501.yh82l3dsytxzf8.com
-    port: 30051
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30025
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇺🇲 美国 A02V'
-    type: vmess
+    name: '🇺🇲 美国 A02R'
+    type: ssr
     server: node-1502.yh82l3dsytxzf8.com
-    port: 30052
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30026
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇺🇲 美国 A03V'
-    type: vmess
+    name: '🇺🇲 美国 A03R'
+    type: ssr
     server: node-1503.yh82l3dsytxzf8.com
-    port: 30029
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30027
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇺🇲 美国 A04V'
-    type: vmess
+    name: '🇺🇲 美国 A04R'
+    type: ssr
     server: node-1504.yh82l3dsytxzf8.com
-    port: 30030
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30028
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A01V'
-    type: vmess
+    name: '🇭🇰 香港 A01R'
+    type: ssr
     server: node-1101.yh82l3dsytxzf8.com
-    port: 30043
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30001
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A02V'
-    type: vmess
+    name: '🇭🇰 香港 A02R'
+    type: ssr
     server: node-1102.yh82l3dsytxzf8.com
-    port: 30044
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30002
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A03V'
-    type: vmess
+    name: '🇭🇰 香港 A03R'
+    type: ssr
     server: node-1103.yh82l3dsytxzf8.com
-    port: 30045
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30003
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A04V'
-    type: vmess
+    name: '🇭🇰 香港 A04R'
+    type: ssr
     server: node-1104.yh82l3dsytxzf8.com
-    port: 30046
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30004
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A05V'
-    type: vmess
+    name: '🇭🇰 香港 A05R'
+    type: ssr
     server: node-1105.yh82l3dsytxzf8.com
-    port: 30047
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30005
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A06V'
-    type: vmess
+    name: '🇭🇰 香港 A06R'
+    type: ssr
     server: node-1106.yh82l3dsytxzf8.com
-    port: 30048
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30006
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A07V'
-    type: vmess
+    name: '🇭🇰 香港 A07R'
+    type: ssr
     server: node-1107.yh82l3dsytxzf8.com
-    port: 30049
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30007
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A08V'
-    type: vmess
+    name: '🇭🇰 香港 A08R'
+    type: ssr
     server: node-1108.yh82l3dsytxzf8.com
-    port: 30050
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30008
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A09V'
-    type: vmess
+    name: '🇭🇰 香港 A09R'
+    type: ssr
     server: node-1109.yh82l3dsytxzf8.com
-    port: 30053
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30009
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A10V'
-    type: vmess
+    name: '🇭🇰 香港 A10R'
+    type: ssr
     server: node-1110.yh82l3dsytxzf8.com
-    port: 30054
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30010
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A11V'
-    type: vmess
+    name: '🇭🇰 香港 A11R'
+    type: ssr
     server: node-1111.yh82l3dsytxzf8.com
-    port: 30059
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30011
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
   -
-    name: '🇭🇰 香港 A12V'
-    type: vmess
+    name: '🇭🇰 香港 A12R'
+    type: ssr
     server: node-1112.yh82l3dsytxzf8.com
-    port: 30060
-    uuid: 377e277d-4ca5-3cef-8d3e-f7a29f1d772b
-    alterId: 0
-    cipher: auto
-    udp: false
+    port: 30012
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
 proxy-groups:
   -
     name: '🚀 节点选择'
     type: select
     proxies:
-      - '🇼🇸 台湾 A01V'
-      - '🇼🇸 台湾 A02V'
-      - '🇼🇸 台湾 A03V'
-      - '🇼🇸 台湾 A04V'
-      - '🇯🇵 日本 A01V'
-      - '🇯🇵 日本 A02V'
-      - '🇯🇵 日本 A03V'
-      - '🇯🇵 日本 A04V'
-      - '🇸🇬 狮城 A01V'
-      - '🇸🇬 狮城 A02V'
-      - '🇸🇬 狮城 A03V'
-      - '🇸🇬 狮城 A04V'
-      - '🇺🇲 美国 A01V'
-      - '🇺🇲 美国 A02V'
-      - '🇺🇲 美国 A03V'
-      - '🇺🇲 美国 A04V'
-      - '🇭🇰 香港 A01V'
-      - '🇭🇰 香港 A02V'
-      - '🇭🇰 香港 A03V'
-      - '🇭🇰 香港 A04V'
-      - '🇭🇰 香港 A05V'
-      - '🇭🇰 香港 A06V'
-      - '🇭🇰 香港 A07V'
-      - '🇭🇰 香港 A08V'
-      - '🇭🇰 香港 A09V'
-      - '🇭🇰 香港 A10V'
-      - '🇭🇰 香港 A11V'
-      - '🇭🇰 香港 A12V'
+      - '🇼🇸 台湾 A01R'
+      - '🇼🇸 台湾 A02R'
+      - '🇼🇸 台湾 A03R'
+      - '🇼🇸 台湾 A04R'
+      - '🇯🇵 日本 A01R'
+      - '🇯🇵 日本 A02R'
+      - '🇯🇵 日本 A03R'
+      - '🇯🇵 日本 A04R'
+      - '🇸🇬 狮城 A01R'
+      - '🇸🇬 狮城 A02R'
+      - '🇸🇬 狮城 A03R'
+      - '🇸🇬 狮城 A04R'
+      - '🇺🇲 美国 A01R'
+      - '🇺🇲 美国 A02R'
+      - '🇺🇲 美国 A03R'
+      - '🇺🇲 美国 A04R'
+      - '🇭🇰 香港 A01R'
+      - '🇭🇰 香港 A02R'
+      - '🇭🇰 香港 A03R'
+      - '🇭🇰 香港 A04R'
+      - '🇭🇰 香港 A05R'
+      - '🇭🇰 香港 A06R'
+      - '🇭🇰 香港 A07R'
+      - '🇭🇰 香港 A08R'
+      - '🇭🇰 香港 A09R'
+      - '🇭🇰 香港 A10R'
+      - '🇭🇰 香港 A11R'
+      - '🇭🇰 香港 A12R'
   -
     name: '🎯 全球直连'
     type: select

@@ -83,3 +83,5 @@ map("n", "<C-f>", ":Neotree<CR>")
 map("n", "<M-l>", ":Neotree toggle=true<CR>")
 vim.keymap.set("n", "<M-r>", vim.cmd.TagbarToggle, options)
 
+-- Tex
+map("n", "tsm", "<plug>(vimtex-env-toggle-math)")

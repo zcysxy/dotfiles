@@ -15,3 +15,6 @@
 	proxy = 127.0.0.1:7890
 [init]
 	defaultBranch = main
+[branch]
+	autosetup = simple
+	autosetupmerge = simple

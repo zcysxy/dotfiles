@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "tex", "latex" },
   callback = function()

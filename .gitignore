@@ -9,9 +9,12 @@
 .*/**/*cache*
 .*auth*
 .*/**/*auth*
+.*token*
+.*/**/*token*
 .*cookie*
 .*/**/*cookie*
 .Trash
+.**.bak
 
 .anaconda
 .cargo
@@ -40,6 +43,8 @@
 .z
 .zsh_sessions
 .oh-my-zsh
+.bash_sessions
+.zcompdump
 
 # Specific files
 .CFUserTextEncoding
@@ -78,3 +83,4 @@
 .links/*
 !.links/bookmarks.html
 !.links/links.cfg
+

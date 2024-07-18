@@ -26,7 +26,7 @@ return {
 
 			-- WARNING: Comment out the following two lines if there were issues
 			keyset("n", "<space>", "<NOP>", { silent = true, noremap = true })
-			vim.o.mapleader = " "
+			vim.g.mapleader = " "
 
 			-- Completion
 			keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',

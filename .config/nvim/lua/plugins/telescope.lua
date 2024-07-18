@@ -39,8 +39,8 @@ return {
 				require('telescope.builtin').builtin { include_extensions = true }
 			end)
 			map('n', '<C-p>', ':Telescope commands<CR>', { silent = true })
-			-- map('n', '<leader>o', ':Telescope find_files<CR>')
-			map('n', '<leader>o', ':Telescope smart_open<CR>', { silent = true })
+			map('n', '<leader>o', ':Telescope find_files<CR>')
+			-- map('n', '<leader>o', ':Telescope smart_open<CR>', { silent = true })
 			map('n', '<leader>b', ':Telescope buffers<CR>', { silent = true })
 			-- nnoremap <Leader>r :Rg<CR>
 			map('n', '<leader>r', ':Telescope live_grep<CR>', { silent = true })
