@@ -124,7 +124,7 @@ local GREEK_LETTERS = {
   z = "zeta"
 }
 local GREEK_COMMANDs =
-"(alpha|beta|[cC]hi|[dD]elta|epsilon|eta|[gG]amma|iota|kappa|[lL]ambda|mu|nu|[oO]mega|[pP]hi|[Pp]i|[rR]ho|[sS]igma|[tT]heta|tau|Xi)"
+"(alpha|beta|[cC]hi|[dD]elta|epsilon|eta|[gG]amma|iota|kappa|[lL]ambda|mu|nu|[oO]mega|[pP]hi|[Pp]i|[Pp]si|[rR]ho|[sS]igma|[tT]heta|tau|Xi)"
 local greek = {
   ms({ trig = "[;@](%a)", regTrig = true, }, {
     f(function(_, snip)
@@ -170,7 +170,7 @@ local subscripts = {
     end)
   ),
   ms(
-    { trig = "([ijkdtn])\\1", name = "letter subscript", trigEngine = "ecma" },
+    { trig = "(?<!\\\\)([ijkdtn])\\1", name = "letter subscript", trigEngine = "ecma" },
     f(function(_, snip)
       return "_" .. snip.captures[1]
     end)
@@ -192,6 +192,7 @@ local superscripts = {
   ps({ trig = "sq", name = "squre" }, "^{2}"),
   ps({ trig = "(?<=[\\w\\d^_]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
   ps({ trig = "TT", name = "transpose" }, "^{T}"),
+  ps({ trig = "_dag", name = "ddagger" }, "^\\ddagger"),
   ps({ trig = "dag", name = "dagger" }, "^\\dagger"),
 }
 
@@ -284,7 +285,7 @@ local surroundings = {
   ps({ trig = "floor" }, "\\left\\lfloor $1 \\right\\rfloor$0"),
   ps({ trig = "ceil" }, "\\left\\lceil $1 \\right\\rceil$0"),
   ps({ trig = "paren" }, "\\paren{ $1 }$0"),
-  ps({ trig = "vec" }, "\\vec{ $1 }$0"),
+  -- ps({ trig = "vec" }, "\\vec{ $1 }$0"),
   ms(
     { trig = "(lr|@|;)(\\(|\\[|<|\\||\\\\\\||\\{)", trigEngine = "ecma", name = "Big parens" },
     d(1, function(_, snip)
@@ -297,6 +298,9 @@ local surroundings = {
       elseif left == "{" then
         left = "\\{"
         right = "\\}"
+      elseif left == "[" then
+        left = "["
+        right = "]"
       end
 
       return sn(
@@ -366,10 +370,15 @@ local decorations = {
     i(1),
     t("}"),
   }),
+  ms({ trig = "(\\?%a+)(brev)", regTrig = true }, {
+    f(function(_, snip)
+      return "\\breve{" .. snip.captures[1] .. "}"
+    end),
+  }),
   ms({ trig = "(\\?%a+)([hH])at", regTrig = true }, {
     f(function(_, snip)
       local hat = "\\hat{"
-      if snip.captures[2] == "T" then
+      if snip.captures[2] == "H" then
         hat = "\\widehat{"
       end
       return hat .. snip.captures[1] .. "}"
@@ -448,13 +457,13 @@ local align = {
 
 -- Expressions
 local expressions = {
-  rsps({ trig = "\\\\?sum" }, "\\sum_{${1:n=1}}^{${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?prod" }, "\\prod_{${1:n=1}}^{${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?cup" }, "\\bigcup_{${1:n=1}}^{${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?cap" }, "\\bigcap_{${1:n=1}}^{${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?lim" }, "\\lim_{${1:n} \\to ${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?limsup" }, "\\limsup_{${1:n} \\to ${2:\\infity}}$0"),
-  rsps({ trig = "\\\\?int" }, "\\int_{${1:0}}^{${2:\\infity}} $0 \\, \\mathrm{d}${3:x}"),
+  rsps({ trig = "\\\\?sum" }, "\\sum_{${1:n=1}}^{${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?prod" }, "\\prod_{${1:n=1}}^{${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?cup" }, "\\bigcup_{${1:n=1}}^{${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?cap" }, "\\bigcap_{${1:n=1}}^{${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?lim" }, "\\lim_{${1:n} \\to ${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?limsup" }, "\\limsup_{${1:n} \\to ${2:\\infty}}$0"),
+  rsps({ trig = "\\\\?int" }, "\\int_{${1:0}}"),
   ms({ trig = "(%w):", name = "functions", regTrig = true }, {
     d(1, function(_, snip)
       return sn(1, {

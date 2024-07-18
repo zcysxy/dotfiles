@@ -61,4 +61,48 @@ return {
 	-- 		require('cmp_pandoc').setup()
 	-- 	end
 	-- }
+	{
+		'MeanderingProgrammer/markdown.nvim',
+		name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+		dependencies = { 'nvim-treesitter/nvim-treesitter' },
+		config = function()
+			require('render-markdown').setup({
+				callout = {
+					note = { raw = '[!NOTE]', rendered = '󰋽 Note', highlight = 'DiagnosticInfo' },
+					remark = { raw = '[!rmk]', rendered = '󰳦 Remark', highlight = 'DiagnosticError' },
+					caution = { raw = '[!CAUTION]', rendered = '󰳦 Caution', highlight = 'DiagnosticError' },
+					qn = { raw = '[!qn]', rendered = '󰘥 Question', highlight = 'DiagnosticWarn' },
+					question = { raw = '[!QUESTION]', rendered = '󰘥 Question', highlight = 'DiagnosticWarn' },
+					IMPORTANT = { raw = '[!IMPORTANT]', rendered = '󰅾 Important', highlight = 'DiagnosticHint' },
+					important = { raw = '[!impt]', rendered = '󰅾 Important', highlight = 'DiagnosticHint' },
+					ex = { raw = '[!ex]', rendered = '󰉹 Example', highlight = 'DiagnosticHint' },
+					example = { raw = '[!EXAMPLE]', rendered = '󰉹 Example', highlight = 'DiagnosticHint' },
+					TIP = { raw = '[!TIP]', rendered = '󰌶 Tip', highlight = 'DiagnosticOk' },
+					tip = { raw = '[!tip]', rendered = '󰌶 Tip', highlight = 'DiagnosticOk' },
+					warning = { raw = '[!WARNING]', rendered = '󰀪 Warning', highlight = 'DiagnosticWarn' },
+					abstract = { raw = '[!ABSTRACT]', rendered = '󰨸 Abstract', highlight = 'DiagnosticInfo' },
+					todo = { raw = '[!TODO]', rendered = '󰗡 Todo', highlight = 'DiagnosticInfo' },
+					success = { raw = '[!SUCCESS]', rendered = '󰄬 Success', highlight = 'DiagnosticOk' },
+					failure = { raw = '[!FAILURE]', rendered = '󰅖 Failure', highlight = 'DiagnosticError' },
+					danger = { raw = '[!DANGER]', rendered = '󱐌 Danger', highlight = 'DiagnosticError' },
+					bug = { raw = '[!BUG]', rendered = '󰨰 Bug', highlight = 'DiagnosticError' },
+					quote = { raw = '[!QUOTE]', rendered = '󱆨 Quote', highlight = '@markup.quote' },
+				},
+				checkbox = {
+					custom = {
+						-- todo = { raw = '[-]', rendered = '󰥔 ', highlight = '@markup.raw' },
+						rmk = { raw = '[!]', rendered = '󰳦 ', highlight = 'DiagnosticError' },
+						important = { raw = '[*]', rendered = ' ', highlight = 'DiagnosticHint' },
+						question = { raw = '[?]', rendered = '󰘥 ', highlight = 'DiagnosticWarn' },
+						example = { raw = '[@]', rendered = '󰉹 ', highlight = 'DiagnosticHint' },
+						tip = { raw = '[~]', rendered = '󰌶 ', highlight = 'DiagnosticOk' },
+						wontdo = { raw = '[=]', rendered = '󰜺 ', highlight = '@markup.quote' },
+						defer = { raw = '[>]', rendered = ' ', highlight = 'DiagnosticInfo' },
+						pro = { raw = '[+]', rendered = ' ', highlight = 'DiagnosticOk' },
+						con = { raw = '[-]', rendered = ' ', highlight = 'DiagnosticError' },
+					},
+				}
+			})
+		end,
+	}
 }
