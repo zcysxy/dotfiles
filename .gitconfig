@@ -9,10 +9,6 @@
 [filter "gitignore"]
 	clean = "sed '/-- gitignore$/d; /# gitignore$/d; /\\/\\/ gitignore$/d'"
 	smudge = cat
-[https]
-	proxy = 127.0.0.1:7890
-[http]
-	proxy = 127.0.0.1:7890
 [init]
 	defaultBranch = main
 [branch]

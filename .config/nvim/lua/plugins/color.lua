@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
 	-- Autoswitch
 	{
@@ -7,6 +9,7 @@ return {
 			set_dark_mode = function()
 				vim.api.nvim_set_option_value("background", "dark", {})
 				vim.cmd("colorscheme gruvbox-material")
+				-- vim.cmd("colorscheme ares")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option_value("background", "light", {})
@@ -32,6 +35,8 @@ return {
 			require('bluloco').setup({ transparent = true, italics = true })
 		end
 	},
+	'rktjmp/lush.nvim',
+	{ 'ab-dx/ares.nvim', name = 'ares', priority = 1000 },
 
 	-- Utils
 	'cormacrelf/dark-notify',
