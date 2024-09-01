@@ -34,6 +34,7 @@ return nil, {
 	s({ trig = " wrt ", name = "with regard to" }, t(" w.r.t. ")),
 	s({ trig = " ie ", name = "ie" }, t(" i.e., ")),
 	s({ trig = " eg ", name = "eg" }, t(" e.g., ")),
+	s({ trig = " ea ", name = "et al" }, t(" et al. ")),
 	s({ trig = "\\beg([ ,])", name = "for example", trigEngine = "ecma" }, { f(function(_, snip)
 		return "e.g." .. snip.captures[1
 		]

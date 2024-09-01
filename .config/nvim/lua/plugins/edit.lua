@@ -15,6 +15,8 @@ return {
 	'https://github.com/tpope/vim-surround',
 	'https://github.com/jiangmiao/auto-pairs',
 	{ 'mg979/vim-visual-multi', branch = 'master' },
-	'tpope/vim-abolish'
-	,
+	'tpope/vim-abolish',
+
+	-- spectre
+	'nvim-pack/nvim-spectre',
 }

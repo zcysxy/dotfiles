@@ -95,8 +95,8 @@ local math_modes = {
 
 -- Text decorations
 local text_decorations = {
-  ps( { trig = "emph", name = "emphasis" }, "\\emph{${1}}$0"),
-  ps( { trig = "**", name = "emphasis" }, "\\emph{${1}}$0"),
+  ps( { trig = "emph", name = "emphasis", snippetType = "snippet" }, "\\emph{${1}}$0"),
+  ps( { trig = "**", name = "emphasis", snippetType = "snippet" }, "\\emph{${1}}$0"),
   sps( { trig = "fbf", name = "boldface" }, "\\textbf{${1}}$0"),
   ps( { trig = "__", name = "boldface" }, "\\textbf{${1}}$0"),
   sps({ trig = "fit", name = "italic" }, "\\textit{${1}}$0"),
