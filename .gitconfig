@@ -14,3 +14,5 @@
 [branch]
 	autosetup = simple
 	autosetupmerge = simple
+[credential]
+	helper = store

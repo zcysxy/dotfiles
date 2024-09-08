@@ -13,6 +13,7 @@
 .*/**/*token*
 .*cookie*
 .*/**/*cookie*
+.*credential*
 .Trash
 .**.bak
 

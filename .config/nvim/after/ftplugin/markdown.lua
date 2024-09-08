@@ -84,5 +84,5 @@ vim.g.vim_markdown_fenced_languages = {'shell=sh', 'bash=sh'}
 
 vim.keymap.set({ 'n' },'<leader>ll', function() require("knap").toggle_autopreviewing() end)
 
-vim.wo.conceallevel = 1
-vim.o.conceallevel = 1
+vim.wo.conceallevel = 2
+vim.o.conceallevel = 2

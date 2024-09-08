@@ -67,6 +67,8 @@ return {
 		dependencies = { 'nvim-treesitter/nvim-treesitter' },
 		config = function()
 			require('render-markdown').setup({
+				latex = { enabled = false },
+				win_options = { conceallevel = { rendered = 2 } },
 				callout = {
 					note = { raw = '[!NOTE]', rendered = '󰋽 Note', highlight = 'DiagnosticInfo' },
 					remark = { raw = '[!rmk]', rendered = '󰳦 Remark', highlight = 'DiagnosticError' },
