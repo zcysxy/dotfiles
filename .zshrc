@@ -104,7 +104,8 @@ export PATH="\
 /Users/ce/.local/bin:\
 /Applications/MATLAB_R2021b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
-/opt/homebrew/anaconda3/bin:\
+/opt/anaconda3/bin:\
+/opt/anaconda3/condabin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 /Users/ce/.scripts:\
 $PATH"  
@@ -266,14 +267,14 @@ eval $(thefuck --alias)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ce/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/ce/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ce/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/ce/opt/anaconda3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
