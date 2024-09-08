@@ -22,9 +22,9 @@ export LANG=en_US.UTF-8
 #export LC_CTYPE=C
 #export LANG=C
 #export w=$HOME/Workbench
-export t=$HOME/0-TMP/temp
-export p=$HOME/0-TMP/Projects
-export m=$HOME/0-MI
+export t=$HOME/0-TMP/08-test
+export p=$HOME/0-TMP/01-projects
+export m=$HOME/1-ME
 export k=$HOME/3-KNWL
 export dl=$HOME/Downloads
 #export s=$HOME/Workbench/School
@@ -44,7 +44,7 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # pre-oh-my-zsh
 # aliases
-alias temp="cd ~/0-TMP/temp"
+alias temp="cd ~/0-TMP/08-test"
 alias lse=ls_extended
 alias weather="curl http://wttr.in/"
 alias figletc="figlet -c -w \$(tput cols)"
