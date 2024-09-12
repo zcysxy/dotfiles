@@ -37,4 +37,4 @@ dependencies:
       - typer==0.9.0
       - typing-extensions==4.9.0
       - wcwidth==0.2.13
-prefix: /Users/ce/opt/anaconda3/envs/obsidian
+prefix: /opt/anaconda3/envs/obsidian

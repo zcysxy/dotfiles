@@ -98,4 +98,4 @@ dependencies:
       - torchvision==0.15.2
       - urllib3==2.0.4
       - wandb==0.16.0
-prefix: /Users/ce/opt/anaconda3/envs/rl
+prefix: /opt/anaconda3/envs/rl
