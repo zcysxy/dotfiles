@@ -93,4 +93,4 @@ dependencies:
       - torchvision==0.16.1
       - tzdata==2023.3
       - urllib3==2.1.0
-prefix: /Users/ce/opt/anaconda3/envs/dl
+prefix: /opt/anaconda3/envs/dl
