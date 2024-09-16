@@ -30,6 +30,7 @@ export dl=$HOME/Downloads
 #export s=$HOME/Workbench/School
 export 0=$HOME/0-TMP
 export salt=$HOME/3-KNWL/34-Notes/Salt-Box
+export OBSIDIAN_REST_API_KEY=9148ca96a40219a821a3ae3e47ea08590a22b66e1c1372193eadfe3de420542d
 #export snip=$HOME/3-KNWL/34-Notes/Salt-Box/.obsidian/snippets
 if [ -d ~/.texmf ] ; then
     export TEXMFHOME=~/.texmf
@@ -72,6 +73,7 @@ alias q=exit
 alias :q="cowsay 'Fuck you, Im not Vim!'"
 alias :wq="cowsay 'Fuck you, Im not Vim!'"
 alias gs=gscholar
+alias d=pwd
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -127,7 +129,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="nothing" # common
+NT_HIDE_EXIT_CODE=1
+NT_HIDE_COUNT=1
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

@@ -41,6 +41,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "ccbaee59547425ef8b766433a6020ac191f3151f" },
   "nvim-ufo": { "branch": "main", "commit": "5525f422d48f570262611ae2b6aa562c1c428bc5" },
   "nvim-web-devicons": { "branch": "master", "commit": "9793801f974bba70e4ac5d7eae6c4f5659993d8e" },
+  "obsidian-bridge.nvim": { "branch": "main", "commit": "dd7bacd95141bfa355ce4d31c7cde681d7e45573" },
   "oil.nvim": { "branch": "master", "commit": "1fe476daf0b3c108cb8ee1fc1226cc282fa2c9c1" },
   "one-nvim": { "branch": "main", "commit": "faf6fb3f98fccbe009c3466f657a8fff84a5f956" },
   "onenord.nvim": { "branch": "main", "commit": "057d7048e499b4de7cd4edaff94ec1890242a117" },
