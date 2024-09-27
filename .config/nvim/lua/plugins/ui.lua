@@ -25,6 +25,7 @@ return {
 			})
 		end
 	},
+	"edkolev/tmuxline.vim",
 	{
 		"folke/which-key.nvim",
 		config = function()
