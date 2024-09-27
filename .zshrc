@@ -50,7 +50,7 @@ alias lse=ls_extended
 alias weather="curl http://wttr.in/"
 alias figletc="figlet -c -w \$(tput cols)"
 alias hello="say -v Fred hi\!"
-alias c=clear
+alias c=/usr/bin/clear
 alias re="(git rev-parse --is-inside-work-tree && onefetch)||(clear && neofetch)"
 alias cat="bat --theme ansi"
 alias sed=gsed
@@ -73,7 +73,7 @@ alias q=exit
 alias :q="cowsay 'Fuck you, Im not Vim!'"
 alias :wq="cowsay 'Fuck you, Im not Vim!'"
 alias gs=gscholar
-alias d=pwd
+alias d='echo $(IFS=/; echo "${${${(s:/:)PWD}:(-3)}[*]}")'
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -110,6 +110,7 @@ export PATH="\
 /opt/anaconda3/condabin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 /Users/ce/.scripts:\
+/Applications/WezTerm.app/Contents/MacOS:\
 $PATH"  
 
 # autosuggestions

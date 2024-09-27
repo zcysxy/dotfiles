@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/citations
+~MSle0~/First level
 
 # Command Line History (newest to oldest):
 :q
@@ -24,6 +24,8 @@
 |2,0,1710855229,,"w"
 
 # Search String History (newest to oldest):
+?/First level
+|2,1,1727238666,47,"First level"
 ?/citations
 |2,1,1717474335,47,"citations"
 ?/brew
@@ -64,36 +66,196 @@
 |3,0,36,0,1,0,1715703852," "
 
 # File marks:
-'0  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
-|4,48,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
-'1  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
-|4,49,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
-'2  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
-|4,50,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
-'3  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,51,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
-'4  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,52,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
-'5  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,53,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
-'6  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,54,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
-'7  253  0  /private/var/folders/kt/8542mdzd03q6v0r_k8n155kc0000gn/T/BetterZip Temporary Folder.9kWq8q/BetterZip Temporary Folder.Ewrhj1/rtrssn.tex
-|4,55,253,0,1717127861,"/private/var/folders/kt/8542mdzd03q6v0r_k8n155kc0000gn/T/BetterZip Temporary Folder.9kWq8q/BetterZip Temporary Folder.Ewrhj1/rtrssn.tex"
-'8  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/Projects/mfg/lfa_qml/mans/lfa_qml_1.tex
-|4,56,1,0,1716308768,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/Projects/mfg/lfa_qml/mans/lfa_qml_1.tex"
-'9  95  0  ~/.zshrc
-|4,57,95,0,1715703932,"~/.zshrc"
+'0  136  0  ~/Desktop/iclr2025_conference.tex
+|4,48,136,0,1727238672,"~/Desktop/iclr2025_conference.tex"
+'1  1  0  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+|4,49,1,0,1726619685,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
+'2  9  25  ~/Downloads/siam_22M1499534.bib
+|4,50,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+'3  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,51,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+'4  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,52,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+'5  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,53,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+'6  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
+|4,54,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
+'7  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
+|4,55,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
+'8  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
+|4,56,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
+'9  557  19  ~/Downloads/icml2024/example_paper.tex
+|4,57,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
 
 # Jumplist (newest first):
+-'  136  0  ~/Desktop/iclr2025_conference.tex
+|4,39,136,0,1727238672,"~/Desktop/iclr2025_conference.tex"
+-'  1  0  ~/Desktop/iclr2025_conference.tex
+|4,39,1,0,1727238666,"~/Desktop/iclr2025_conference.tex"
+-'  1  0  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+|4,39,1,0,1726619685,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
+-'  1  0  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+|4,39,1,0,1726619685,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  9  25  ~/Downloads/siam_22M1499534.bib
+|4,39,9,25,1726613650,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
+-'  1  0  ~/Downloads/siam_22M1499534.bib
+|4,39,1,0,1726613643,"~/Downloads/siam_22M1499534.bib"
 -'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
 |4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  88  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,88,0,1725412089,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
+-'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
+|4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
 -'  1  0  ~/Downloads/LaTeX_DL_468198_240419/template.tex
 |4,39,1,0,1725411878,"~/Downloads/LaTeX_DL_468198_240419/template.tex"
 -'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
 |4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
 -'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
 |4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex
+|4,39,1,0,1725247482,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/06-share/12.01-NutstoreShare/notes/articlenotes/notes_differential-notions.tex"
 -'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
 |4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
 -'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
@@ -102,192 +264,44 @@
 |4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
 -'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
 |4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex
-|4,39,1,0,1725215131,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/global_rebuttal.tex"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib
-|4,39,1,0,1725215123,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/lfa_qml.bib"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  1  0  ~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps
-|4,39,1,0,1718700662,"~/Downloads/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997_370/vecteezy_regular-fit-short-sleeve-t-shirt-technical-sketch-fashion_6188997.eps"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
--'  557  19  ~/Downloads/icml2024/example_paper.tex
-|4,39,557,19,1717474375,"~/Downloads/icml2024/example_paper.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
+-'  1  0  ~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex
+|4,39,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
 
 # History of marks within files (newest to oldest):
+
+> ~/Desktop/iclr2025_conference.tex
+	*	1727238670	0
+	"	136	0
+
+> ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+	*	1726619682	0
+	"	1	0
+
+> ~/Downloads/siam_22M1499534.bib
+	*	1726613649	0
+	"	9	25
 
 > ~/Downloads/LaTeX_DL_468198_240419/template.tex
 	*	1725412089	0

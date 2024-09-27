@@ -22,6 +22,10 @@ return {
 				mdtopdf = "panrun %docroot%",
 				mdtopdfviewerlaunch = "open -a Skim.app %outputfile%",
 				mdtopdfviewerrefresh = "kill -HUP %pid%",
+
+				htmltohtml = "none",
+				htmltohtmlviewerlaunch = "live-server --quiet --open=%outputfile% --watch=%outputfile% --wait=800",
+				htmltohtmlviewerrefresh = "none",
 				-- mdtopdfbufferasstdin = true,
 				delay = 1000
 			}

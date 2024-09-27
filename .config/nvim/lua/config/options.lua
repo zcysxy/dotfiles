@@ -40,7 +40,7 @@ vim.o.mouse = 'a'
 vim.o.statusline = vim.o.statusline .. '%F'
 vim.o.grepprg = "rg --vimgrep --no-heading --smart-case -g '!*~'"
 
-vim.g.python3_host_prog = '/Users/ce/opt/anaconda3/bin/python'
+vim.g.python3_host_prog = '/opt/anaconda3/bin/python'
 
 -- Terminal
 vim.env.ZDOTDIR = "/Users/ce/.zsh/simp"

@@ -23,7 +23,7 @@ return {
 			vim.g.jupytext_enable = 1
 			vim.g.jupytext_command = 'jupytext'
 			vim.g.jupytext_fmt = 'py:percent'
-			vim.g.python3_host_prog = '/opt/homebrew/anaconda3/envs/py3/bin/python'
+			vim.g.python3_host_prog = '/opt/anaconda3/bin/python3'
 			vim.g.jupyter_highlight_cells = 1
 			vim.g.jupyter_cell_separators = { '# %%' }
 
