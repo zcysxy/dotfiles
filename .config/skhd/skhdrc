@@ -1,6 +1,7 @@
 # Open apps
 # alt + cmd - t: open -a /Applications/iTerm.app/Contents/MacOS/iTerm2
 ctrl + cmd - t: osascript /Users/ce/.scripts/new-iterm-window.scpt
+ctrl + cmd - a: osascript /Users/ce/.scripts/new-browser.scpt
 # cmd - e: open ~
 
 # pin window to always on top

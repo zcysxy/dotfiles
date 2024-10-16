@@ -1,9 +1,9 @@
 # Brew mirrors
-export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
+# export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+# export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -22,6 +22,7 @@ export LANG=en_US.UTF-8
 #export LC_CTYPE=C
 #export LANG=C
 #export w=$HOME/Workbench
+export XDG_CONFIG_HOME="$HOME/.config"
 export t=$HOME/0-TMP/08-test
 export p=$HOME/0-TMP/01-projects
 export m=$HOME/1-ME
@@ -51,7 +52,7 @@ alias weather="curl http://wttr.in/"
 alias figletc="figlet -c -w \$(tput cols)"
 alias hello="say -v Fred hi\!"
 alias c=/usr/bin/clear
-alias re="(git rev-parse --is-inside-work-tree && onefetch)||(clear && neofetch)"
+alias re="(git rev-parse --is-inside-work-tree && onefetch)||(/usr/bin/clear && neofetch)"
 alias cat="bat --theme ansi"
 alias sed=gsed
 alias e=$EDITOR
@@ -74,6 +75,10 @@ alias :q="cowsay 'Fuck you, Im not Vim!'"
 alias :wq="cowsay 'Fuck you, Im not Vim!'"
 alias gs=gscholar
 alias d='echo $(IFS=/; echo "${${${(s:/:)PWD}:(-3)}[*]}")'
+alias t=tmux
+alias ta='tmux attach -t'
+alias matlab='/Applications/MATLAB_R2024b.app/bin/matlab'
+alias matlab2='/Applications/MATLAB_R2021b.app/bin/matlab'
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -101,16 +106,19 @@ export NVM_DIR="$HOME/.nvm"
 
 # PATH
 export PATH="\
+/Users/ce/.local/bin:\
 /opt/homebrew/bin:\
 /opt/homebrew/sbin:\
-/Users/ce/.local/bin:\
 /Applications/MATLAB_R2021b.app/bin:\
+/Applications/MATLAB_R2021b.app/bin/maci64:\
+/Applications/MATLAB_R2024b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
 /opt/anaconda3/bin:\
 /opt/anaconda3/condabin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 /Users/ce/.scripts:\
 /Applications/WezTerm.app/Contents/MacOS:\
+/Applications/sioyek.app/Contents/MacOS:\
 $PATH"  
 
 # autosuggestions
