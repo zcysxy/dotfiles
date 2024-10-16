@@ -85,3 +85,10 @@ vim.keymap.set("n", "<M-r>", vim.cmd.TagbarToggle, options)
 
 -- Tex
 map("n", "tsm", "<plug>(vimtex-env-toggle-math)")
+
+-- Files
+map('n', '<leader>f', ':Oil --float<CR>', { silent = true })
+map('n', '<leader>r', ':Telescope oldfiles<CR>', { silent = true })
+
+-- Winshift
+map("n", "<C-w><space>", ":WinShift<CR>")

@@ -96,6 +96,16 @@ local math_modes = {
 -- Text decorations
 local text_decorations = {
   ps( { trig = "emph", name = "emphasis", snippetType = "snippet" }, "\\emph{${1}}$0"),
+  s({ trig = "**", name = "emphasis", snippetType = "snippet" }, {
+    d(1, function(_, snip)
+      if snip.env.TM_SELECTED_TEXT[1] then
+        return sn(1, {
+          t("\\emph{" .. snip.env.TM_SELECTED_TEXT[1] .. "}"),
+        })
+      end
+      return sn(nil, {t("\\emph{"), i(1), t("}")})
+    end),
+  }),
   ps( { trig = "**", name = "emphasis", snippetType = "snippet" }, "\\emph{${1}}$0"),
   sps( { trig = "fbf", name = "boldface" }, "\\textbf{${1}}$0"),
   ps( { trig = "__", name = "boldface" }, "\\textbf{${1}}$0"),

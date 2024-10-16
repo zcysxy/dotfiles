@@ -100,7 +100,7 @@ autocmd("FileType", {
 })
 
 -- Clear notifications
-vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+autocmd({ "InsertEnter" }, {
 	group = vim.api.nvim_create_augroup("NotifyClearGrp", {}),
 	pattern = "*",
 	callback = function()
@@ -108,3 +108,12 @@ vim.api.nvim_create_autocmd({ "InsertEnter" }, {
 	end
 })
 
+-- Stop dynamic folding
+-- autocmd({ "InsertLeave", "WinEnter" }, {
+-- 	pattern = "*",
+-- 	command = "setlocal foldmethod=syntax",
+-- })
+-- autocmd({ "InsertEnter", "WinLeave" }, {
+-- 	pattern = "*",
+-- 	command = "setlocal foldmethod=manual",
+-- })
