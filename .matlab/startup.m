@@ -9,3 +9,4 @@ set(0, 'DefaultLineMarker', 'none')
 set(0, 'DefaultTextInterpreter', 'tex', 'DefaultTextFontName', 'times new roman', 'DefaultTextFontWeight', 'normal')
 % Defaults for legend
 set(0, 'DefaultLegendInterpreter', 'tex', 'DefaultLegendBox', 'off')
+set(groot, 'defaultLegendLocation', 'best')

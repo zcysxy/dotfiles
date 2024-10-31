@@ -77,6 +77,7 @@ alias gs=gscholar
 alias d='echo $(IFS=/; echo "${${${(s:/:)PWD}:(-3)}[*]}")'
 alias t=tmux
 alias ta='tmux attach -t'
+alias tn='tmux new -s'
 alias matlab='/Applications/MATLAB_R2024b.app/bin/matlab'
 alias matlab2='/Applications/MATLAB_R2021b.app/bin/matlab'
 
@@ -107,14 +108,14 @@ export NVM_DIR="$HOME/.nvm"
 # PATH
 export PATH="\
 /Users/ce/.local/bin:\
+/opt/anaconda3/bin:\
+/opt/anaconda3/condabin:\
 /opt/homebrew/bin:\
 /opt/homebrew/sbin:\
 /Applications/MATLAB_R2021b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
 /Applications/MATLAB_R2024b.app/bin:\
 /Applications/MATLAB_R2021b.app/bin/maci64:\
-/opt/anaconda3/bin:\
-/opt/anaconda3/condabin:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 /Users/ce/.scripts:\
 /Applications/WezTerm.app/Contents/MacOS:\

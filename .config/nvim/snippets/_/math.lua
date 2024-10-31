@@ -217,6 +217,7 @@ local relations = {
   ps({ trig = "\\\\\\", name = "set minues" }, "\\setminus "),
   ps({ trig = "<<" }, "\\ll "),
   ps({ trig = ">>" }, "\\gg "),
+  ps({ trig = "/0" }, "\\emptyset "),
 }
 
 -- Symbols

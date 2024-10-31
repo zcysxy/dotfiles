@@ -30,6 +30,34 @@ return {
 			},
 		})
 
+		local untrigger = function()
+			-- get the snippet
+			local snip = require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()].parent.snippet
+			-- get its trigger
+			local trig = snip.trigger
+			-- replace that region with the trigger
+			local node_from, node_to = snip.mark:pos_begin_end_raw()
+			vim.api.nvim_buf_set_text(
+				0,
+				node_from[1],
+				node_from[2],
+				node_to[1],
+				node_to[2],
+				{ trig }
+			)
+			-- reset the cursor-position to ahead the trigger
+			vim.fn.setpos(".", { 0, node_from[1] + 1, node_from[2] + 1 + string.len(trig) })
+		end
+
+		keyset({ "i", "s" }, "<c-x>", function()
+			if require("luasnip").in_snippet() then
+				untrigger()
+				require("luasnip").unlink_current()
+			end
+		end, {
+			desc = "Undo a snippet",
+		})
+
 		keyset({ "i" }, "<C-K>", function() ls.expand() end, { silent = true })
 		keyset({ "i", "s" }, "<C-L>", function() ls.jump(1) end, { silent = true })
 		keyset({ "i", "s" }, "<C-J>", function() ls.jump(-1) end, { silent = true })
