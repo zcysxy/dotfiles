@@ -65,8 +65,8 @@ vim.g.VM_maps['Find Under'] = '<C-d>'
 vim.g.VM_maps['Find Subword Under'] = '<C-d>'
 
 -- GitGutter
-map("n", "<C-g>r", ":GitGutterUndoHunk<CR>", { silent = true, noremap = true })
-map("n", "<C-g>s", ":GitGutterStageHunk<CR>", { silent = true, noremap = true })
+map("n", "<leader>gr", ":GitGutterUndoHunk<CR>", { silent = true, noremap = true })
+map("n", "<leader>gs", ":GitGutterStageHunk<CR>", { silent = true, noremap = true })
 
 -- SnipRun
 map('v', 'f', '<Plug>SnipRun', { silent = true })

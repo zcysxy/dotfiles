@@ -110,3 +110,6 @@ vim.opt.laststatus = 0
 
 -- local rc
 vim.o.exrc = true
+
+-- listchars
+vim.o.nrformats = "bin,hex,alpha"
