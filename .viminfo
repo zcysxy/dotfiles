@@ -66,8 +66,8 @@
 |3,0,36,0,1,0,1715703852," "
 
 # File marks:
-'0  1  0  ~/Downloads/init.lua
-|4,48,1,0,1730966428,"~/Downloads/init.lua"
+'0  1  0  ~/.config/kitty/kitty.conf
+|4,48,1,0,1730929758,"~/.config/kitty/kitty.conf"
 '1  1  0  ~/Cloud-MATLAB/dlss/fig/conn_comp.eps
 |4,49,1,0,1729928119,"~/Cloud-MATLAB/dlss/fig/conn_comp.eps"
 '2  1  0  ~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/qmi/ecai/ecai-template/fig/logo_columbia_stack.eps
@@ -88,8 +88,8 @@
 |4,57,1,0,1725215134,"~/Library/CloudStorage/OneDrive-四川民族学院/0-TMP/01-projects/mfg/lfa_qml/mans/rebuttal.tex"
 
 # Jumplist (newest first):
--'  1  0  ~/Downloads/init.lua
-|4,39,1,0,1730966428,"~/Downloads/init.lua"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1730929758,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/Cloud-MATLAB/dlss/fig/conn_comp.eps
 |4,39,1,0,1729928119,"~/Cloud-MATLAB/dlss/fig/conn_comp.eps"
 -'  1  0  ~/Cloud-MATLAB/dlss/fig/conn_comp.eps
@@ -291,8 +291,8 @@
 
 # History of marks within files (newest to oldest):
 
-> ~/Downloads/init.lua
-	*	1730966426	0
+> ~/.config/kitty/kitty.conf
+	*	1730929755	0
 	"	1	0
 
 > ~/Cloud-MATLAB/dlss/fig/conn_comp.eps

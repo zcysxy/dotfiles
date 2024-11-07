@@ -19,4 +19,9 @@ return {
 
 	-- spectre
 	'nvim-pack/nvim-spectre',
+	{
+		"chrisgrieser/nvim-various-textobjs",
+		event = "UIEnter",
+		opts = { useDefaultKeymaps = true },
+	},
 }
