@@ -338,19 +338,18 @@ local surroundings = {
 
 -- Decorations
 local decorations = {
-  ms(
-	{ trig = "(\\?%a+)bar", regTrig = true }, {
+  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
+  ms({ trig = "(\\?%a+)bar", regTrig = true }, {
     f(function(_, snip)
       return "\\bar{" .. snip.captures[1] .. "}"
     end),
   }),
-  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
+  ms({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
   ms({ trig = "(\\?%a+)Bar", regTrig = true }, {
     f(function(_, snip)
       return "\\overline{" .. snip.captures[1] .. "}"
     end),
   }),
-  ms({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
   ms({ trig = "(\\?%a+)([tT])il", regTrig = true }, {
     f(function(_, snip)
       local tilde = "\\tilde{"
@@ -376,6 +375,17 @@ local decorations = {
       return "\\breve{" .. snip.captures[1] .. "}"
     end),
   }),
+  ms({ trig = "([hH])at", regTrig = true }, {
+    f(function(_, snip)
+      local hat = "\\hat{"
+      if snip.captures[1] == "H" then
+        hat = "\\widehat{"
+      end
+      return hat
+    end),
+    i(1),
+    t("}"),
+  }),
   ms({ trig = "(\\?%a+)([hH])at", regTrig = true }, {
     f(function(_, snip)
       local hat = "\\hat{"
@@ -384,17 +394,6 @@ local decorations = {
       end
       return hat .. snip.captures[1] .. "}"
     end),
-  }),
-  ms({ trig = "([hH])at", regTrig = true }, {
-    f(function(_, snip)
-      local hat = "\\hat{"
-      if snip.captures[1] == "T" then
-        hat = "\\widehat{"
-      end
-      return hat
-    end),
-    i(1),
-    t("}"),
   }),
   ms({ trig = "(\\?[%a%d^_]+)bm", regTrig = true }, {
     f(function(_, snip)

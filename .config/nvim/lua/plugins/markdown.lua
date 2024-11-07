@@ -110,28 +110,61 @@ return {
 			})
 		end,
 	},
--- 	{
---   "epwalsh/obsidian.nvim",
---   version = "*",  -- recommended, use latest release instead of latest commit
---   lazy = true,
---   event = {
---     -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
---     -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
---     -- refer to `:h file-pattern` for more examples
--- 		"BufReadPre " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/*.md",
--- 		"BufNewFile " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/*.md",
---   },
---   dependencies = {
---     -- Required.
---     "nvim-lua/plenary.nvim",
---   },
---   opts = {
---     workspaces = {
---       {
---         name = "Salt-Box",
---         path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box",
---       },
---     },
---   },
--- }
+	-- 	{
+	--   "epwalsh/obsidian.nvim",
+	--   version = "*",  -- recommended, use latest release instead of latest commit
+	--   lazy = true,
+	--   event = {
+	--     -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+	--     -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
+	--     -- refer to `:h file-pattern` for more examples
+	-- 		"BufReadPre " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/*.md",
+	-- 		"BufNewFile " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/*.md",
+	--   },
+	--   dependencies = {
+	--     -- Required.
+	--     "nvim-lua/plenary.nvim",
+	--   },
+	--   opts = {
+	--     workspaces = {
+	--       {
+	--         name = "Salt-Box",
+	--         path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box",
+	--       },
+	--     },
+	--   },
+	-- }
+	{
+    "3rd/image.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+          require("nvim-treesitter.configs").setup({
+            ensure_installed = { "markdown" },
+            highlight = { enable = true },
+          })
+        end,
+      },
+    },
+    opts = {
+      backend = "kitty",
+      integrations = {
+        markdown = {
+          enabled = true,
+          clear_in_insert_mode = false,
+          download_remote_images = true,
+          only_render_image_at_cursor = false,
+          filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here
+        },
+      },
+      max_width = nil,
+      max_height = nil,
+      max_width_window_percentage = nil,
+      max_height_window_percentage = nil,
+      kitty_method = "normal",
+    },
+  },
 }
