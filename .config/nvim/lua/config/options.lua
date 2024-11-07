@@ -65,9 +65,9 @@ if vim.fn.has("vms") then
   vim.o.backup = false         -- do not keep a backup file, use versions instead
 else
   vim.o.backup = true           -- keep a backup file (restore to previous version)
-  if vim.fn.has('persistent_undo') then
-    vim.o.undofile = true       -- keep an undo file (undo changes after closing)
-  end
+end
+if vim.fn.has('persistent_undo') then
+	vim.o.undofile = true       -- keep an undo file (undo changes after closing)
 end
 vim.o.backupdir = os.getenv("HOME") .. "/.vimtmp//"
 vim.o.directory = os.getenv("HOME") .. "/.vimtmp//"
