@@ -81,7 +81,7 @@ vim.wo.foldtext = 'v:lua.vim.treesitter.foldtext()'
 
 vim.g.vim_markdown_fenced_languages = { 'shell=sh', 'bash=sh', 'r' }
 -- vim.o.foldmethod = 'expr'
--- vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- -- vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.keymap.set({ 'n' }, '<leader>ll', function() require("knap").toggle_autopreviewing() end)
@@ -109,5 +109,25 @@ omap <silent><buffer> id <plug>(vimtex-id)
 omap <silent><buffer> ad <plug>(vimtex-ad)
 xmap <silent><buffer> id <plug>(vimtex-id)
 xmap <silent><buffer> ad <plug>(vimtex-ad)
-" ... (add more maps if you want)
 ]])
+
+vim.api.nvim_create_autocmd('BufEnter', {
+  desc = 'Fold YAML frontmatter',
+  pattern = '*.md',
+  group = vim.api.nvim_create_augroup('markdown header', { clear = true }),
+  callback = function()
+    local current_buffer_id = vim.api.nvim_get_current_buf()
+    local lines = vim.api.nvim_buf_get_lines(current_buffer_id, 0, -1, true)
+
+    for i, line in ipairs(lines) do
+			if i == 1 and string.sub(line, 1, 3) ~= '---' then
+				return
+			end
+      if i ~= 1 and string.sub(line, 1, 3) == '---' then
+				local command = [[norm! ggV]] .. i-1 .. [[jzfj``]]
+				vim.cmd(command)
+				return
+      end
+    end
+  end,
+})

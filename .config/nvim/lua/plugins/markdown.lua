@@ -11,7 +11,8 @@ return {
 			vim.g.vim_markdown_strikethrough = 1
 			vim.g.vim_markdown_toc_autofit = 1
 			vim.g["pandoc#syntax#conceal#use"] = 0
-		end
+		end,
+		enabled = false
 	},
 	{
 		"frabjous/knap",
