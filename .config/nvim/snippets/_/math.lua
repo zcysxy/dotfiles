@@ -190,7 +190,7 @@ local superscripts = {
     end)
   ),
   ps({ trig = "sq", name = "squre" }, "^{2}"),
-  ps({ trig = "(?<=[\\w\\d^_]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
+  ps({ trig = "(?<=[\\w\\d}]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
   ps({ trig = "TT", name = "transpose" }, "^{T}"),
   ps({ trig = "_dag", name = "ddagger" }, "^\\ddagger"),
   ps({ trig = "dag", name = "dagger" }, "^\\dagger"),
@@ -375,6 +375,15 @@ local decorations = {
       return "\\breve{" .. snip.captures[1] .. "}"
     end),
   }),
+  ms({ trig = "(\\?%a+)([hH])at", regTrig = true }, {
+    f(function(_, snip)
+      local hat = "\\hat{"
+      if snip.captures[2] == "H" then
+        hat = "\\widehat{"
+      end
+      return hat .. snip.captures[1] .. "}"
+    end),
+  }),
   ms({ trig = "([hH])at", regTrig = true }, {
     f(function(_, snip)
       local hat = "\\hat{"
@@ -385,15 +394,6 @@ local decorations = {
     end),
     i(1),
     t("}"),
-  }),
-  ms({ trig = "(\\?%a+)([hH])at", regTrig = true }, {
-    f(function(_, snip)
-      local hat = "\\hat{"
-      if snip.captures[2] == "H" then
-        hat = "\\widehat{"
-      end
-      return hat .. snip.captures[1] .. "}"
-    end),
   }),
   ms({ trig = "(\\?[%a%d^_]+)bm", regTrig = true }, {
     f(function(_, snip)

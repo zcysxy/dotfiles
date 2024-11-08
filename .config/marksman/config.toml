@@ -38,3 +38,4 @@ create_missing_file.enable = true
 # * "file-path-stem" same as above but using file path.
 # * "title-slug" to complete using the title slug.
 wiki.style = "file-stem"
+

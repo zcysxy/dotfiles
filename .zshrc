@@ -23,6 +23,7 @@ export LANG=en_US.UTF-8
 #export LANG=C
 #export w=$HOME/Workbench
 export XDG_CONFIG_HOME="$HOME/.config"
+export c=$HOME/.config
 export t=$HOME/0-TMP/08-test
 export p=$HOME/0-TMP/01-projects
 export m=$HOME/1-ME

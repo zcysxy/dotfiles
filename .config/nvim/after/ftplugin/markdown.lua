@@ -80,6 +80,8 @@ vim.wo.foldtext = 'v:lua.vim.treesitter.foldtext()'
 -- ]])
 
 vim.g.vim_markdown_fenced_languages = { 'shell=sh', 'bash=sh', 'r' }
+-- vim.o.foldmethod = 'expr'
+-- vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.keymap.set({ 'n' }, '<leader>ll', function() require("knap").toggle_autopreviewing() end)
@@ -87,10 +89,25 @@ vim.keymap.set({ 'n' }, '<leader>ll', function() require("knap").toggle_autoprev
 vim.wo.conceallevel = 2
 vim.o.conceallevel = 2
 
-vim.cmd([[
-vnoremap <silent> ic :<C-U>call MdCodeBlockTextObj('i')<CR>
-onoremap <silent> ic :<C-U>call MdCodeBlockTextObj('i')<CR>
+-- vim.cmd([[
+-- vnoremap <silent> ic :<C-U>call MdCodeBlockTextObj('i')<CR>
+-- onoremap <silent> ic :<C-U>call MdCodeBlockTextObj('i')<CR>
+--
+-- vnoremap <silent> ac :<C-U>call MdCodeBlockTextObj('a')<CR>
+-- onoremap <silent> ac :<C-U>call MdCodeBlockTextObj('a')<CR>
+-- ]])
 
-vnoremap <silent> ac :<C-U>call MdCodeBlockTextObj('a')<CR>
-onoremap <silent> ac :<C-U>call MdCodeBlockTextObj('a')<CR>
+vim.cmd([[
+call vimtex#options#init()
+call vimtex#text_obj#init_buffer()
+
+omap <silent><buffer> i$ <plug>(vimtex-i$)
+omap <silent><buffer> a$ <plug>(vimtex-a$)
+xmap <silent><buffer> i$ <plug>(vimtex-i$)
+xmap <silent><buffer> a$ <plug>(vimtex-a$)
+omap <silent><buffer> id <plug>(vimtex-id)
+omap <silent><buffer> ad <plug>(vimtex-ad)
+xmap <silent><buffer> id <plug>(vimtex-id)
+xmap <silent><buffer> ad <plug>(vimtex-ad)
+" ... (add more maps if you want)
 ]])
