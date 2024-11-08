@@ -9,6 +9,15 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+# General windows
+yabai -m rule --add app=".*" sub-layer=normal
+yabai -m rule --add app="^TickTick$" manage=off sub-layer=below
+yabai -m rule --add app="^Music$" manage=off sub-layer=below
+yabai -m rule --add app="^1Password$" manage=off sub-layer=below
+yabai -m rule --add app="^WeChat$" manage=off sub-layer=below
+yabai -m rule --add app="^System Settings$" manage=off sub-layer=below
+yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float'
+
 # .. more yabai startup stuff
 #!/usr/bin/env sh
 

@@ -5,6 +5,8 @@
 .files
 .*hist*
 .*/**/*hist*
+.*log*
+.*/**/*log*
 .*cache*
 .*/**/*cache*
 .*auth*
@@ -85,3 +87,4 @@
 !.links/bookmarks.html
 !.links/links.cfg
 
+.config/nvim/lazy-lock.json

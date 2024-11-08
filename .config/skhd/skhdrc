@@ -66,12 +66,14 @@ shift + alt - h : yabai -m window --resize right:-40:0 ;
 # alt - f : yabai -m window --toggle native-fullscreen
 
 # toggle current space layout
-cmd + ctrl - u : yabai -m space --layout bsp
-cmd + ctrl - f : yabai -m space --layout float
+# cmd + shift - b : yabai -m space --layout bsp
+# cmd + shift - f : yabai -m space --layout float
+cmd + ctrl - space : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" else "bsp" end')
 
 # temporarily float and center window
-ctrl + alt - space : yabai -m window --toggle float;\
-					  yabai -m window --grid 4:4:1:1:2:2
+shift + cmd - space : yabai -m window --toggle float;\
+					  yabai -m window --grid 4:4:1:1:2:2;\
+						yabai -m window --sub-layer below;
 
 # reset padding/gap to my preferred defaults (12)
 # shift + alt - 0 : \
@@ -87,3 +89,29 @@ ctrl + alt - space : yabai -m window --toggle float;\
 # shift + alt - 0x1B : \
 # 	yabai -m space --padding rel:-6:-6:-6:-6; \
 # 	yabai -m space --gap rel:-6
+
+cmd + ctrl - left : yabai -m window --focus prev
+cmd + ctrl - right : yabai -m window --focus next
+cmd + ctrl - tab : yabai -m window --focus recent
+cmd + ctrl - h : yabai -m window --focus west
+cmd + ctrl - l : yabai -m window --focus east
+cmd + ctrl - k : yabai -m window --focus north
+cmd + ctrl - j : yabai -m window --focus south
+cmd + shift - h : yabai -m window --warp west
+cmd + shift - l : yabai -m window --warp east
+cmd + shift - k : yabai -m window --warp north
+cmd + shift - j : yabai -m window --warp south
+
+# Balance out all windows both horizontally and vertically to occupy the same space
+cmd + shift - 0x18 : yabai -m space --balance
+cmd + shift - 0x2C : yabai -m space --rotate 90
+cmd + shift - 0x2A : yabai -m window --toggle split
+
+# Flip the tree horizontally
+# cmd + ctrl - | : yabai -m space --mirror x-axis
+#
+# # Flip the tree vertically
+# yabai -m space --mirror y-axis
+#
+# # Rotate the window tree clock-wise (options: 90, 180, 270 degree)
+# yabai -m space --rotate 90
