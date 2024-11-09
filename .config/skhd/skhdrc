@@ -72,8 +72,8 @@ cmd + ctrl - space : yabai -m space --layout $(yabai -m query --spaces --space |
 
 # temporarily float and center window
 shift + cmd - space : yabai -m window --toggle float;\
-					  yabai -m window --grid 4:4:1:1:2:2;\
-						yabai -m window --sub-layer below;
+					  yabai -m window --grid 5:4:1:1:2:3;\
+						yabai -m window --sub-layer normal;
 
 # reset padding/gap to my preferred defaults (12)
 # shift + alt - 0 : \

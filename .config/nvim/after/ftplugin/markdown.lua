@@ -111,11 +111,15 @@ xmap <silent><buffer> id <plug>(vimtex-id)
 xmap <silent><buffer> ad <plug>(vimtex-ad)
 ]])
 
-vim.api.nvim_create_autocmd('BufEnter', {
+vim.api.nvim_create_autocmd({'BufEnter'}, {
   desc = 'Fold YAML frontmatter',
   pattern = '*.md',
   group = vim.api.nvim_create_augroup('markdown header', { clear = true }),
   callback = function()
+		if vim.b.status then
+			return
+		end
+		vim.b.status = 1
     local current_buffer_id = vim.api.nvim_get_current_buf()
     local lines = vim.api.nvim_buf_get_lines(current_buffer_id, 0, -1, true)
 
