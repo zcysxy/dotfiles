@@ -12,7 +12,7 @@ return {
 			vim.g.vim_markdown_toc_autofit = 1
 			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
-		enabled = false
+		enabled = true
 	},
 	{
 		"frabjous/knap",
@@ -135,6 +135,19 @@ return {
 	--     },
 	--   },
 	-- }
+	{
+		"oflisback/obsidian-bridge.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim" },
+		config = function() require("obsidian-bridge").setup({
+			scroll_sync = true
+		}) end,
+		event = {
+			"BufReadPre *.md",
+			"BufNewFile *.md",
+		},
+		lazy = true,
+		enabled = false,
+	},
 	{
     "3rd/image.nvim",
     event = "VeryLazy",

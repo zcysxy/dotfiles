@@ -338,12 +338,12 @@ local surroundings = {
 
 -- Decorations
 local decorations = {
-  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
   ms({ trig = "(\\?%a+)bar", regTrig = true }, {
     f(function(_, snip)
       return "\\bar{" .. snip.captures[1] .. "}"
     end),
   }),
+  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
   ms({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
   ms({ trig = "(\\?%a+)Bar", regTrig = true }, {
     f(function(_, snip)

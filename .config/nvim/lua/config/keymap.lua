@@ -20,7 +20,7 @@ map("n", "H", "^")
 map("n", "L", "$")
 -- nmap J <C-D>
 -- nmap K <C-U>
--- map("n", "<S-CR>", "i<CR><ESC>0") -- break line
+map("n", "<S-CR>", "i<CR><ESC>0") -- break line
 vim.cmd [[command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>]]
 vim.cmd [[command! -bang Q quit<bang>]]
 
