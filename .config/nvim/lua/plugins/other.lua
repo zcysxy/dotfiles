@@ -54,4 +54,15 @@ return {
 			require('oil').setup()
 		end
 	},
+	-- Smooth cursor movement.
+	-- {"sphamba/smear-cursor.nvim", opts = {}, enable = false},
+
+	-- Smooth scrolling.
+	-- {
+	-- 	"karb94/neoscroll.nvim",
+	-- 	config = function()
+	-- 		require("neoscroll").setup {}
+	-- 	end,
+	-- 	enable = false,
+	-- }
 }

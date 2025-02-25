@@ -88,3 +88,8 @@
 !.links/links.cfg
 
 .config/nvim/lazy-lock.json
+
+# Temporary blocked
+.cursor
+.config/raycast
+.ollama

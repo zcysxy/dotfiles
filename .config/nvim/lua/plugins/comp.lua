@@ -46,8 +46,8 @@ return {
 			keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
 
 			-- Refactor
-			keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
-			keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
+			-- keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
+			-- keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
 			-- keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 			-- keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 			keyset("x", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
