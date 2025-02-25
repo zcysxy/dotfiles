@@ -38,9 +38,17 @@ return {
 						any = {
 							{ event = "msg_show", kind = "confirm_sub" },
 						},
-					
+
 					},
-				}
+				},
+				{
+					filter = {
+						event = "msg_show",
+						kind = "",
+						find = "written",
+					},
+					opts = { skip = true },
+				},
 			}
 		})
 		require("notify").setup({

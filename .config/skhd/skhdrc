@@ -6,7 +6,7 @@ ctrl + cmd - a: osascript /Users/ce/.scripts/new-browser.scpt
 
 # pin window to always on top
 # topmost < alt + cmd - z: yabai -m window --layer above; yabai -m window --layer normal;
-alt + cmd - z: yabai -m window --layer above
+alt + cmd - z: yabai -m window --sub-layer above
 shift + alt - z: yabai -m window --layer normal
 # topmost < alt + cmd - z: skhd -k "escape";\
 #                          yabai -m window --layer above
@@ -103,9 +103,10 @@ cmd + shift - k : yabai -m window --warp north
 cmd + shift - j : yabai -m window --warp south
 
 # Balance out all windows both horizontally and vertically to occupy the same space
-cmd + shift - 0x18 : yabai -m space --balance
-cmd + shift - 0x2C : yabai -m space --rotate 90
-cmd + shift - 0x2A : yabai -m window --toggle split
+cmd + shift - 0x18 : yabai -m space --balance # cmd + shift + =
+cmd + shift - 0x2C : yabai -m space --rotate 90 # cmd + shift + /
+# cmd + shift + -
+cmd + shift - 0x1B : yabai -m window --toggle split 
 
 # Flip the tree horizontally
 # cmd + ctrl - | : yabai -m space --mirror x-axis

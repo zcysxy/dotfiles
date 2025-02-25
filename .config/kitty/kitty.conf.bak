@@ -83,9 +83,3 @@ symbol_map  U+279c  Menlo
 
 map f8 launch --type overlay --title mode sh -c "defaults read -g AppleInterfaceStyle 2>/dev/null && kitty @ set-colors --all --configured ~/.config/kitty/dark.conf || kitty @ set-colors --all --configured ~/.config/kitty/light.conf"
 startup_session ./startup.conf
-
-
-# BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
-include current-theme.conf
-# END_KITTY_THEME

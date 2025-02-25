@@ -338,17 +338,25 @@ local surroundings = {
 
 -- Decorations
 local decorations = {
-  ms({ trig = "(\\?%a+)bar", regTrig = true }, {
+  ms({ trig = "(\\?%a+)([bB])ar", regTrig = true }, {
     f(function(_, snip)
-      return "\\bar{" .. snip.captures[1] .. "}"
+      local bar = "\\bar{"
+      if snip.captures[2] == "B" then
+        bar = "\\overline{"
+      end
+      return bar .. snip.captures[1] .. "}"
     end),
   }),
-  ms({ trig = "bar" }, { t("\\bar{"), i(1), t("}"), }),
-  ms({ trig = "Bar" }, { t("\\overline{"), i(1), t("}"), }),
-  ms({ trig = "(\\?%a+)Bar", regTrig = true }, {
+  ms({ trig = "([bB])ar", regTrig = true }, {
     f(function(_, snip)
-      return "\\overline{" .. snip.captures[1] .. "}"
+      local bar = "\\bar{"
+      if snip.captures[1] == "B" then
+        bar = "\\overline{"
+      end
+      return bar
     end),
+    i(1),
+    t("}"),
   }),
   ms({ trig = "(\\?%a+)([tT])il", regTrig = true }, {
     f(function(_, snip)
