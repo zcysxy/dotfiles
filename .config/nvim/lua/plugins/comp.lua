@@ -304,7 +304,7 @@ return {
 			-- "sirver/ultisnips",
 			"github/copilot.vim",
 			-- "zbirenbaum/copilot.lua",
-			"neoclide/coc.nvim",
+			-- "neoclide/coc.nvim",
 			"github/copilot.vim",
 		},
 		config = function()

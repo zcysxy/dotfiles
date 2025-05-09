@@ -71,6 +71,12 @@ return {
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = function()
 			require('todo-comments').setup({
+				keywords = {
+					DONE = { icon = " ", color = "info" },
+					NOW = { icon = "󰔟 ", color = "warning" },
+					SOON = { icon = "󰄉 ", color = "hint" },
+					LATER = { icon = " ", color = "test" },
+				},
 				highlight = {
 					pattern = [[.*<(KEYWORDS)\s*]],
 				},
