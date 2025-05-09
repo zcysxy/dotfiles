@@ -50,11 +50,11 @@ local remove_auto_close_char = function(snippet)
   end
 end
 
-local remove_auto_close_char_callback = {
-  [-1] = {
-    [snippet_events.enter] = remove_auto_close_char,
-  },
-}
+-- local remove_auto_close_char_callback = {
+--   [-1] = {
+--     [snippet_events.enter] = remove_auto_close_char,
+--   },
+-- }
 
 local get_env = function(name, close)
   close = close or ""
@@ -259,6 +259,12 @@ local math_fonts = {
       end)
     }),
   ms(
+    { trig = "\\b([A-Z])bb", name = "blackboard", trigEngine = "ecma" }, {
+      f(function(_, snip)
+        return "\\mathbb{" .. snip.captures[1] .. "}"
+      end)
+    }),
+  ms(
     { trig = "\\b(\\w*)rm", name = "roman", trigEngine = "ecma" }, {
       f(function(_, snip)
         return "\\mathrm{" .. snip.captures[1] .. "}"
@@ -308,8 +314,8 @@ local surroundings = {
         1,
         fmt([[\left{} {} \right{}]], { t(left), i(1), t(right) })
       )
-    end),
-    { callbacks = remove_auto_close_char_callback }
+    end)
+    -- { callbacks = remove_auto_close_char_callback }
   ),
   ms({ trig = "(\\(|\\||\\\\\\||\\[|\\{|<)", trigEngine = "ecma", name = "visual parens" }, {
     d(1, function(_, snip)

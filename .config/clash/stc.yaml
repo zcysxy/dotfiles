@@ -1,7 +1,7 @@
-#!MANAGED-CONFIG https://wrpbkvdc68yyt.stc-spare1.com/link/VD1oF9XDGHhxhYeM?sub=2&client=clash
+#!MANAGED-CONFIG http://ac333.stc-spadesdns.com/link/VD1oF9XDGHhxhYeM?sub=2&client=clash
 
 #---------------------------------------------------#
-## 上次更新于：2024-08-11 04:56:52
+## 上次更新于：2025-04-27 06:10:39
 #---------------------------------------------------#
 
 port: 7890
@@ -54,6 +54,46 @@ proxies:
     protocol-param: '778662:gscyy8'
     obfs: tls1.2_ticket_auth
   -
+    name: '🇼🇸 台湾 B01R'
+    type: ssr
+    server: node-2201.yh82l3dsytxzf8.com
+    port: 6012
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇼🇸 台湾 B02R'
+    type: ssr
+    server: node-2202.yh82l3dsytxzf8.com
+    port: 6013
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇼🇸 台湾 B03R'
+    type: ssr
+    server: node-2203.yh82l3dsytxzf8.com
+    port: 6014
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇼🇸 台湾 B04R'
+    type: ssr
+    server: node-2204.yh82l3dsytxzf8.com
+    port: 6015
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
     name: '🇯🇵 日本 A01R'
     type: ssr
     server: node-1301.yh82l3dsytxzf8.com
@@ -88,6 +128,16 @@ proxies:
     type: ssr
     server: node-1304.yh82l3dsytxzf8.com
     port: 30024
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇯🇵 日本 B01R'
+    type: ssr
+    server: node-2301.yh82l3dsytxzf8.com
+    port: 24009
     cipher: aes-256-cfb
     password: STC.SS
     protocol: auth_aes128_md5
@@ -134,6 +184,16 @@ proxies:
     protocol-param: '778662:gscyy8'
     obfs: tls1.2_ticket_auth
   -
+    name: '🇸🇬 狮城 B01R'
+    type: ssr
+    server: node-2401.yh82l3dsytxzf8.com
+    port: 24008
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
     name: '🇺🇲 美国 A01R'
     type: ssr
     server: node-1501.yh82l3dsytxzf8.com
@@ -168,6 +228,16 @@ proxies:
     type: ssr
     server: node-1504.yh82l3dsytxzf8.com
     port: 30028
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇺🇲 美国 B01R'
+    type: ssr
+    server: node-2501.yh82l3dsytxzf8.com
+    port: 24010
     cipher: aes-256-cfb
     password: STC.SS
     protocol: auth_aes128_md5
@@ -293,6 +363,66 @@ proxies:
     protocol: auth_aes128_md5
     protocol-param: '778662:gscyy8'
     obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B01R'
+    type: ssr
+    server: node-2101.yh82l3dsytxzf8.com
+    port: 24001
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B02R'
+    type: ssr
+    server: node-2102.yh82l3dsytxzf8.com
+    port: 24002
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B03R'
+    type: ssr
+    server: node-2103.yh82l3dsytxzf8.com
+    port: 24003
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B04R'
+    type: ssr
+    server: node-2104.yh82l3dsytxzf8.com
+    port: 24004
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B05R'
+    type: ssr
+    server: node-2105.yh82l3dsytxzf8.com
+    port: 24005
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
+  -
+    name: '🇭🇰 香港 B06R'
+    type: ssr
+    server: node-2106.yh82l3dsytxzf8.com
+    port: 24006
+    cipher: aes-256-cfb
+    password: STC.SS
+    protocol: auth_aes128_md5
+    protocol-param: '778662:gscyy8'
+    obfs: tls1.2_ticket_auth
 proxy-groups:
   -
     name: '🚀 节点选择'
@@ -302,18 +432,25 @@ proxy-groups:
       - '🇼🇸 台湾 A02R'
       - '🇼🇸 台湾 A03R'
       - '🇼🇸 台湾 A04R'
+      - '🇼🇸 台湾 B01R'
+      - '🇼🇸 台湾 B02R'
+      - '🇼🇸 台湾 B03R'
+      - '🇼🇸 台湾 B04R'
       - '🇯🇵 日本 A01R'
       - '🇯🇵 日本 A02R'
       - '🇯🇵 日本 A03R'
       - '🇯🇵 日本 A04R'
+      - '🇯🇵 日本 B01R'
       - '🇸🇬 狮城 A01R'
       - '🇸🇬 狮城 A02R'
       - '🇸🇬 狮城 A03R'
       - '🇸🇬 狮城 A04R'
+      - '🇸🇬 狮城 B01R'
       - '🇺🇲 美国 A01R'
       - '🇺🇲 美国 A02R'
       - '🇺🇲 美国 A03R'
       - '🇺🇲 美国 A04R'
+      - '🇺🇲 美国 B01R'
       - '🇭🇰 香港 A01R'
       - '🇭🇰 香港 A02R'
       - '🇭🇰 香港 A03R'
@@ -326,6 +463,12 @@ proxy-groups:
       - '🇭🇰 香港 A10R'
       - '🇭🇰 香港 A11R'
       - '🇭🇰 香港 A12R'
+      - '🇭🇰 香港 B01R'
+      - '🇭🇰 香港 B02R'
+      - '🇭🇰 香港 B03R'
+      - '🇭🇰 香港 B04R'
+      - '🇭🇰 香港 B05R'
+      - '🇭🇰 香港 B06R'
   -
     name: '🎯 全球直连'
     type: select
