@@ -11,13 +11,13 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/citep
+~MSle0~/woo
 
 # Command Line History (newest to oldest):
+:q
+|2,0,1747431754,,"q"
 :q!
 |2,0,1744144953,,"q!"
-:q
-|2,0,1744144852,,"q"
 :w
 |2,0,1738599842,,"w"
 :wqa
@@ -26,6 +26,12 @@
 |2,0,1715703750,,"wq"
 
 # Search String History (newest to oldest):
+?/woo
+|2,1,1747431677,47,"woo"
+?/blessing
+|2,1,1747431675,47,"blessing"
+?/zou201
+|2,1,1747431665,47,"zou201"
 ?/citep
 |2,1,1741847697,47,"citep"
 ?/citet
@@ -111,32 +117,88 @@
 |3,0,36,0,1,0,1715703852," "
 
 # File marks:
-'0  8  0  ~/Downloads/siam_1.9780898719857.bib
-|4,48,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
-'1  8  0  ~/Downloads/siam_1.9781611977165.bib
-|4,49,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+'0  10214  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,48,10214,0,1747431754,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+'1  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,49,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
 '2  8  0  ~/Downloads/siam_1.9781611977165.bib
-|4,50,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
-'3  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,51,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
-'4  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,52,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
-'5  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,53,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
-'6  1  0  ~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex
-|4,54,1,0,1740530631,"~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex"
-'7  1  0  ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
-|4,55,1,0,1740034765,"~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex"
-'8  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,56,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
-'9  495  33  ~/Downloads/scribe17 (1).tex
-|4,57,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
+|4,50,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+'3  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,51,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+'4  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,52,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+'5  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
+|4,53,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
+'6  2  0  ~/Downloads/icml2025/example_paper.tex
+|4,54,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
+'7  1  0  ~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex
+|4,55,1,0,1740530631,"~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex"
+'8  1  0  ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
+|4,56,1,0,1740034765,"~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex"
+'9  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+|4,57,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
 
 # Jumplist (newest first):
+-'  10214  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10214,0,1747431754,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  10214  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10214,0,1747431754,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  4712  56  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,4712,56,1747431701,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  4712  56  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,4712,56,1747431701,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  10216  6  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10216,6,1747431700,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  10207  14  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10207,14,1747431700,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  10216  6  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10216,6,1747431700,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  10207  14  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,10207,14,1747431700,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  9087  23  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,9087,23,1747431679,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  9087  23  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,9087,23,1747431679,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  6895  18  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,6895,18,1747431678,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  6895  18  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,6895,18,1747431678,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  12149  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,12149,0,1747431677,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  12149  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,12149,0,1747431677,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  1  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,1,0,1747431665,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  1  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,1,0,1747431665,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
 -'  8  0  ~/Downloads/siam_1.9780898719857.bib
 |4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
 -'  8  0  ~/Downloads/siam_1.9780898719857.bib
 |4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
 -'  1  0  ~/Downloads/siam_1.9780898719857.bib
 |4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
 -'  1  0  ~/Downloads/siam_1.9780898719857.bib
@@ -150,6 +212,34 @@
 -'  8  0  ~/Downloads/siam_1.9781611977165.bib
 |4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
 -'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
 |4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
 -'  8  0  ~/Downloads/siam_1.9781611977165.bib
 |4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
@@ -157,6 +247,74 @@
 |4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
 -'  8  0  ~/Downloads/siam_1.9781611977165.bib
 |4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
 -'  1  0  ~/Downloads/siam_1.9781611977165.bib
 |4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
 -'  1  0  ~/Downloads/siam_1.9781611977165.bib
@@ -179,160 +337,12 @@
 |4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
 -'  8  0  ~/Downloads/siam_1.9781421407944.bib
 |4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  8  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Downloads/siam_1.9781421407944.bib
-|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
-|4,39,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
--'  2  0  ~/Downloads/icml2025/example_paper.tex
-|4,39,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
 
 # History of marks within files (newest to oldest):
+
+> ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+	*	1747431753	0
+	"	10214	0
 
 > ~/Downloads/siam_1.9780898719857.bib
 	*	1744144990	0
