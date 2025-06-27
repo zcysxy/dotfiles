@@ -67,6 +67,8 @@ vim.g.VM_maps['Find Subword Under'] = '<C-d>'
 -- GitGutter
 map("n", "<leader>gr", ":GitGutterUndoHunk<CR>", { silent = true, noremap = true })
 map("n", "<leader>gs", ":GitGutterStageHunk<CR>", { silent = true, noremap = true })
+map("n", "<leader>gn", ":GitGutterNextHunk<CR>", { silent = true, noremap = true })
+map("n", "<leader>gp", ":GitGutterPrevHunk<CR>", { silent = true, noremap = true })
 
 -- SnipRun
 map('v', 'f', '<Plug>SnipRun', { silent = true })
@@ -92,3 +94,6 @@ map('n', '<leader>r', ':Telescope oldfiles<CR>', { silent = true })
 
 -- Winshift
 map("n", "<C-w><space>", ":WinShift<CR>")
+
+vim.api.nvim_create_user_command('P', function(opts) vim.cmd('CodeCompanionCmd ' .. opts.args) end, { nargs = 1 })
+

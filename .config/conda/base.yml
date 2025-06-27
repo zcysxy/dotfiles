@@ -515,6 +515,7 @@ dependencies:
       - jsonpath-python==1.0.6
       - jupyter-matlab-proxy==0.15.3
       - jupyter-server-proxy==4.4.0
+      - jupytext==1.17.2
       - matlab-proxy==0.23.1
       - matlabengine==24.2.1
       - mistralai==1.5.1
