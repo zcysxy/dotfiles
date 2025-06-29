@@ -145,6 +145,7 @@ brew "samtay/tui/tetris"
 brew "zegervdv/zathura/girara", args: ["HEAD"]
 brew "zegervdv/zathura/zathura", args: ["HEAD"]
 brew "zegervdv/zathura/zathura-pdf-poppler"
+cask "1password-cli"
 cask "anaconda"
 cask "bbedit"
 cask "coteditor"
