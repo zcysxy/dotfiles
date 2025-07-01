@@ -7,22 +7,22 @@ return {
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
-			panel = {
-				keymap = {
-					accept = "<s-cr>"
+				panel = {
+					keymap = {
+						accept = "<s-cr>"
+					}
+				},
+				suggestion = {
+					auto_trigger = true,
+					keymap = {
+						accept = "<s-cr>",
+					}
+				},
+				filetypes = {
+					markdown = true,
+					tex = true,
+					yaml = true,
 				}
-			},
-			suggestion = {
-				auto_trigger = true,
-				keymap = {
-					accept = "<s-cr>",
-				}
-			},
-			filetypes = {
-				markdown = true,
-				tex = true,
-				yaml = true,
-			}
 			})
 		end,
 	},
@@ -143,5 +143,22 @@ let g:copilot_filetypes = {
 			-- Custom command to suggest a commit message
 			vim.api.nvim_create_user_command('AIV', generateVimCommand, { nargs = '*' })
 		end
-	}
+	},
+	{
+		"olimorris/codecompanion.nvim",
+		opts = {},
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("codecompanion").setup({
+				strategies = {
+					chat = {
+						adapter = "copilot"
+					}
+				}
+			})
+		end,
+	},
 }
