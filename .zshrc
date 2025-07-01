@@ -39,6 +39,8 @@ if [ -d ~/.texmf ] ; then
 fi
 export GOPATH=~/.go
 export GOROOT="$(brew --prefix golang)/libexec"
+export _Z_ECHO=1
+export ZSHZ_ECHO=1
 
 # Default editor
 export EDITOR=nvim

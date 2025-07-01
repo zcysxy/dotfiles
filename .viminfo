@@ -11,11 +11,13 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/approx.pdf
+~MSle0~/bhand
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1744144953,,"q!"
 :q
-|2,0,1738599875,,"q"
+|2,0,1744144852,,"q"
 :w
 |2,0,1738599842,,"w"
 :wqa
@@ -24,6 +26,12 @@
 |2,0,1715703750,,"wq"
 
 # Search String History (newest to oldest):
+?/bhand
+|2,1,1748463405,47,"bhand"
+?/citep
+|2,1,1741847697,47,"citep"
+?/citet
+|2,1,1741847691,47,"citet"
 ?/approx.pdf
 |2,1,1732059801,47,"approx.pdf"
 ?/First level
@@ -40,6 +48,8 @@
 |2,1,1710855347,47,"path"
 
 # Expression History (newest to oldest):
+=y"+
+|2,2,1744144817,,"y\"+"
 
 # Input Line History (newest to oldest):
 
@@ -47,6 +57,30 @@
 
 # Registers:
 "1	LINE	0
+	author = {Trefethen, Lloyd N. and Bau, David},
+	title = {Numerical Linear Algebra, Twenty-fifth Anniversary Edition},
+	publisher = {Society for Industrial and Applied Mathematics},
+	year = {2022},
+	doi = {10.1137/1.9781611977165},
+	address = {Philadelphia, PA},
+	edition   = {},
+	URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781611977165},
+	eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611977165}
+	}
+|3,0,1,1,10,0,1744144896,"author = {Trefethen, Lloyd N. and Bau, David},","title = {Numerical Linear Algebra, Twenty-fifth Anniversary Edition},","publisher = {Society for Industrial and Applied Mathematics},","year = {2022},","doi = {10.1137/1.9781611977165},","address = {Philadelphia, PA},","edition   = {},","URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781611977165},","eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611977165}","}"
+"2	LINE	0
+	author = {Golub, Gene H. and Van Loan, Charles F.},
+	title = {Matrix Computations - 4th Edition},
+	publisher = {Johns Hopkins University Press},
+	year = {2013},
+	doi = {10.1137/1.9781421407944},
+	address = {Philadelphia, PA},
+	edition   = {},
+	URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781421407944},
+	eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781421407944}
+	}
+|3,0,2,1,10,0,1744144801,"author = {Golub, Gene H. and Van Loan, Charles F.},","title = {Matrix Computations - 4th Edition},","publisher = {Johns Hopkins University Press},","year = {2013},","doi = {10.1137/1.9781421407944},","address = {Philadelphia, PA},","edition   = {},","URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781421407944},","eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781421407944}","}"
+"3	LINE	0
 	\newtheorem{theorem}{Theorem}
 	\newtheorem{corollary}[theorem]{Corollary}
 	\newtheorem{lemma}[theorem]{Lemma}
@@ -56,8 +90,8 @@
 	\newtheorem{claim}[theorem]{Claim}
 	\newtheorem{fact}[theorem]{Fact}
 	\newtheorem{assumption}[theorem]{Assumption}
-|3,0,1,1,9,0,1731648723,"\\newtheorem{theorem}{Theorem}","\\newtheorem{corollary}[theorem]{Corollary}","\\newtheorem{lemma}[theorem]{Lemma}","\\newtheorem{observation}[theorem]{Observation}","\\newtheorem{proposition}[theorem]{Proposition}","\\newtheorem{definition}[theorem]{Definition}","\\newtheorem{claim}[theorem]{Claim}","\\newtheorem{fact}[theorem]{Fact}","\\newtheorem{assumption}[theorem]{Assumption}"
-"2	LINE	0
+|3,0,3,1,9,0,1731648723,"\\newtheorem{theorem}{Theorem}","\\newtheorem{corollary}[theorem]{Corollary}","\\newtheorem{lemma}[theorem]{Lemma}","\\newtheorem{observation}[theorem]{Observation}","\\newtheorem{proposition}[theorem]{Proposition}","\\newtheorem{definition}[theorem]{Definition}","\\newtheorem{claim}[theorem]{Claim}","\\newtheorem{fact}[theorem]{Fact}","\\newtheorem{assumption}[theorem]{Assumption}"
+"4	LINE	0
 	# PATH
 	export PATH="\
 	/opt/homebrew/bin:\
@@ -70,239 +104,275 @@
 	/Users/ce/.scripts:\
 	$PATH"  
 	
-|3,0,2,1,12,0,1710855839,"# PATH","export PATH=\"\\","/opt/homebrew/bin:\\","/opt/homebrew/sbin:\\","/Users/ce/.local/bin:\\","/Applications/MATLAB_R2021b.app/bin:\\","/Applications/MATLAB_R2021b.app/bin/maci64:\\","/opt/homebrew/anaconda3/bin:\\","${GOPATH}/bin:${GOROOT}/bin:\\","/Users/ce/.scripts:\\","$PATH\"  ",""
-"3	LINE	0
+|3,0,4,1,12,0,1710855839,"# PATH","export PATH=\"\\","/opt/homebrew/bin:\\","/opt/homebrew/sbin:\\","/Users/ce/.local/bin:\\","/Applications/MATLAB_R2021b.app/bin:\\","/Applications/MATLAB_R2021b.app/bin/maci64:\\","/opt/homebrew/anaconda3/bin:\\","${GOPATH}/bin:${GOROOT}/bin:\\","/Users/ce/.scripts:\\","$PATH\"  ",""
+"5	LINE	0
 	export GOROOT="$(brew --prefix golang)/libexec"
-|3,0,3,1,2,0,1710855207,"export GOROOT=\"$(brew --prefix golang)/libexec\"","export OBSIDIAN_REST_API_KEY=9148ca96a40219a821a3ae3e47ea08590a22b66e1c1372193eadfe3de420542d # gitignore"
+|3,0,5,1,2,0,1710855207,"export GOROOT=\"$(brew --prefix golang)/libexec\"","export OBSIDIAN_REST_API_KEY=9148ca96a40219a821a3ae3e47ea08590a22b66e1c1372193eadfe3de420542d # gitignore"
 "-	CHAR	0
-	 
-|3,0,36,0,1,0,1715703852," "
+	bhandari2018finite,
+|3,0,36,0,1,0,1748463406,"bhandari2018finite,"
 
 # File marks:
-'0  1  0  ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
-|4,48,1,0,1740034765,"~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex"
-'1  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,49,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
-'2  495  33  ~/Downloads/scribe17 (1).tex
-|4,50,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
-'3  30  0  ~/Downloads/scribe_template.tex
-|4,51,30,0,1731648912,"~/Downloads/scribe_template.tex"
-'4  12  9  ~/Downloads/scribe_template.tex
-|4,52,12,9,1731646087,"~/Downloads/scribe_template.tex"
-'5  12  9  ~/Downloads/scribe_template.tex
-|4,53,12,9,1731646087,"~/Downloads/scribe_template.tex"
-'6  6  18  ~/Downloads/scribe_template.tex
-|4,54,6,18,1731633825,"~/Downloads/scribe_template.tex"
-'7  6  18  ~/Downloads/scribe_template.tex
-|4,55,6,18,1731633825,"~/Downloads/scribe_template.tex"
-'8  6  18  ~/Downloads/scribe_template.tex
-|4,56,6,18,1731633825,"~/Downloads/scribe_template.tex"
-'9  6  18  ~/Downloads/scribe_template.tex
-|4,57,6,18,1731633825,"~/Downloads/scribe_template.tex"
+'0  921  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,48,921,0,1748473034,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+'1  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,49,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+'2  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,50,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+'3  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,51,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+'4  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,52,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+'5  1  0  ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
+|4,53,1,0,1743655256,"~/Cloud-MATLAB/ic/fig/rtr_conv.eps"
+'6  2  0  ~/Downloads/icml2025/example_paper.tex
+|4,54,2,0,1741847727,"~/Downloads/icml2025/example_paper.tex"
+'7  1  0  ~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex
+|4,55,1,0,1740530631,"~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex"
+'8  1  0  ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
+|4,56,1,0,1740034765,"~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex"
+'9  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
+|4,57,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
 
 # Jumplist (newest first):
--'  1  0  ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
-|4,39,1,0,1740034765,"~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex"
--'  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  4  11  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,4,11,1738599875,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  28  27  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,28,27,1738599836,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  28  27  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,28,27,1738599836,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  1  0  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,1,0,1738599751,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  1  0  ~/Downloads/ICLR 2025 Template/iclr2025_conference.tex
-|4,39,1,0,1738599751,"~/Downloads/ICLR 2025 Template/iclr2025_conference.tex"
--'  495  33  ~/Downloads/scribe17 (1).tex
-|4,39,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
--'  495  33  ~/Downloads/scribe17 (1).tex
-|4,39,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
--'  495  33  ~/Downloads/scribe17 (1).tex
-|4,39,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
--'  495  33  ~/Downloads/scribe17 (1).tex
-|4,39,495,33,1732059802,"~/Downloads/scribe17 (1).tex"
--'  73  27  ~/Downloads/scribe17 (1).tex
-|4,39,73,27,1732059801,"~/Downloads/scribe17 (1).tex"
--'  73  27  ~/Downloads/scribe17 (1).tex
-|4,39,73,27,1732059801,"~/Downloads/scribe17 (1).tex"
--'  73  27  ~/Downloads/scribe17 (1).tex
-|4,39,73,27,1732059801,"~/Downloads/scribe17 (1).tex"
--'  73  27  ~/Downloads/scribe17 (1).tex
-|4,39,73,27,1732059801,"~/Downloads/scribe17 (1).tex"
--'  1  0  ~/Downloads/scribe17 (1).tex
-|4,39,1,0,1732059797,"~/Downloads/scribe17 (1).tex"
--'  1  0  ~/Downloads/scribe17 (1).tex
-|4,39,1,0,1732059797,"~/Downloads/scribe17 (1).tex"
--'  1  0  ~/Downloads/scribe17 (1).tex
-|4,39,1,0,1732059797,"~/Downloads/scribe17 (1).tex"
--'  1  0  ~/Downloads/scribe17 (1).tex
-|4,39,1,0,1732059797,"~/Downloads/scribe17 (1).tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  30  0  ~/Downloads/scribe_template.tex
-|4,39,30,0,1731648912,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  39  0  ~/Downloads/scribe_template.tex
-|4,39,39,0,1731648724,"~/Downloads/scribe_template.tex"
--'  40  0  ~/Downloads/scribe_template.tex
-|4,39,40,0,1731648724,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731647590,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  12  9  ~/Downloads/scribe_template.tex
-|4,39,12,9,1731646087,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731646061,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  6  18  ~/Downloads/scribe_template.tex
-|4,39,6,18,1731633825,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
--'  1  0  ~/Downloads/scribe_template.tex
-|4,39,1,0,1731633817,"~/Downloads/scribe_template.tex"
+-'  921  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,921,0,1748473034,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  1  0  ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+|4,39,1,0,1748463405,"~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,8,0,1744144990,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  1  0  ~/Downloads/siam_1.9780898719857.bib
+|4,39,1,0,1744144987,"~/Downloads/siam_1.9780898719857.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144982,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,8,0,1744144953,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  1  0  ~/Downloads/siam_1.9781611977165.bib
+|4,39,1,0,1744144891,"~/Downloads/siam_1.9781611977165.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  8  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,8,0,1744144853,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
+-'  1  0  ~/Downloads/siam_1.9781421407944.bib
+|4,39,1,0,1744144794,"~/Downloads/siam_1.9781421407944.bib"
 
 # History of marks within files (newest to oldest):
+
+> ~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/myLibrary.bib
+	*	1748473034	0
+	"	921	0
+	.	876	15
+	+	876	15
+
+> ~/Downloads/siam_1.9780898719857.bib
+	*	1744144990	0
+	"	8	0
+
+> ~/Downloads/siam_1.9781611977165.bib
+	*	1744144981	0
+	"	8	0
+	.	8	0
+	+	18	0
+	+	8	0
+
+> ~/Downloads/siam_1.9781421407944.bib
+	*	1744144852	0
+	"	8	0
+	.	8	0
+	+	18	0
+	+	8	0
+
+> ~/Cloud-MATLAB/ic/fig/rtr_conv.eps
+	*	1743655254	0
+	"	1	0
+
+> ~/Downloads/icml2025/example_paper.tex
+	*	1741847727	0
+	"	2	0
+
+> ~/Library/CloudStorage/OneDrive-MassachusettsInstituteofTechnology/0-TMP/01-projects/mfg/lfa_qml/pres/poster.tex
+	*	1740530630	0
+	"	1	0
 
 > ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Salt-Box/hw.tex
 	*	1740034761	0
