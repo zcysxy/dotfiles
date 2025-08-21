@@ -137,7 +137,7 @@ local greek = {
 }
 
 -- Commands
-local COMMANDS = "(sin|cos|tan|log|ln|exp|ell|nabla|max|sup)"
+local COMMANDS = "(sin|cos|tan|log|ln|exp|ell|nabla|min|max|sup|inf)"
 local commands = {
   ms({ trig = "(?<!\\\\)" .. COMMANDS, trigEngine = "ecma" }, {
     f(function(_, snip)
