@@ -17,6 +17,8 @@ return {
 		require("luasnip.loaders.from_lua").lazy_load({
 			paths = vim.fn["stdpath"]("config") .. "/snippets/",
 		})
+		-- Loads in local workspace snippets
+		require("luasnip.loaders.from_lua").load({paths = {vim.fn.getcwd() .. "/.luasnippets/"}})
 		require("luasnip").config.set_config({
 			update_events = "TextChanged,TextChangedI",
 			enable_autosnippets = true,
