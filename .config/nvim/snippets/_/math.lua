@@ -31,9 +31,8 @@ end
 local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
 local ls = require("luasnip")
-local snippet_events = require('luasnip.util.events')
--- local utils = require("snippets.util.utils")
 
+local snippet_events = require('luasnip.util.events')
 local remove_auto_close_char = function(snippet)
   local char_list = '[%)%]}>"\']'
   local line_index = snippet.mark:pos_end()[1]
@@ -50,11 +49,12 @@ local remove_auto_close_char = function(snippet)
   end
 end
 
--- local remove_auto_close_char_callback = {
---   [-1] = {
---     [snippet_events.enter] = remove_auto_close_char,
---   },
--- }
+local remove_auto_close_char_callback = {
+  [-1] = {
+    -- [snippet_events.enter] = utils.remove_auto_close_char,
+    [snippet_events.enter] = remove_auto_close_char,
+  },
+}
 
 local get_env = function(name, close)
   close = close or ""
@@ -320,8 +320,8 @@ local surroundings = {
         1,
         fmt([[\left{} {} \right{}]], { t(left), i(1), t(right) })
       )
-    end)
-    -- { callbacks = remove_auto_close_char_callback }
+    end),
+    { callbacks = remove_auto_close_char_callback }
   ),
   ms({ trig = "(\\(|\\||\\\\\\||\\[|\\{|<)", trigEngine = "ecma", name = "visual parens" }, {
     d(1, function(_, snip)
