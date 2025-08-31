@@ -92,7 +92,7 @@ shift + cmd - space : yabai -m window --toggle float;\
 
 cmd + ctrl - left : yabai -m window --focus prev
 cmd + ctrl - right : yabai -m window --focus next
-cmd + ctrl - tab : yabai -m window --focus recent
+# cmd + ctrl - tab : yabai -m window --focus recent
 cmd + ctrl - h : yabai -m window --focus west
 cmd + ctrl - l : yabai -m window --focus east
 cmd + ctrl - k : yabai -m window --focus north
@@ -116,3 +116,13 @@ cmd + shift - 0x1B : yabai -m window --toggle split
 #
 # # Rotate the window tree clock-wise (options: 90, 180, 270 degree)
 # yabai -m space --rotate 90
+
+# New space
+cmd + ctrl - n : yabai -m space --create && yabai -m space --focus last;
+# Close space
+cmd + ctrl - x : yabai -m space --destroy && yabai -m space --focus last;
+# cycle forwards on the focused display
+cmd + ctrl - tab : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+# cycle backwards on the focused display
+cmd + shift + ctrl - tab : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+
