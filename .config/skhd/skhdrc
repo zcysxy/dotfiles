@@ -117,12 +117,12 @@ cmd + shift - 0x1B : yabai -m window --toggle split
 # # Rotate the window tree clock-wise (options: 90, 180, 270 degree)
 # yabai -m space --rotate 90
 
-# New space
-cmd + ctrl - n : yabai -m space --create && yabai -m space --focus last;
-# Close space
+# Spaces
+cmd + ctrl + shift - n : yabai -m space --create && yabai -m space --focus last;
 cmd + ctrl - x : yabai -m space --destroy && yabai -m space --focus last;
-# cycle forwards on the focused display
-cmd + ctrl - tab : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
-# cycle backwards on the focused display
-cmd + shift + ctrl - tab : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
-
+# Focus next space if it exists, otherwise create it
+cmd + ctrl - n : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+cmd + ctrl - p : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+# Move focused window to next/prev space
+cmd + shift - n : yabai -m window --space next && yabai -m space --focus next
+cmd + shift - p : yabai -m window --space prev && yabai -m space --focus prev
