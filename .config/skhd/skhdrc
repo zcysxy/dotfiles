@@ -118,11 +118,11 @@ cmd + shift - 0x1B : yabai -m window --toggle split
 # yabai -m space --rotate 90
 
 # Spaces
-cmd + ctrl + shift - n : yabai -m space --create && yabai -m space --focus last;
+cmd + ctrl - n : yabai -m space --create && yabai -m space --focus last;
 cmd + ctrl - x : yabai -m space --destroy && yabai -m space --focus last;
 # Focus next space if it exists, otherwise create it
-cmd + ctrl - n : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
-cmd + ctrl - p : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+cmd + ctrl - right : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
+cmd + ctrl - left : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
 # Move focused window to next/prev space
-cmd + shift - n : yabai -m window --space next && yabai -m space --focus next
-cmd + shift - p : yabai -m window --space prev && yabai -m space --focus prev
+cmd + shift - right : yabai -m window --space next && yabai -m space --focus next
+cmd + shift - left : yabai -m window --space prev && yabai -m space --focus prev
