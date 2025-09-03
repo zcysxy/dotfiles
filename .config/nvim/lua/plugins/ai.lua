@@ -156,6 +156,37 @@ let g:copilot_filetypes = {
 				strategies = {
 					chat = {
 						adapter = "copilot"
+					},
+					inline = {
+						adapter = "copilot"
+					}
+				},
+				prompt_library = {
+					["mans"] = {
+						strategy = "inline",
+						description = "Writing manuscripts.",
+						opts = {
+							placement = "replace",
+							contains_code = true,
+							is_slash_cmd = true,
+							modes = { "v" },
+							short_name = "mans",
+							user_prompt = true,
+							ignore_system_prompt = true,
+							auto_submit = true,
+							stop_context_insertion = true,
+						},
+						prompts = {
+							{
+								role = "system",
+								content = function(context)
+									local text = require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
+									return
+									"You are a professional researcher in machine learning and am writing a paper. Your task is the improve the writing of the manuscript, focusing on its clarity and storytelling to make it more professional and attractive to readers." ..
+									"Here is the text from the manuscript to focus on:\n" .. text
+								end
+							}
+						}
 					}
 				}
 			})
