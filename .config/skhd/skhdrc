@@ -90,8 +90,8 @@ shift + cmd - space : yabai -m window --toggle float;\
 # 	yabai -m space --padding rel:-6:-6:-6:-6; \
 # 	yabai -m space --gap rel:-6
 
-cmd + ctrl - left : yabai -m window --focus prev
-cmd + ctrl - right : yabai -m window --focus next
+# cmd + ctrl - left : yabai -m window --focus prev
+# cmd + ctrl - right : yabai -m window --focus next
 # cmd + ctrl - tab : yabai -m window --focus recent
 cmd + ctrl - h : yabai -m window --focus west
 cmd + ctrl - l : yabai -m window --focus east
@@ -124,5 +124,5 @@ cmd + ctrl - x : yabai -m space --destroy && yabai -m space --focus last;
 cmd + ctrl - right : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | reverse | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
 cmd + ctrl - left : id="$(yabai -m query --spaces --display | jq 'sort_by(.index) | .[map(."has-focus") | index(true) - 1].index')" && yabai -m space --focus "${id}"
 # Move focused window to next/prev space
-cmd + shift - right : yabai -m window --space next && yabai -m space --focus next
-cmd + shift - left : yabai -m window --space prev && yabai -m space --focus prev
+cmd + ctrl + alt - right : yabai -m window --space next && yabai -m space --focus next
+cmd + ctrl + alt - left : yabai -m window --space prev && yabai -m space --focus prev
