@@ -12,7 +12,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # General windows
 yabai -m rule --add app=".*" layer=normal
 yabai -m rule --add app=".*" sub-layer=normal
-yabai -m rule --add app="^TickTick$" manage=off
+# yabai -m rule --add app="^TickTick$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^MATLAB" manage=off
 yabai -m rule --add app="^1Password$" manage=off
