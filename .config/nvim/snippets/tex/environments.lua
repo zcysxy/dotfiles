@@ -74,7 +74,7 @@ return nil,
       ),
 
       -- Equations
-      s("ali", get_env("align", "."), { condition = in_text }),
+      s({ trig = "ali", snippetType = "snippet" }, get_env("align", "."), { condition = in_text }),
       s("ali", get_env("aligned", "."), { condition = in_mathzone * line_begin }),
       s("eqn", get_env("equation", "."), { condition = in_text }),
       s("case", get_env("cases", "."), { condition = in_mathzone }),
