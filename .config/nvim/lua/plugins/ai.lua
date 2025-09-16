@@ -150,9 +150,15 @@ let g:copilot_filetypes = {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
+			"ravitemer/codecompanion-history.nvim",
 		},
 		config = function()
 			require("codecompanion").setup({
+				extensions = {
+					history = {
+						enabled = true,
+					}
+				},
 				strategies = {
 					chat = {
 						adapter = "copilot"
@@ -182,8 +188,8 @@ let g:copilot_filetypes = {
 								content = function(context)
 									local text = require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
 									return
-									"You are a professional researcher in machine learning and am writing a paper. Your task is the improve the writing of the manuscript, focusing on its clarity and storytelling to make it more professional and attractive to readers." ..
-									"Here is the text from the manuscript to focus on:\n" .. text
+											"You are a professional researcher in machine learning and am writing a paper. Your task is the improve the writing of the manuscript, focusing on its clarity and storytelling to make it more professional and attractive to readers." ..
+											"Here is the text from the manuscript to focus on:\n" .. text
 								end
 							}
 						}

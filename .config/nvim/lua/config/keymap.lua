@@ -97,3 +97,10 @@ map("n", "<C-w><space>", ":WinShift<CR>")
 
 vim.api.nvim_create_user_command('P', function(opts) vim.cmd('CodeCompanionCmd ' .. opts.args) end, { nargs = 1 })
 
+-- AI
+vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<LocalLeader>ca", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "<LocalLeader>ca", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
