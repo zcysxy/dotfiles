@@ -4,6 +4,15 @@ return {
 	{
 		'neoclide/coc.nvim',
 		config = function()
+			-- Disable for certain filetypes
+			-- autocmd FileType python let b:coc_suggest_disable = 1
+			-- vim.api.nvim_create_autocmd("FileType", {
+			-- 	pattern = { "codecompanion" },
+			-- 	callback = function()
+			-- 		vim.b.coc_suggest_disable = 1
+			-- 	end,
+			-- 	desc = "Disable coc.nvim for certain filetypes"
+			-- })
 			-- Some servers have issues with backup files, see #649
 			vim.opt.backup = false
 			vim.opt.writebackup = false
@@ -22,6 +31,7 @@ return {
 				local col = vim.fn.col('.') - 1
 				return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 			end
+
 			local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 
 			-- WARNING: Comment out the following two lines if there were issues
@@ -109,7 +119,8 @@ return {
 			-- keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 			-- -- Resume latest coc list
 			-- keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
-			keyset("n", "gL", "<cmd>call coc#rpc#request('fillDiagnostics', [bufnr('%')])<CR><cmd>Trouble loclist<CR>`", { silent = true })
+			keyset("n", "gL", "<cmd>call coc#rpc#request('fillDiagnostics', [bufnr('%')])<CR><cmd>Trouble loclist<CR>`",
+				{ silent = true })
 
 			-- Use K to show documentation in preview windowinit
 			function _G.show_docs()
@@ -162,7 +173,6 @@ return {
 			-- NOTE: Please see `:h coc-status` for integrations with external plugins that
 			-- provide custom statusline: lightline.vim, vim-airline
 			vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
-
 		end
 	},
 
@@ -300,6 +310,7 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"hrsh7th/nvim-cmp",
+			"olimorris/codecompanion.nvim",
 			"L3MON4D3/LuaSnip",
 			-- "sirver/ultisnips",
 			"github/copilot.vim",
@@ -328,7 +339,7 @@ return {
 					{ open = '$', close = '$' }
 				},
 				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-				exclude = {} -- tabout will ignore these filetypes
+				exclude = { 'codecompanion' } -- tabout will ignore these filetypes
 			})
 
 			-- handle <Tab> key to prioritize LuaSnip over Tabout

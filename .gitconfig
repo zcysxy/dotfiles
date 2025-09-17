@@ -16,3 +16,8 @@
 	autosetupmerge = simple
 [credential]
 	helper = store
+[merge]
+	tool = vimdiff
+[mergetool "vimdiff"]
+	cmd = nvim -d \"$MERGED\" \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
