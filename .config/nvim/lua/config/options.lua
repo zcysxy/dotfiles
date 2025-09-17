@@ -113,3 +113,14 @@ vim.o.exrc = true
 
 -- listchars
 vim.o.nrformats = "bin,hex,alpha"
+
+-- spell
+vim.opt.spelllang = "en"
+local global_spells = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
+-- local project_spells = vim.fn.getcwd() .. "/.vim/spell/en.utf-8.add"
+local project_root = vim.fn.systemlist("git rev-parse --show-toplevel")
+[1]
+vim.opt.spellfile = global_spells
+if project_root and project_root ~= '' and not project_root:match('^fatal:') then
+    vim.opt.spellfile:append(project_root .. ".spell/en.utf-8.add")
+end
