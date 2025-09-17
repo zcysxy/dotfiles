@@ -1,3 +1,4 @@
 {
-  "selectedAuthType": "oauth-personal"
+  "selectedAuthType": "oauth-personal",
+  "vimMode": false
 }

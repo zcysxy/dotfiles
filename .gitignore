@@ -10,6 +10,7 @@
 .*cache*
 .*/**/*cache*
 .*auth*
+.*tmp*
 .*/**/*auth*
 .*token*
 .*/**/*token*
