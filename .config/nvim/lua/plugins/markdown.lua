@@ -105,6 +105,7 @@ return {
 						tip = { raw = '[~]', rendered = '󰌶 ', highlight = 'DiagnosticOk' },
 						wontdo = { raw = '[=]', rendered = '󰜺 ', highlight = '@markup.quote' },
 						defer = { raw = '[>]', rendered = ' ', highlight = 'DiagnosticInfo' },
+						inprogress = { raw = '[/]', rendered = '󰦕 ', highlight = 'DiagnosticInfo' },
 						pro = { raw = '[+]', rendered = ' ', highlight = 'DiagnosticOk' },
 						con = { raw = '[-]', rendered = ' ', highlight = 'DiagnosticError' },
 					},
