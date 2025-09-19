@@ -53,7 +53,7 @@ return {
 		})
 		require("notify").setup({
 			background_colour = "#000000",
-			render = "wrapped-compact",
+			render = "minimal",
 			top_down = false
 		})
 	end,
