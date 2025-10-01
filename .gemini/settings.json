@@ -1,4 +1,10 @@
 {
-  "selectedAuthType": "oauth-personal",
-  "vimMode": false
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "general": {
+    "vimMode": false
+  }
 }
