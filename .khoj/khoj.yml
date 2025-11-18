@@ -2,15 +2,12 @@ content-type:
   image: null
   ledger: null
   markdown:
-    compressed-jsonl: "/Users/ce/.khoj/content/markdown/_Users_ce_Library_CloudStorage_OneDrive-\u56DB\
-      \u5DDD\u6C11\u65CF\u5B66\u9662_3-KNWL_34-Notes_Salt-Box.jsonl.gz"
-    embeddings-file: "/Users/ce/.khoj/content/markdown/_Users_ce_Library_CloudStorage_OneDrive-\u56DB\
-      \u5DDD\u6C11\u65CF\u5B66\u9662_3-KNWL_34-Notes_Salt-Box.pt"
+    compressed-jsonl: /Users/ce/.khoj/content/markdown/_Users_ce_Library_CloudStorage_OneDrive-四川民族学院_3-KNWL_34-Notes_Salt-Box.jsonl.gz
+    embeddings-file: /Users/ce/.khoj/content/markdown/_Users_ce_Library_CloudStorage_OneDrive-四川民族学院_3-KNWL_34-Notes_Salt-Box.pt
     index-heading-entries: false
     input-files: null
     input-filter:
-    - "/Users/ce/Library/CloudStorage/OneDrive-\u56DB\u5DDD\u6C11\u65CF\u5B66\u9662\
-      /3-KNWL/34-Notes/Salt-Box/**/*.md"
+    - /Users/ce/Library/CloudStorage/OneDrive-四川民族学院/3-KNWL/34-Notes/Salt-Box/**/*.md
   music: null
   org: null
 processor: null
@@ -29,3 +26,4 @@ search-type:
     encoder: sentence-transformers/all-MiniLM-L6-v2
     encoder-type: null
     model-directory: ~/.khoj/search/symmetric
+version: 0.15.0
