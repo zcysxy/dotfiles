@@ -1,4 +1,17 @@
 {
-  "selectedAuthType": "gemini-api-key",
-  "vimMode": false
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "general": {
+    "vimMode": false
+  },
+  "context": {
+    "fileName": [
+      "AGENTS.md",
+      "CONTEXT.md",
+      "GEMINI.md"
+    ]
+  }
 }
