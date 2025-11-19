@@ -1,0 +1,4 @@
+name: affpcl
+channels:
+  - defaults
+prefix: /opt/homebrew/anaconda3/envs/affpcl
