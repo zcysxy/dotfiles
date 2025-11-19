@@ -1,4 +1,10 @@
 {
-  "selectedAuthType": "gemini-api-key",
-  "vimMode": false
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "general": {
+    "vimMode": false
+  }
 }
