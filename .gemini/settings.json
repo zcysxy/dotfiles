@@ -6,5 +6,12 @@
   },
   "general": {
     "vimMode": false
+  },
+  "context": {
+    "fileName": [
+      "AGENTS.md",
+      "CONTEXT.md",
+      "GEMINI.md"
+    ]
   }
 }
