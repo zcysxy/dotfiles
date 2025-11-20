@@ -6,12 +6,7 @@ return {
 			require('Comment').setup()
 		end
 	},
-	{
-		'ggandor/leap.nvim',
-		config = function()
-			require('leap').add_default_mappings()
-		end
-	},
+	{ 'ggandor/leap.nvim', },
 	'https://github.com/tpope/vim-surround',
 	'https://github.com/jiangmiao/auto-pairs',
 	{ 'mg979/vim-visual-multi', branch = 'master' },
