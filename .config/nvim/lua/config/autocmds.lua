@@ -65,17 +65,17 @@ autocmd('BufReadPost', {
 	command = 'silent! normal! g`"zv'
 })
 
-vim.api.nvim_create_user_command("Messages", function()
-	local bufnr = vim.api.nvim_create_buf(false, true)
-	vim.bo[bufnr].buftype = "vim"
-	vim.api.nvim_buf_call(bufnr, function()
-		vim.cmd([[put= execute('messages')]])
-	end)
-	vim.api.nvim_buf_set_option(bufnr, "modifiable", false)
-	vim.cmd.split()
-	local winnr = vim.api.nvim_get_current_win()
-	vim.api.nvim_win_set_buf(winnr, bufnr)
-end, {})
+-- vim.api.nvim_create_user_command("Messages", function()
+-- 	local bufnr = vim.api.nvim_create_buf(false, true)
+-- 	vim.bo[bufnr].buftype = "vim"
+-- 	vim.api.nvim_buf_call(bufnr, function()
+-- 		vim.cmd([[put= execute('messages')]])
+-- 	end)
+-- 	vim.api.nvim_buf_set_option(bufnr, "modifiable", false)
+-- 	vim.cmd.split()
+-- 	local winnr = vim.api.nvim_get_current_win()
+-- 	vim.api.nvim_win_set_buf(winnr, bufnr)
+-- end, {})
 
 -- Save folds
 -- autocmd({"BufWinLeave"}, {

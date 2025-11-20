@@ -5,7 +5,7 @@
     }
   },
   "general": {
-    "vimMode": false
+    "vimMode": true
   },
   "context": {
     "fileName": [

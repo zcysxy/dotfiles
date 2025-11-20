@@ -1,7 +1,12 @@
 ---@diagnostic disable: undefined-global
 
 return {
-	'goerz/jupytext.vim',
+	{
+		'goerz/jupytext.nvim',
+		opts = {
+			format = 'py',
+		}
+	},
 	-- {
 	-- 	'dccsillag/magma-nvim',
 	-- 	config = function()
