@@ -23,6 +23,7 @@ export LANG=en_US.UTF-8
 #export LANG=C
 #export w=$HOME/Workbench
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/Library/Application Support"
 export c=$HOME/.config
 export g=$HOME/.g
 export t=$HOME/0-TMP/08-test
@@ -42,6 +43,9 @@ export GOPATH=~/.go
 export GOROOT="$(brew --prefix golang)/libexec"
 export _Z_ECHO=1
 export ZSHZ_ECHO=1
+
+# Directories
+export SHELL_SESSION_DIR=$HOME/.cache/shell/sessions
 
 # Default editor
 export EDITOR=nvim
@@ -132,7 +136,7 @@ bindkey '^P' autosuggest-accept
 
 # icons-in-terminal
 source ~/.local/share/icons-in-terminal/icons_bash.sh
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -283,6 +287,7 @@ rga-fzf() {
 }
 
 eval $(thefuck --alias)
+eval "$(antidot init)"
  
 
 # >>> conda initialize >>>

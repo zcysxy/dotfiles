@@ -19,10 +19,12 @@
 .*/**/*cookie*
 .*credential*
 .Trash
+.b
 .**.bak
 
 .anaconda
 .conda/tos/*
+.config/conda/tos/*
 .CanvasSync.settings
 .cargo
 .docfetcher
@@ -30,10 +32,12 @@
 .dbclient
 .g
 .gem
+.config/gem
 .gemini/installation_id
 .gk
 .go
 .ipy*
+.config/ipy*
 .lesshst
 # .mume
 .npm
