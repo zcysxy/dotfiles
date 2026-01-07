@@ -1,18 +1,19 @@
 ---@diagnostic disable: undefined-global
 
 return {
-	'lervag/vimtex',
-	lazy = false,
-	config = function()
-		vim.g.tex_flavor = 'latex'
-		vim.g.vimtex_quickfix_mode = 0
-		vim.g.vimtex_view_method = 'sioyek'
-		vim.g.vimtex_view_skim_sync = 1
-		vim.g.vimtex_view_skim_activate = 0
-		vim.g.vimtex_view_sioyek_sync = 1
-		vim.g.vimtex_view_sioyek_activate = 0
-		vim.g.vimtex_fold_enable = 1
-		vim.cmd([[let g:vimtex_env_toggle_math_map = {
+	{
+		'lervag/vimtex',
+		lazy = false,
+		config = function()
+			vim.g.tex_flavor = 'latex'
+			vim.g.vimtex_quickfix_mode = 0
+			vim.g.vimtex_view_method = 'sioyek'
+			vim.g.vimtex_view_skim_sync = 1
+			vim.g.vimtex_view_skim_activate = 0
+			vim.g.vimtex_view_sioyek_sync = 1
+			vim.g.vimtex_view_sioyek_activate = 0
+			vim.g.vimtex_fold_enable = 1
+			vim.cmd([[let g:vimtex_env_toggle_math_map = {
       \ '$': '\[',
       \ '\[': 'align',
       \}
@@ -25,6 +26,13 @@ return {
 						\ 'comments': {'enabled': 1},
 					\}
 			]])
-	end,
-	ft = { 'tex', 'latex', 'markdown' },
+		end,
+		ft = { 'tex', 'latex', 'markdown' },
+	},
+	{
+		"let-def/texpresso.vim",
+		config = function()
+			require('texpresso').texpresso_path = "/Users/ce/Applications/texpresso/build/texpresso"
+		end,
+	},
 }
