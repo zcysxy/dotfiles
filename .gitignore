@@ -22,11 +22,15 @@
 .**.bak
 
 .anaconda
+.conda/tos/*
+.CanvasSync.settings
 .cargo
 .docfetcher
 .dropbox
+.dbclient
 .g
 .gem
+.gemini/installation_id
 .gk
 .go
 .ipy*
