@@ -1,0 +1,23 @@
+[core]
+	excludesfile = /Users/ce/.config/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[user]
+	email = zcysxy.wyzdz@gmail.com
+	name = zcysxy
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[filter "gitignore"]
+	clean = "sed '/-- gitignore$/d; /# gitignore$/d; /\\/\\/ gitignore$/d'"
+	smudge = cat
+[init]
+	defaultBranch = main
+[branch]
+	autosetup = simple
+	autosetupmerge = simple
+[credential]
+	helper = store
+[merge]
+	tool = vimdiff
+[mergetool "vimdiff"]
+	cmd = nvim -d \"$MERGED\" \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
