@@ -1,2 +1,0 @@
-/opt/homebrew/anaconda3
-/opt/homebrew/anaconda3/envs/affpcl
