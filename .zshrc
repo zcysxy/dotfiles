@@ -62,7 +62,7 @@ alias sed=gsed
 alias e=$EDITOR
 alias lc='colorls -A --sd'
 alias p=pbcopy
-alias config='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias m=man
 alias nv=nvim
 alias n=nvim
