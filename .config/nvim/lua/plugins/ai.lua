@@ -7,11 +7,11 @@ return {
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
-				panel = {
-					keymap = {
-						accept = "<s-cr>"
-					}
-				},
+				-- panel = {
+				-- 	keymap = {
+				-- 		accept = "<s-cr>"
+				-- 	}
+				-- },
 				suggestion = {
 					auto_trigger = true,
 					keymap = {

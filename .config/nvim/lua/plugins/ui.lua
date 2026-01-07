@@ -88,4 +88,5 @@ return {
 	},
 	"j-hui/fidget.nvim",
 	-- " Plug 'https://github.com/vim-airline/vim-airline'
+	{ "meznaric/key-analyzer.nvim", opts = {promotion = false} },
 }
