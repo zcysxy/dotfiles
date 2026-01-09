@@ -1,0 +1,7 @@
+{
+  "selectedAuthType": "oauth-personal",
+  "vimMode": false,
+	"context": {
+		"fileName": ["AGENTS.md", "CONTEXT.md", "GEMINI.md"]
+	}
+}
