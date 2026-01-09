@@ -1,0 +1,3 @@
+FC = /opt/homebrew/Cellar/gcc/14.2.0_1/bin/gfortran
+F77 = /opt/homebrew/Cellar/gcc/14.2.0_1/bin/gfortran
+FLIBS = -L/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/11
