@@ -19,17 +19,25 @@
 .*/**/*cookie*
 .*credential*
 .Trash
+.b
 .**.bak
 
 .anaconda
+.conda/tos/*
+.config/conda/tos/*
+.CanvasSync.settings
 .cargo
 .docfetcher
 .dropbox
+.dbclient
 .g
 .gem
+.config/gem
+.gemini/installation_id
 .gk
 .go
 .ipy*
+.config/ipy*
 .lesshst
 # .mume
 .npm
@@ -83,7 +91,6 @@
 !.config/coc/settings.json
 .config/github-copilot/hosts.json
 .config/github-copilot/apps.json
-.copilot/pkg/*
 .fonts/**.ttf
 .snipaste/*
 !.snipaste/config.ini
