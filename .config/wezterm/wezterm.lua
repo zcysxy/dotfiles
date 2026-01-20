@@ -1,5 +1,8 @@
 local wezterm = require("wezterm")
 
+-- Plugins
+-- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+
 local LEFT_ARROW = utf8.char(0xff0b3)
 -- The filled in variant of the < symbol
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
@@ -28,28 +31,29 @@ wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
 end)
 
 function get_appearance()
-  if wezterm.gui then
-    return wezterm.gui.get_appearance()
-  end
-  return 'Dark'
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return 'Dark'
 end
 
 function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return 'Gruvbox Material (Gogh)'
-  else
-    return 'Bluloco Zsh Light (Gogh)'
-  end
+	if appearance:find 'Dark' then
+		return 'Gruvbox Material (Gogh)'
+	else
+		return 'Bluloco Zsh Light (Gogh)'
+	end
 end
 
 wezterm.on('window-config-reloaded', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  local appearance = window:get_appearance()
-  local scheme = scheme_for_appearance(appearance)
-  if overrides.color_scheme ~= scheme then
-    overrides.color_scheme = scheme
-    window:set_config_overrides(overrides)
-  end
+	local overrides = window:get_config_overrides() or {}
+	local appearance = window:get_appearance()
+	local scheme = scheme_for_appearance(appearance)
+	if overrides.color_scheme ~= scheme then
+		overrides.color_scheme = scheme
+		window:set_config_overrides(overrides)
+	end
+	bg = window:effective_config().resolved_palette.background
 end)
 
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
@@ -82,14 +86,17 @@ end)
 -- 		{ Text = SOLID_RIGHT_ARROW },
 -- 	}
 -- end)
+color_scheme_name = scheme_for_appearance(get_appearance())
+bg = wezterm.color.get_builtin_schemes()[color_scheme_name].background
+fg = wezterm.color.get_builtin_schemes()[color_scheme_name].foreground
 
 return {
-	color_scheme =  'Gruvbox Material (Gogh)',
+	color_scheme = 'Gruvbox Material (Gogh)',
 	-- default_cursor_style = "BlinkingBar",
 	-- default_prog = { "/opt/homebrew/bin/tmux" },
-	font_size = 16.0,
+	font_size = 18.0,
 	font = wezterm.font_with_fallback({
-		{family = "FiraCode Nerd Font", weight = "Medium"},
+		{ family = "FiraCode Nerd Font", weight = "Medium" },
 		"Font Awesome 6 Free Regular",
 		"Font Awesome 6 Free Solid",
 		"Font Awesome 6 Free Brands Regular",
@@ -101,7 +108,46 @@ return {
 	check_for_updates = false,
 	-- Tab Bar Options
 	enable_tab_bar = true,
-	window_decorations = "RESIZE | MACOS_FORCE_ENABLE_SHADOW ", -- | INTEGRATED_BUTTONS 
+	window_frame = {
+		active_titlebar_bg = bg,
+		inactive_titlebar_bg = bg,
+	},
+	colors = {
+		tab_bar = {
+			background = bg,
+
+			active_tab = {
+				bg_color = bg,
+				fg_color = fg,
+				intensity = "Bold",
+				underline = "None",
+				italic = false,
+			},
+
+			inactive_tab = {
+				bg_color = bg,
+				fg_color = "#888888",
+			},
+
+			inactive_tab_hover = {
+				bg_color = bg,
+				fg_color = "#AAAAAA",
+				italic = false,
+			},
+
+			new_tab = {
+				bg_color = bg,
+				fg_color = "#444444",
+			},
+
+			new_tab_hover = {
+				bg_color = bg,
+				fg_color = "#AAAAAA",
+				italic = false,
+			},
+		},
+	},
+	window_decorations = "RESIZE | MACOS_FORCE_ENABLE_SHADOW ", -- | INTEGRATED_BUTTONS
 	window_background_opacity = 0.8,
 	text_background_opacity = 0.8,
 	hide_tab_bar_if_only_one_tab = true,
@@ -146,13 +192,13 @@ return {
 	-- disable_default_key_bindings = true,
 	-- quick_select_alphabet = "colemak",
 	-- leader = { key = "n", mods = "SUPER", timeout_milliseconds = 2000 },
-	enable_kitty_graphics=true,
-	enable_kitty_keyboard=true,
+	enable_kitty_graphics = true,
+	enable_kitty_keyboard = true,
 	keys = {
-		{ key = "Space", mods = "SHIFT", action = wezterm.action.SendKey {key = "RightArrow"} },
-		{key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b[13;2u"}},
-		{key="C", mods="CTRL", action=wezterm.action.DisableDefaultAssignment},
-		{key="Space", mods="CTRL", action=wezterm.action.DisableDefaultAssignment},
+		{ key = "Space", mods = "SHIFT", action = wezterm.action.SendKey { key = "RightArrow" } },
+		{ key = "Enter", mods = "SHIFT", action = wezterm.action { SendString = "\x1b[13;2u" } },
+		{ key = "C",     mods = "CTRL",  action = wezterm.action.DisableDefaultAssignment },
+		{ key = "Space", mods = "CTRL",  action = wezterm.action.DisableDefaultAssignment },
 		-- { key = "r", mods = "LEADER", action = "ReloadConfiguration" },
 		-- --
 		-- {
@@ -188,4 +234,3 @@ return {
 		-- { key = "y", mods = "CTRL", action = wezterm.action({ PasteFrom = "Clipboard" }) },
 	},
 }
-
