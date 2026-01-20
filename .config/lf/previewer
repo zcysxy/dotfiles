@@ -1,0 +1,41 @@
+#!/bin/sh
+
+file="$1"
+w="$2"
+h="$3"
+x="$4"
+y="$5"
+
+case "$(file -Lb --mime-type "$file")" in
+    # *.jpg|*.jpeg|*.png|*.bmp|*.gif|*.webp)
+		image/*)
+        # WezTerm works best with Chafa using the sixel format.
+        # --size controls the output size to fit the pane
+        chafa -f sixel -s "${w}x${h}" --animate=false "$file"
+        exit 1
+        ;;
+    application/pdf)
+        # Optional: Preview PDF first page as image
+        # pdftoppm -f 1 -l 1 -scale-to-x 1920 -scale-to-y -1 -singlefile -jpeg -tiffcompression jpeg -- "$file" - | \
+        # chafa -f sixel -s "${w}x${h}" --animate=false -
+				pdftoppm -f 1 -l 1 -scale-to-x 1920 -scale-to-y -1 -singlefile -jpeg -tiffcompression jpeg "$file" "$CACHE"
+				# kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "${CACHE}.jpg" < /dev/null > /dev/tty
+        chafa -f sixel -s "${w}x${h}" --animate=false "${CACHE}.jpg" 
+        exit 1
+        ;;
+    # *.mp4)
+		video/*)
+				# Preview video thumbnail as image
+				# kitty +kitten icat --stdin no --transfer-mode memory --place "${w}x${h}@${x}x${y}" "$(~/.config/lf/vidthumb "$file")" </dev/null >/dev/tty
+        chafa -f sixel -s "${w}x${h}" --animate=false "$(~/.config/lf/vidthumb "$file")" 
+        exit 1
+        ;;
+		application/zip)
+				# List contents of zip files with only filenames
+				unzip -l "$file" | awk 'NR>3 {print $4}' | sed '$d'
+				;;
+    *)
+        # Fallback for text files
+        bat --color=always --style=plain "$file"
+        ;;
+esac

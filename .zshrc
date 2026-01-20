@@ -103,7 +103,7 @@ difr () {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-LFCD="/etc/lf/lfcd.sh"
+export LFCD="/Users/ce/.config/lf/lfcd.sh"
 if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
