@@ -6,7 +6,7 @@ return {
 			require('Comment').setup()
 		end
 	},
-	{ 'ggandor/leap.nvim', },
+	{ url = 'https://codeberg.org/andyg/leap.nvim', },
 	'https://github.com/tpope/vim-surround',
 	'https://github.com/jiangmiao/auto-pairs',
 	{ 'mg979/vim-visual-multi', branch = 'master' },
