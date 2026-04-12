@@ -107,7 +107,17 @@ local text_decorations = {
     end),
   }),
   ps( { trig = "**", name = "emphasis", snippetType = "snippet" }, "\\emph{${1}}$0"),
-  sps( { trig = "fbf", name = "boldface" }, "\\textbf{${1}}$0"),
+  -- sps( { trig = "fbf", name = "boldface" }, "\\textbf{${1}}$0"),
+  s({ trig = "fbf", name = "boldface", snippetType = "snippet" }, {
+    d(1, function(_, snip)
+      if snip.env.TM_SELECTED_TEXT[1] then
+        return sn(1, {
+          t("\\textbf{" .. snip.env.TM_SELECTED_TEXT[1] .. "}"),
+        })
+      end
+      return sn(nil, {t("\\textbf{"), i(1), t("}")})
+    end),
+  }),
   ps( { trig = "__", name = "boldface" }, "\\textbf{${1}}$0"),
   sps({ trig = "fit", name = "italic" }, "\\textit{${1}}$0"),
   sps( { trig = "ftt", name = "teletype" }, "\\texttt{${1}}$0"),

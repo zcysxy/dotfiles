@@ -191,6 +191,7 @@ local superscripts = {
   ),
   ps({ trig = "sq", name = "squre" }, "^{2}"),
   ps({ trig = "(?<=[\\w\\d}]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
+  ps({ trig = "(?<=[\\w\\d}]+)opt", name = "inverse", trigEngine = "ecma" }, "^*$0 "),
   ps({ trig = "TT", name = "transpose" }, "^{T}"),
   ps({ trig = "_dag", name = "ddagger" }, "^\\ddagger"),
   ps({ trig = "dag", name = "dagger" }, "^\\dagger"),
@@ -414,6 +415,11 @@ local decorations = {
     end),
     i(1),
     t("}"),
+  }),
+  ms({ trig = "(\\?[%a%d^_]+)bf", regTrig = true }, {
+    f(function(_, snip)
+      return "\\mathbf{" .. snip.captures[1] .. "}"
+    end),
   }),
   ms({ trig = "(\\?[%a%d^_]+)bm", regTrig = true }, {
     f(function(_, snip)
