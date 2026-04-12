@@ -5,7 +5,8 @@
     }
   },
   "general": {
-    "vimMode": false
+    "vimMode": false,
+    "preferredEditor": "neovim"
   },
   "context": {
     "fileName": [
@@ -13,5 +14,8 @@
       "CONTEXT.md",
       "GEMINI.md"
     ]
+  },
+  "ui": {
+    "theme": "Default"
   }
 }
