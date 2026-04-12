@@ -417,6 +417,11 @@ local decorations = {
     i(1),
     t("}"),
   }),
+  ms({ trig = "(\\?[%a%d^_]+)bf", regTrig = true }, {
+    f(function(_, snip)
+      return "\\mathbf{" .. snip.captures[1] .. "}"
+    end),
+  }),
   ms({ trig = "(\\?[%a%d^_]+)bm", regTrig = true }, {
     f(function(_, snip)
       return "\\bm{" .. snip.captures[1] .. "}"
