@@ -18,6 +18,7 @@ case "$(file -Lb --mime-type "$file")" in
         # Optional: Preview PDF first page as image
         # pdftoppm -f 1 -l 1 -scale-to-x 1920 -scale-to-y -1 -singlefile -jpeg -tiffcompression jpeg -- "$file" - | \
         # chafa -f sixel -s "${w}x${h}" --animate=false -
+				export CACHE="/tmp/lf_pdf_preview_$$"
 				pdftoppm -f 1 -l 1 -scale-to-x 1920 -scale-to-y -1 -singlefile -jpeg -tiffcompression jpeg "$file" "$CACHE"
 				# kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "${CACHE}.jpg" < /dev/null > /dev/tty
         chafa -f sixel -s "${w}x${h}" --animate=false "${CACHE}.jpg" 

@@ -190,7 +190,8 @@ local superscripts = {
     end)
   ),
   ps({ trig = "sq", name = "squre" }, "^{2}"),
-  ps({ trig = "(?<=[\\w\\d}]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
+  ps({ trig = "(?<=[\\w\\d})]+)inv", name = "inverse", trigEngine = "ecma" }, "^{-1}$0 "),
+  ps({ trig = "(?<=[\\w\\d})]+)opt", name = "optimal", trigEngine = "ecma" }, "^*$0 "),
   ps({ trig = "TT", name = "transpose" }, "^{T}"),
   ps({ trig = "_dag", name = "ddagger" }, "^\\ddagger"),
   ps({ trig = "dag", name = "dagger" }, "^\\dagger"),
@@ -224,6 +225,7 @@ local relations = {
 local symbols = {
   ps({ trig = "xx" }, "\\times "),
   ps({ trig = "ox" }, "\\otimes "),
+  ps({ trig = "o." }, "\\odot "),
   ps({ trig = "o+" }, "\\oplus "),
   ps({ trig = "**" }, "\\cdot "),
   ps({ trig = "..." }, "\\dots"),

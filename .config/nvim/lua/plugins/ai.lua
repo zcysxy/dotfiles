@@ -215,7 +215,7 @@ let g:copilot_filetypes = {
 							})
 						end,
 					},
-				}
+				},
 			})
 		end,
 	},
