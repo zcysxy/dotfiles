@@ -2,7 +2,6 @@ return {
 	'nvim-treesitter/nvim-treesitter',
 	config = function()
 		require 'nvim-treesitter.config'.setup {
-			prefer_git = true,
 			-- A list of parser names, or "all" (the five listed parsers should always be installed)
 			ensure_installed = {
 				"c",
