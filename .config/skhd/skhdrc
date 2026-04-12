@@ -16,12 +16,12 @@ shift + alt - z: yabai -m window --layer normal
 alt + cmd - 0x1B: \
 	yabai -m window --opacity \
 	$(($(yabai -m query --windows --window \
-	| jq -re .opacity)-0.1))
+	| jq -re .opacity)-0.05))
 
 alt + cmd - 0x18: \
 	yabai -m window --opacity \
 	$(($(yabai -m query --windows --window \
-	| jq -re .opacity)+0.1))	
+	| jq -re .opacity)+0.05))	
 
 # Swap windows
 #ctrl + alt - left: yabai -m window --warp west
