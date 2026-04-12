@@ -1,6 +1,21 @@
 return {
 	-- NOTE: Checkout lsp-zero
-	-- 'neovim/nvim-lspconfig',
+	{
+		'neovim/nvim-lspconfig',
+		config = function()
+			vim.lsp.enable('texlab')
+			vim.lsp.config('texlab', {
+				settings = {
+					inlayHints = {
+						maxLength = 10
+					}
+				}
+			})
+
+			vim.api.nvim_create_user_command("Format", "lua vim.lsp.buf.format { async = true, timeout_ms = 5000 }", { desc = "Format current buffer with LSP" })
+		end
+	},
+	{ 'mason-org/mason.nvim', opts = {} }
 	-- {
 	-- 	'nvimdev/lspsaga.nvim',
 	-- 	dependencies = {
