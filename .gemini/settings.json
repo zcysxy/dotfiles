@@ -6,6 +6,12 @@
   },
   "general": {
     "vimMode": false,
+    "previewFeatures": true,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    },
     "preferredEditor": "neovim"
   },
   "context": {
