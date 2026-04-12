@@ -20,5 +20,8 @@
       "CONTEXT.md",
       "GEMINI.md"
     ]
+  },
+  "ui": {
+    "theme": "Default"
   }
 }
