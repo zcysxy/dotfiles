@@ -2,6 +2,7 @@
 return {
 	'fannheyward/telescope-coc.nvim',
 	'catgoose/telescope-helpgrep.nvim',
+	'nvim-telescope/telescope-ui-select.nvim',
 	{
 		"Shougo/deoplete.nvim",
 		config = function()
@@ -29,6 +30,7 @@ return {
 
 			require('telescope').load_extension('coc')
 			require('telescope').load_extension('helpgrep')
+			require('telescope').load_extension('ui-select')
 
 			local map = vim.keymap.set
 			vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })

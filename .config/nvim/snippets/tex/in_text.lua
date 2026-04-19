@@ -118,8 +118,17 @@ local text_decorations = {
       return sn(nil, {t("\\textbf{"), i(1), t("}")})
     end),
   }),
+  s({ trig = "fit", name = "italic", snippetType = "snippet" }, {
+    d(1, function(_, snip)
+      if snip.env.TM_SELECTED_TEXT[1] then
+        return sn(1, {
+          t("\\textit{" .. snip.env.TM_SELECTED_TEXT[1] .. "}"),
+        })
+      end
+      return sn(nil, {t("\\textit{"), i(1), t("}")})
+    end),
+  }),
   ps( { trig = "__", name = "boldface" }, "\\textbf{${1}}$0"),
-  sps({ trig = "fit", name = "italic" }, "\\textit{${1}}$0"),
   sps( { trig = "ftt", name = "teletype" }, "\\texttt{${1}}$0"),
 }
 
