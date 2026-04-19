@@ -147,3 +147,11 @@ local RemoveComments = function()
     end
 end
 vim.api.nvim_create_user_command("RemoveComments", RemoveComments, {})
+
+-- Auto hover
+autocmd({ "CursorHold", "CursorHoldI" }, {
+	pattern = "*",
+	callback = function()
+		vim.diagnostic.open_float(nil, { focusable = false })
+	end,
+})
