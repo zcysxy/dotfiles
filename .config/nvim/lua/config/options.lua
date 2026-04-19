@@ -99,7 +99,8 @@ vim.o.ch = 0
 -- vim.opt.guicursor = ""
 vim.opt.isfname:append("@-@")
 vim.opt.signcolumn = "yes"
-vim.opt.updatetime = 50
+-- vim.opt.updatetime = 50
+vim.opt.updatetime = 300
 
 -- wrapping
 vim.opt.wrap = true
@@ -123,4 +124,9 @@ local project_root = vim.fn.systemlist("git rev-parse --show-toplevel")
 vim.opt.spellfile = global_spells
 if project_root and project_root ~= '' and not project_root:match('^fatal:') then
     vim.opt.spellfile:append(project_root .. ".spell/en.utf-8.add")
+end
+
+-- vimdiff
+if vim.opt.diff:get() then
+  vim.o.diffopt = 'internal,filler,closeoff'
 end

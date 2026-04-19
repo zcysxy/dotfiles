@@ -1,16 +1,1 @@
-{
-  "banner": "never",
-  "last_logged_in_user": {
-    "host": "https://github.com",
-    "login": "zcysxy"
-  },
-  "logged_in_users": [
-    {
-      "host": "https://github.com",
-      "login": "zcysxy"
-    }
-  ],
-  "render_markdown": true,
-  "screen_reader": false,
-  "theme": "auto"
-}
+/Users/ce/.copilot/config.json

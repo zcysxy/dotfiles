@@ -50,7 +50,7 @@ return {
 			keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })
 			keyset("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })
 			keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
-			keyset("n", "<Leader><CR>", ":call CocActionAsync('jumpDefinition')<CR>", { silent = true })
+			-- keyset("n", "<Leader><CR>", ":call CocActionAsync('jumpDefinition')<CR>", { silent = true })
 			keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
 			keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
 			keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
@@ -66,8 +66,8 @@ return {
 			-- Code actions
 			---@diagnostic disable-next-line: redefined-local
 			local opts = { silent = true, nowait = true }
-			keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts) -- Example: `<leader>aap` for current paragraph
-			keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
+			-- keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts) -- Example: `<leader>aap` for current paragraph
+			-- keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
 			keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
 			keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts)
 			-- keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
@@ -134,7 +134,7 @@ return {
 				end
 			end
 
-			keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
+			-- keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
 			-- Highlight the symbol and its references on a CursorHold event(cursor is idle)
 			vim.api.nvim_create_augroup("CocGroup", {})
