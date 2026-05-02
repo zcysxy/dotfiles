@@ -83,7 +83,9 @@ vim.keymap.set('n', '<c-c>', function() require("notify").dismiss({ silent = tru
 -- Tree
 map("n", "<C-f>", ":Neotree<CR>")
 map("n", "<M-l>", ":Neotree toggle=true<CR>")
-vim.keymap.set("n", "<M-r>", vim.cmd.TagbarToggle, options)
+-- vim.keymap.set("n", "<M-r>", vim.cmd.TagbarToggle, options)
+-- Lspsaga
+vim.keymap.set("n", "<M-r>", ':Lspsaga outline<CR>', options)
 
 -- Tex
 map("n", "tsm", "<plug>(vimtex-env-toggle-math)")
