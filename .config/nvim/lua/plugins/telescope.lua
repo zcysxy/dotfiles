@@ -50,4 +50,15 @@ return {
 			-- nnoremap <A-p> :Commands<CR>
 		end
 	},
+	{
+		'prochri/telescope-all-recent.nvim',
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"kkharji/sqlite.lua",
+		},
+		opts =
+		{
+			-- your config goes here
+		}
+	}
 }

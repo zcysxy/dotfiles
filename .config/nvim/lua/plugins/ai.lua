@@ -157,6 +157,11 @@ let g:copilot_filetypes = {
 				extensions = {
 					history = {
 						enabled = true,
+						opts = {
+							title_generation_opts = {
+								adapter = "copilot"
+							}
+						}
 					}
 				},
 				strategies = {
@@ -212,6 +217,13 @@ let g:copilot_filetypes = {
 								},
 								env = {
 									GEMINI_API_KEY = "cmd:op read op://personal/Gemini_API/credential --no-newline",
+								},
+							})
+						end,
+						claude_code = function()
+							return require("codecompanion.adapters").extend("claude_code", {
+								env = {
+									ANTHROPIC_API_KEY = "cmd:op read op://personal/Claude_API/credential --no-newline",
 								},
 							})
 						end,
