@@ -126,14 +126,14 @@ return {
 				silent = true,
 				desc = 'Peek type definition (lspsaga)',
 			},
-			{
-				'<leader>gr',
-				'<Cmd>Lspsaga rename<CR>',
-				mode = 'n',
-				noremap = true,
-				silent = true,
-				desc = 'Rename (lspsaga)',
-			},
+			-- {
+			-- 	'<leader>gr',
+			-- 	'<Cmd>Lspsaga rename<CR>',
+			-- 	mode = 'n',
+			-- 	noremap = true,
+			-- 	silent = true,
+			-- 	desc = 'Rename (lspsaga)',
+			-- },
 			{
 				'<leader>go',
 				'<Cmd>Lspsaga outline<CR>',
