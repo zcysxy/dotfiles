@@ -87,8 +87,8 @@ alias d='echo $(IFS=/; echo "${${${(s:/:)PWD}:(-3)}[*]}")'
 alias t=tmux
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
-alias matlab='/Applications/MATLAB_R2024b.app/bin/matlab'
-alias matlab2='/Applications/MATLAB_R2021b.app/bin/matlab'
+alias matlab='/Applications/MATLAB_R2026a.app/bin/matlab'
+export MWI_USE_EXISTING_LICENSE=True
 
 # Functions
 mvf() { mv "$@" && goto "$_"; }
@@ -121,10 +121,10 @@ export PATH="\
 /opt/homebrew/anaconda3/condabin:\
 /opt/homebrew/bin:\
 /opt/homebrew/sbin:\
-/Applications/MATLAB_R2021b.app/bin:\
-/Applications/MATLAB_R2021b.app/bin/maci64:\
-/Applications/MATLAB_R2024b.app/bin:\
-/Applications/MATLAB_R2021b.app/bin/maci64:\
+/Applications/MATLAB_R2026a.app/bin:\
+/Applications/MATLAB_R2026a.app/bin/maci64:\
+/Applications/MATLAB_R2026a.app/bin:\
+/Applications/MATLAB_R2026a.app/bin/maci64:\
 ${GOPATH}/bin:${GOROOT}/bin:\
 /Users/ce/.scripts:\
 /Applications/WezTerm.app/Contents/MacOS:\
@@ -239,10 +239,10 @@ plugins=(
 	z
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-    #copyfile
-    dirhistory
-    history
-    macos
+	#copyfile
+	dirhistory
+	history
+	macos
 )
 source $ZSH/oh-my-zsh.sh
 

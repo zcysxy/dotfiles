@@ -37,6 +37,7 @@ return {
 				"lua_ls",
 			},
 			automatic_installation = true,
+			automatic_enable = true,
 		},
 	},
 	{

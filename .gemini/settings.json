@@ -1,7 +1,7 @@
 {
   "security": {
     "auth": {
-      "selectedType": "oauth-personal"
+      "selectedType": "gemini-api-key"
     }
   },
   "general": {
@@ -22,6 +22,6 @@
     ]
   },
   "ui": {
-    "theme": "Default"
+    "theme": "Default Light"
   }
 }
