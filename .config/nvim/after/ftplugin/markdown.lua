@@ -111,6 +111,23 @@ xmap <silent><buffer> id <plug>(vimtex-id)
 xmap <silent><buffer> ad <plug>(vimtex-ad)
 ]])
 
+vim.treesitter.query.set("markdown", "textobjects", [[
+  ; The entire block including backticks
+  (fenced_code_block) @codeblock.outer
+
+  ; The content inside the backticks
+  ((fenced_code_block
+    (code_fence_content) @codeblock.inner))
+]])
+vim.keymap.set({ "x", "o" }, "iC", function()
+	-- Select inner code block using Treesitter textobjects
+	require("nvim-treesitter-textobjects.select").select_textobject("@codeblock.inner", "textobjects")
+end, { buffer = true, desc = "Select inner code block" })
+vim.keymap.set({ "x", "o" }, "aC", function()
+	-- Select outer code block using Treesitter textobjects
+	require("nvim-treesitter-textobjects.select").select_textobject("@codeblock.outer", "textobjects")
+end, { buffer = true, desc = "Select outer code block" })
+
 vim.api.nvim_create_autocmd({'BufEnter'}, {
   desc = 'Fold YAML frontmatter',
   pattern = '*.md',

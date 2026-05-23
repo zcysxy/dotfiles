@@ -3,6 +3,7 @@ return {
 	'fannheyward/telescope-coc.nvim',
 	'catgoose/telescope-helpgrep.nvim',
 	'nvim-telescope/telescope-ui-select.nvim',
+	"nvim-telescope/telescope-live-grep-args.nvim",
 	{
 		"Shougo/deoplete.nvim",
 		config = function()
@@ -31,6 +32,7 @@ return {
 			require('telescope').load_extension('coc')
 			require('telescope').load_extension('helpgrep')
 			require('telescope').load_extension('ui-select')
+			require('telescope').load_extension("live_grep_args")
 
 			local map = vim.keymap.set
 			vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { silent = true, noremap = true })
@@ -46,7 +48,7 @@ return {
 			map('n', '<leader>b', ':Telescope buffers<CR>', { silent = true })
 			-- nnoremap <Leader>r :Rg<CR>
 			map('n', '<leader>r', ':Telescope live_grep<CR>', { silent = true })
-			map('n', '<leader>s', ':Telescope live_grep<CR>', { silent = true })
+			map('n', '<leader>s', ':Telescope live_grep_args<CR>', { silent = true })
 			-- nnoremap <A-p> :Commands<CR>
 		end
 	},

@@ -79,10 +79,10 @@ return {
 			keyset("o", "if", "<Plug>(coc-funcobj-i)", opts)
 			keyset("x", "af", "<Plug>(coc-funcobj-a)", opts)
 			keyset("o", "af", "<Plug>(coc-funcobj-a)", opts)
-			keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
-			keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
-			keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
-			keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
+			-- keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
+			-- keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
+			-- keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
+			-- keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
 			-- Remap <C-f> and <C-b> to scroll float windows/popups
 			---@diagnostic disable-next-line: redefined-local
